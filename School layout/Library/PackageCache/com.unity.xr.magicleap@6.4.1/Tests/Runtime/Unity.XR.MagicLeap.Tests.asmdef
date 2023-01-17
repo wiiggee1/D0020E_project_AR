@@ -1,0 +1,14 @@
+{
+    "name": "Unity.XR.MagicLeap.Tests",
+    "allowUnsafeCode": true,
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "references": [
+        "UnityEngine.XR.MagicLeap"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ]
+}

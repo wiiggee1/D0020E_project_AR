@@ -1,0 +1,34 @@
+{
+    "name": "UnityEngine.XR.MagicLeap",
+    "references": [
+        "Unity.Subsystem.Registration",
+        "Unity.XR.ARSubsystems",
+        "Unity.XR.InteractionSubsystems",
+        "Unity.XR.Management",
+        "Unity.XR.Management.Editor",
+        "Unity.InputSystem"
+    ],
+    "includePlatforms": [
+        "Editor",
+        "Lumin"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.inputsystem",
+            "expression": "",
+            "define": "UNITY_INPUT_SYSTEM"
+        },
+        {
+            "name": "com.unity.xr.management",
+            "expression": "3.2.0",
+            "define": "XR_MANAGEMENT_3_2_0_OR_NEWER"
+        }
+    ],
+    "noEngineReferences": false
+}
