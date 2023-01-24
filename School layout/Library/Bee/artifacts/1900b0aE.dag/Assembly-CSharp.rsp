@@ -387,6 +387,14 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.XR.MagicLeap.ref.dll"
 "Assets/ExampleAssets/Scripts/AnchorCreator.cs"
 "Assets/ExampleAssets/Scripts/ARFeatheredPlaneMeshVisualizer.cs"
+"Assets/OurFolders/Algorithm/Algorithm.cs"
+"Assets/OurFolders/Camera/Camera.cs"
+"Assets/OurFolders/Main/Main.cs"
+"Assets/OurFolders/Obtacles/Obstacles.cs"
+"Assets/OurFolders/Positioning Class/PosPers.cs"
+"Assets/OurFolders/QR codes/QRCode.cs"
+"Assets/OurFolders/QR codes/QRScanner.cs"
+"Assets/OurFolders/Timer/Timer.cs"
 -langversion:9.0
 
 /deterministic
