@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Does not need to be inheriting from MonoBehaviour
 public class QRCode
 {
+    // Local variables to store default data for each QR code
     private int roomId;
     private BitArray qrAsBits;
 
