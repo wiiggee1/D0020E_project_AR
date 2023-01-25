@@ -6,19 +6,21 @@ using System.IO;
 using CsvHelper;
 using CsvHelper.Configuration;
 using System;
+using ServiceStack.Text;
 
 // Inherits the parent base class of the "AlgorithmClass"
 public class SaveData : Algorithm
 {
     // Should be an array of type PosPers instead of double! 
-    private Dictionary<string, List<double>> _posPers = new Dictionary<string, List<double>>();
+    private Dictionary<string, List<float>> _posPers = new Dictionary<string, List<float>>();
 
+    [Obsolete]
     public SaveData()
     {
-        _posPers.Add("lat", new List<double>());
-        _posPers.Add("long", new List<double>());
-        //_posPers.Add("safeZone_lat", sz_lat);
-        //_posPers.Add("safeZone_long", sz_long);
+        _posPers.Add("lat", new List<float>());
+        _posPers.Add("long", new List<float>());
+        _posPers.Add("safeZone_lat", );
+        _posPers.Add("safeZone_long", sz_long);
     }
 
     public void SavePosPersAndTime()
@@ -28,7 +30,7 @@ public class SaveData : Algorithm
         //_posPers["long"].append();
     }
 
-    public Dictionary<string, List<double>> PosPers
+    public Dictionary<string, List<float>> PosPers
     {
         get { return _posPers; }
         set { _posPers = value; }
