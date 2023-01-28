@@ -7,11 +7,10 @@ public class QRCode
 {
     // Local variables to store default data for each QR code
     private int roomId;
-    private BitArray qrAsBits;
+    // TODO: add location variables
 
     // Constructor with default data that each QR code shall have
     public QRCode (int roomId, BitArray qrAsBits) {
         this.roomId = roomId;
-        this.qrAsBits = qrAsBits;
     }
 }
