@@ -7,38 +7,42 @@ public class Main : MonoBehaviour
     public Obstacles obstacles;
     public PosPers posPers;
     public Timer timer;
-    public boolean QRscanned;
-    public boolean checkForQR;
-    public int obstacleModel;
+    public bool QRscanned;
+    public bool checkForQR;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-    
     }
 
     // Update is called once per frame
     void Update()
-    {
-        
+    { 
+    }
+
+    //When player pressed button to try and scan QR
+    void QRscan() {
+        checkForQR = true;
     }
 
     //handler of issue #16 succesfull scan of QR
-    void QRscan(int obsModel) {
+    void QRdetected() {
             QRscanned = true;
-            obstacleModel = obsModel;
+            checkForQR = false;
     }
 
     //handler of issue #17
-    void QRfail(int obsModel) {
+    void QRfail() {
                 Debug.Log("Not a valid QR code");
         }
 
     void initGame() {
         if (QRscanned == true) {
-        obstacles.placeObstacles(int obstacleModel);
-        posPers.startPosPers();
-        timer.startTimer();
+            Debug.Log("Methods initialize game");
+        //obstacles.placeObstacles();
+        //posPers.startPosPers();
+        //timer.startTimer();
         }
     }
 }

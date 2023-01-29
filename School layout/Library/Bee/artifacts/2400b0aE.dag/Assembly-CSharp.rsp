@@ -390,6 +390,7 @@
 "Assets/OurFolders/Algorithm/Algorithm.cs"
 "Assets/OurFolders/Camera/Camera.cs"
 "Assets/OurFolders/Main/Main.cs"
+"Assets/OurFolders/Main/MainMenu.cs"
 "Assets/OurFolders/Obtacles/Obstacles.cs"
 "Assets/OurFolders/Positioning Class/PosPers.cs"
 "Assets/OurFolders/QR codes/QR.cs"
