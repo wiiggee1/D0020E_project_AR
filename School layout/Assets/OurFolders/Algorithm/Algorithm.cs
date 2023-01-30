@@ -23,6 +23,10 @@ public class Algorithm : MonoBehaviour
     private ARSessionOrigin _arSessionOrigin;
     private ARTrackable _arTrackable;
     private ARSession _arSession;
+    private ARAnchor _arPoseDriver;
+
+    private float device_lat; //device geodata
+    private float device_long; //device geodata
 
     [Obsolete]
     public Algorithm()
@@ -41,15 +45,13 @@ public class Algorithm : MonoBehaviour
         {
             Permission.RequestUserPermission(Permission.FineLocation);
         }
-
-        // inital state and start positioning
-        float start_x = posPers.getPos().x;
-        float start_y = posPers.getPos().y;
-        float start_z = posPers.getPos().z;
-        float start_vertical = posPers.getPos().upDown;
-        float start_horizontal = posPers.getPos().leftRight;
-
-        float[] startPosition = {start_x,start_y,start_z,start_vertical,start_horizontal};
+        else
+        {
+            Input.location.Start(); //get's the android device current location.
+        }
+        
+        ARSession.stateChanged += ARSessionStateChanged;
+  
         
     }
 
@@ -80,15 +82,36 @@ public class Algorithm : MonoBehaviour
 
     }
 
+    private void ARSessionStateChanged(ARSessionStateChangedEventArgs args)
+    {
+        if (args.state == ARSessionState.SessionTracking)
+        {
+            // Wait until AR is fully initialized
+            ARSession.stateChanged -= ARSessionStateChanged;
+
+            // Using the android device's current geolocation
+            device_lat = Input.location.lastData.latitude;
+            device_long = Input.location.lastData.longitude;
+            Input.location.Stop(); // stops the location service updates only need reference point
+
+            // Set the ARPoseDriver's target transform to the ARReferencePoint
+            var map_long_lat = UnityEngine.Quaternion.AngleAxis(device_long, -Vector3.up) * UnityEngine.Quaternion.AngleAxis(device_lat, -Vector3.right) * new Vector3(0, 0, 1);
+
+            _arPoseDriver.transform.TransformPoint(map_long_lat);       
+            _arPoseDriver.enabled = true;
+        }
+    }
+
     // Should be of type PosPers instead of double! 
     public float[] getCurrentPosPers()
     {
-        var x = posPers.getPos().x;
-        var y = posPers.getPos().y;
-        var z = posPers.getPos().z;
-        var vertical = posPers.getPos().upDown;
-        var horizontal = posPers.getPos().leftRight;
+        var x = this.posPers.getPos().x;
+        var y = this.posPers.getPos().y;
+        var z = this.posPers.getPos().z;
+        var vertical = this.posPers.getPos().upDown;
+        var horizontal = this.posPers.getPos().leftRight;
         float[] currentPosition = {x, y, z, vertical, horizontal};
+      
         return currentPosition;
     }
 
@@ -96,16 +119,36 @@ public class Algorithm : MonoBehaviour
     public PosPers startPosPers()
     {
         //QRScanner position should have a method for returning its coordinates and if QR is scanned? (readQR???)
-        float init_x = _pointCloud.transform.position.x;
-        float init_y = _pointCloud.transform.position.y;
-        float init_z = _pointCloud.transform.position.z;
-        float init_horizontal = Input.GetAxis("Horizontal");
-        float init_vertical = Input.GetAxis("Vertical");
+        float init_x;
+        float init_y;
+        float init_z;
+        float init_horizontal;
+        float init_vertical;
         
+        try
+        {
+            _arSession.enabled = true; //will start the AR session
+            
+        }
+        catch 
+        {
+            if(ARSession.state == ARSessionState.Unsupported)
+            {
+                Console.WriteLine("NOT SUPPORTED!");
+            }
+        }
+
+        init_x = _pointCloud.transform.position.x;
+        init_y = _pointCloud.transform.position.y;
+        init_z = _pointCloud.transform.position.z;
+        init_horizontal = Input.GetAxis("Horizontal");
+        init_vertical = Input.GetAxis("Vertical");
+
         // Initilize a new PosPers object that will be called in the constructor as reference
         posPers = new PosPers(init_x, init_y, init_z, init_vertical, init_horizontal); // Sets the initial 
-        
+
         return posPers;
+
     }
 
     public ARSession arSession
