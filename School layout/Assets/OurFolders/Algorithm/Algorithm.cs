@@ -12,19 +12,23 @@ using UnityEditor;
 using System.Numerics;
 using Vector3 = UnityEngine.Vector3;
 using UnityEngine.XR.OpenXR.Input;
+using UnityEngine.XR.ARCore;
 
 public class Algorithm : MonoBehaviour
 {
     public ARCameraManager arCameraObject; //ARCore device gameobject
     private PosPers posPers;
     private float[] startPosition;
-    private List<XRNodeState> positionalNodeStates = new List<XRNodeState>();
+    private ARPointCloud _pointCloud; // The AR Foundation PointCloud script
+    private ARSessionOrigin _arSessionOrigin;
+    private ARTrackable _arTrackable;
+    private ARSession _arSession;
 
     [Obsolete]
     public Algorithm()
     {
         Console.WriteLine(ARSession.CheckAvailability());
-        Console.WriteLine(positionalNodeStates);
+        //var pointCloudPos = _pointCloud.positions;
         PosPers posPers = startPosPers();     
                             
     }
@@ -54,9 +58,12 @@ public class Algorithm : MonoBehaviour
     {
         // The transform object is attached to the gameobject 
 
-        InputTracking.GetNodeStates(positionalNodeStates);
-        Vector3 camPosition = arCameraObject.gameObject.transform.position;
-        UnityEngine.Quaternion catRotation = arCameraObject.gameObject.transform.rotation;
+        //Vector3 camPosition = arCameraObject.gameObject.transform.position;
+        Vector3 camPosition = _pointCloud.transform.position;
+
+        //UnityEngine.Quaternion catRotation = arCameraObject.transform.rotation;
+        UnityEngine.Quaternion catRotation = _pointCloud.transform.rotation;
+
 
         //This will set the local space from the camera position vector
         transform.localPosition = camPosition;
@@ -89,9 +96,9 @@ public class Algorithm : MonoBehaviour
     public PosPers startPosPers()
     {
         //QRScanner position should have a method for returning its coordinates and if QR is scanned? (readQR???)
-        float init_x = arCameraObject.gameObject.transform.position.x;
-        float init_y = arCameraObject.gameObject.transform.position.y;
-        float init_z = arCameraObject.gameObject.transform.position.z;
+        float init_x = _pointCloud.transform.position.x;
+        float init_y = _pointCloud.transform.position.y;
+        float init_z = _pointCloud.transform.position.z;
         float init_horizontal = Input.GetAxis("Horizontal");
         float init_vertical = Input.GetAxis("Vertical");
         
@@ -101,6 +108,16 @@ public class Algorithm : MonoBehaviour
         return posPers;
     }
 
+    public ARSession arSession
+    {
+        get { return _arSession; }
+        set { _arSession = value; }
+    }
+
+    public void ResetButtonTrigger()
+    {
+        _arSession.Reset();
+    }
 
     public bool safeZoneReached()
     {

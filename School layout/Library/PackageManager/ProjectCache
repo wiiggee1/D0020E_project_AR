@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638102535771061738
-    m_Hash: 1471587158
+      ticks: 638106818597197296
+    m_Hash: 807143543
   m_LockFileStatus:
     m_FilePath: C:/Users/vikto/Desktop/D0020E_project_AR/School layout/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638102536107642991
-    m_Hash: 2400220180
+      ticks: 638106818597241964
+    m_Hash: 741501010
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -1296,6 +1296,205 @@ m_ResolvedPackages:
     path: 
   unityLifecycle:
     version: 1.7.8
+    nextVersion: 
+- packageId: com.unity.xr.arcore@4.2.7
+  testable: 0
+  isDirectDependency: 1
+  version: 4.2.7
+  source: 1
+  resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\School layout\Library\PackageCache\com.unity.xr.arcore@4.2.7
+  assetPath: Packages/com.unity.xr.arcore
+  name: com.unity.xr.arcore
+  displayName: ARCore XR Plugin
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: asset
+  description: 'Provides native Google ARCore integration for use with Unity''s multi-platform
+    XR API.
+
+    Supports the following features:
+
+    -Efficient Background Rendering
+
+    -Horizontal
+    Planes
+
+    -Depth Data
+
+    -Anchors
+
+    -Hit Testing
+
+    -Occlusion'
+  status: 0
+  errors: []
+  versions:
+    all:
+    - 1.0.0-preview.24
+    - 2.0.2
+    - 2.1.0-preview.4
+    - 2.1.0-preview.5
+    - 2.1.0
+    - 2.1.1
+    - 2.1.2
+    - 2.1.4
+    - 2.1.8
+    - 2.1.11
+    - 2.1.12
+    - 2.1.14
+    - 2.1.16
+    - 2.1.18
+    - 2.1.19
+    - 2.2.0-preview.1
+    - 2.2.0-preview.2
+    - 2.2.0-preview.6
+    - 3.0.0-preview.1
+    - 3.0.0-preview.2
+    - 3.0.0-preview.3
+    - 3.0.0-preview.4
+    - 3.0.1
+    - 3.0.3
+    - 3.0.4
+    - 3.1.0-preview.1
+    - 3.1.0-preview.2
+    - 3.1.0-preview.4
+    - 3.1.0-preview.6
+    - 3.1.0-preview.7
+    - 3.1.0-preview.8
+    - 3.1.3
+    - 3.1.4
+    - 3.1.5
+    - 3.1.7
+    - 3.1.8
+    - 3.1.10
+    - 4.0.0-preview.1
+    - 4.0.0-preview.3
+    - 4.0.3
+    - 4.0.4
+    - 4.0.8
+    - 4.0.9
+    - 4.0.10
+    - 4.0.12
+    - 4.1.0-preview.2
+    - 4.1.0-preview.3
+    - 4.1.0-preview.5
+    - 4.1.0-preview.6
+    - 4.1.0-preview.7
+    - 4.1.0-preview.9
+    - 4.1.0-preview.10
+    - 4.1.0-preview.11
+    - 4.1.0-preview.12
+    - 4.1.0-preview.13
+    - 4.1.1
+    - 4.1.3
+    - 4.1.5
+    - 4.1.7
+    - 4.1.9
+    - 4.1.10
+    - 4.1.12
+    - 4.1.13
+    - 4.2.0-pre.2
+    - 4.2.0-pre.3
+    - 4.2.0-pre.4
+    - 4.2.0-pre.5
+    - 4.2.0-pre.7
+    - 4.2.0-pre.8
+    - 4.2.0-pre.9
+    - 4.2.0-pre.10
+    - 4.2.0-pre.12
+    - 4.2.0
+    - 4.2.1
+    - 4.2.2
+    - 4.2.3
+    - 4.2.6
+    - 4.2.7
+    - 5.0.0-pre.5
+    - 5.0.0-pre.6
+    - 5.0.0-pre.7
+    - 5.0.0-pre.8
+    - 5.0.0-pre.9
+    - 5.0.0-pre.12
+    - 5.0.0-pre.13
+    - 5.0.2
+    - 5.0.3
+    - 5.1.0-pre.1
+    - 5.1.0-pre.2
+    compatible:
+    - 4.2.7
+    - 5.0.0-pre.5
+    - 5.0.0-pre.6
+    - 5.0.0-pre.7
+    - 5.0.0-pre.8
+    - 5.0.0-pre.9
+    - 5.0.0-pre.12
+    - 5.0.0-pre.13
+    - 5.0.2
+    - 5.0.3
+    - 5.1.0-pre.1
+    - 5.1.0-pre.2
+    verified: 4.2.7
+  dependencies:
+  - name: com.unity.xr.arsubsystems
+    version: 4.2.7
+  - name: com.unity.xr.management
+    version: 4.0.1
+  - name: com.unity.modules.androidjni
+    version: 1.0.0
+  - name: com.unity.modules.unitywebrequest
+    version: 1.0.0
+  resolvedDependencies:
+  - name: com.unity.xr.arsubsystems
+    version: 4.2.7
+  - name: com.unity.subsystemregistration
+    version: 1.1.0
+  - name: com.unity.modules.subsystems
+    version: 1.0.0
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  - name: com.unity.xr.management
+    version: 4.2.0
+  - name: com.unity.modules.vr
+    version: 1.0.0
+  - name: com.unity.modules.physics
+    version: 1.0.0
+  - name: com.unity.modules.xr
+    version: 1.0.0
+  - name: com.unity.xr.legacyinputhelpers
+    version: 2.1.10
+  - name: com.unity.modules.androidjni
+    version: 1.0.0
+  - name: com.unity.modules.unitywebrequest
+    version: 1.0.0
+  keywords:
+  - arcore
+  - ar
+  - augmented
+  - xr
+  - reality
+  - core
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 0
+  isAssetStorePackage: 0
+  datePublishedTicks: 638034330180000000
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/arfoundation.git
+    revision: f49c023e846a14016db6ff2bc4c5d0d2e421bef6
+    path: 
+  unityLifecycle:
+    version: 4.2.7
     nextVersion: 
 - packageId: com.unity.xr.management@4.2.0
   testable: 0
@@ -3364,6 +3563,164 @@ m_ResolvedPackages:
   unityLifecycle:
     version: 1.1.0
     nextVersion: 
+- packageId: com.unity.xr.arsubsystems@4.2.7
+  testable: 0
+  isDirectDependency: 0
+  version: 4.2.7
+  source: 1
+  resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\School layout\Library\PackageCache\com.unity.xr.arsubsystems@4.2.7
+  assetPath: Packages/com.unity.xr.arsubsystems
+  name: com.unity.xr.arsubsystems
+  displayName: AR Subsystems
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: asset
+  description: Contains definitions for AR Subsystems. This package is a dependency
+    of provider packages, as well as AR Foundation.
+  status: 0
+  errors: []
+  versions:
+    all:
+    - 2.0.2
+    - 2.1.0-preview.1
+    - 2.1.0-preview.2
+    - 2.1.0
+    - 2.1.1
+    - 2.1.2
+    - 2.1.3
+    - 2.1.14
+    - 2.1.16
+    - 2.1.18
+    - 2.1.19
+    - 2.2.0-preview.2
+    - 2.2.0-preview.3
+    - 2.2.0-preview.6
+    - 3.0.0-preview.1
+    - 3.0.0-preview.2
+    - 3.0.0-preview.3
+    - 3.0.0-preview.4
+    - 3.0.0
+    - 3.0.2
+    - 3.1.0-preview.1
+    - 3.1.0-preview.2
+    - 3.1.0-preview.4
+    - 3.1.0-preview.6
+    - 3.1.0-preview.7
+    - 3.1.0-preview.8
+    - 3.1.3
+    - 3.1.5
+    - 3.1.6
+    - 3.1.10
+    - 4.0.0-preview.1
+    - 4.0.0-preview.3
+    - 4.0.1
+    - 4.0.8
+    - 4.0.9
+    - 4.0.10
+    - 4.0.12
+    - 4.1.0-preview.1
+    - 4.1.0-preview.2
+    - 4.1.0-preview.3
+    - 4.1.0-preview.5
+    - 4.1.0-preview.6
+    - 4.1.0-preview.7
+    - 4.1.0-preview.9
+    - 4.1.0-preview.10
+    - 4.1.0-preview.11
+    - 4.1.0-preview.12
+    - 4.1.0-preview.13
+    - 4.1.1
+    - 4.1.3
+    - 4.1.5
+    - 4.1.7
+    - 4.1.9
+    - 4.1.10
+    - 4.1.12
+    - 4.1.13
+    - 4.2.0-pre.2
+    - 4.2.0-pre.3
+    - 4.2.0-pre.4
+    - 4.2.0-pre.5
+    - 4.2.0-pre.7
+    - 4.2.0-pre.8
+    - 4.2.0-pre.9
+    - 4.2.0-pre.10
+    - 4.2.0-pre.12
+    - 4.2.0
+    - 4.2.1
+    - 4.2.2
+    - 4.2.3
+    - 4.2.6
+    - 4.2.7
+    - 5.0.0-pre.5
+    - 5.0.0-pre.6
+    - 5.0.0-pre.7
+    - 5.0.0-pre.8
+    - 5.0.0-pre.9
+    - 5.0.0-pre.12
+    - 5.0.0-pre.13
+    - 5.0.2
+    compatible:
+    - 4.2.7
+    - 5.0.0-pre.5
+    - 5.0.0-pre.6
+    - 5.0.0-pre.7
+    - 5.0.0-pre.8
+    - 5.0.0-pre.9
+    - 5.0.0-pre.12
+    - 5.0.0-pre.13
+    - 5.0.2
+    verified: 4.2.7
+  dependencies:
+  - name: com.unity.subsystemregistration
+    version: 1.1.0
+  - name: com.unity.xr.management
+    version: 4.0.1
+  resolvedDependencies:
+  - name: com.unity.subsystemregistration
+    version: 1.1.0
+  - name: com.unity.modules.subsystems
+    version: 1.0.0
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  - name: com.unity.xr.management
+    version: 4.2.0
+  - name: com.unity.modules.vr
+    version: 1.0.0
+  - name: com.unity.modules.physics
+    version: 1.0.0
+  - name: com.unity.modules.xr
+    version: 1.0.0
+  - name: com.unity.xr.legacyinputhelpers
+    version: 2.1.10
+  keywords:
+  - subsystem
+  - XR
+  - AR
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 0
+  isAssetStorePackage: 0
+  datePublishedTicks: 638034330150000000
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/arfoundation.git
+    revision: f49c023e846a14016db6ff2bc4c5d0d2e421bef6
+    path: 
+  unityLifecycle:
+    version: 4.2.7
+    nextVersion: 
 - packageId: com.unity.ext.nunit@1.0.6
   testable: 0
   isDirectDependency: 0
@@ -4103,205 +4460,6 @@ m_ResolvedPackages:
   unityLifecycle:
     version: 4.2.7
     nextVersion: 
-- packageId: com.unity.xr.arcore@4.2.7
-  testable: 0
-  isDirectDependency: 0
-  version: 4.2.7
-  source: 1
-  resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\School layout\Library\PackageCache\com.unity.xr.arcore@4.2.7
-  assetPath: Packages/com.unity.xr.arcore
-  name: com.unity.xr.arcore
-  displayName: ARCore XR Plugin
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: asset
-  description: 'Provides native Google ARCore integration for use with Unity''s multi-platform
-    XR API.
-
-    Supports the following features:
-
-    -Efficient Background Rendering
-
-    -Horizontal
-    Planes
-
-    -Depth Data
-
-    -Anchors
-
-    -Hit Testing
-
-    -Occlusion'
-  status: 0
-  errors: []
-  versions:
-    all:
-    - 1.0.0-preview.24
-    - 2.0.2
-    - 2.1.0-preview.4
-    - 2.1.0-preview.5
-    - 2.1.0
-    - 2.1.1
-    - 2.1.2
-    - 2.1.4
-    - 2.1.8
-    - 2.1.11
-    - 2.1.12
-    - 2.1.14
-    - 2.1.16
-    - 2.1.18
-    - 2.1.19
-    - 2.2.0-preview.1
-    - 2.2.0-preview.2
-    - 2.2.0-preview.6
-    - 3.0.0-preview.1
-    - 3.0.0-preview.2
-    - 3.0.0-preview.3
-    - 3.0.0-preview.4
-    - 3.0.1
-    - 3.0.3
-    - 3.0.4
-    - 3.1.0-preview.1
-    - 3.1.0-preview.2
-    - 3.1.0-preview.4
-    - 3.1.0-preview.6
-    - 3.1.0-preview.7
-    - 3.1.0-preview.8
-    - 3.1.3
-    - 3.1.4
-    - 3.1.5
-    - 3.1.7
-    - 3.1.8
-    - 3.1.10
-    - 4.0.0-preview.1
-    - 4.0.0-preview.3
-    - 4.0.3
-    - 4.0.4
-    - 4.0.8
-    - 4.0.9
-    - 4.0.10
-    - 4.0.12
-    - 4.1.0-preview.2
-    - 4.1.0-preview.3
-    - 4.1.0-preview.5
-    - 4.1.0-preview.6
-    - 4.1.0-preview.7
-    - 4.1.0-preview.9
-    - 4.1.0-preview.10
-    - 4.1.0-preview.11
-    - 4.1.0-preview.12
-    - 4.1.0-preview.13
-    - 4.1.1
-    - 4.1.3
-    - 4.1.5
-    - 4.1.7
-    - 4.1.9
-    - 4.1.10
-    - 4.1.12
-    - 4.1.13
-    - 4.2.0-pre.2
-    - 4.2.0-pre.3
-    - 4.2.0-pre.4
-    - 4.2.0-pre.5
-    - 4.2.0-pre.7
-    - 4.2.0-pre.8
-    - 4.2.0-pre.9
-    - 4.2.0-pre.10
-    - 4.2.0-pre.12
-    - 4.2.0
-    - 4.2.1
-    - 4.2.2
-    - 4.2.3
-    - 4.2.6
-    - 4.2.7
-    - 5.0.0-pre.5
-    - 5.0.0-pre.6
-    - 5.0.0-pre.7
-    - 5.0.0-pre.8
-    - 5.0.0-pre.9
-    - 5.0.0-pre.12
-    - 5.0.0-pre.13
-    - 5.0.2
-    - 5.0.3
-    - 5.1.0-pre.1
-    - 5.1.0-pre.2
-    compatible:
-    - 4.2.7
-    - 5.0.0-pre.5
-    - 5.0.0-pre.6
-    - 5.0.0-pre.7
-    - 5.0.0-pre.8
-    - 5.0.0-pre.9
-    - 5.0.0-pre.12
-    - 5.0.0-pre.13
-    - 5.0.2
-    - 5.0.3
-    - 5.1.0-pre.1
-    - 5.1.0-pre.2
-    verified: 4.2.7
-  dependencies:
-  - name: com.unity.xr.arsubsystems
-    version: 4.2.7
-  - name: com.unity.xr.management
-    version: 4.0.1
-  - name: com.unity.modules.androidjni
-    version: 1.0.0
-  - name: com.unity.modules.unitywebrequest
-    version: 1.0.0
-  resolvedDependencies:
-  - name: com.unity.xr.arsubsystems
-    version: 4.2.7
-  - name: com.unity.subsystemregistration
-    version: 1.1.0
-  - name: com.unity.modules.subsystems
-    version: 1.0.0
-  - name: com.unity.modules.jsonserialize
-    version: 1.0.0
-  - name: com.unity.xr.management
-    version: 4.2.0
-  - name: com.unity.modules.vr
-    version: 1.0.0
-  - name: com.unity.modules.physics
-    version: 1.0.0
-  - name: com.unity.modules.xr
-    version: 1.0.0
-  - name: com.unity.xr.legacyinputhelpers
-    version: 2.1.10
-  - name: com.unity.modules.androidjni
-    version: 1.0.0
-  - name: com.unity.modules.unitywebrequest
-    version: 1.0.0
-  keywords:
-  - arcore
-  - ar
-  - augmented
-  - xr
-  - reality
-  - core
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-  hideInEditor: 0
-  isAssetStorePackage: 0
-  datePublishedTicks: 638034330180000000
-  documentationUrl: 
-  hasRepository: 1
-  repository:
-    type: git
-    url: https://github.cds.internal.unity3d.com/unity/arfoundation.git
-    revision: f49c023e846a14016db6ff2bc4c5d0d2e421bef6
-    path: 
-  unityLifecycle:
-    version: 4.2.7
-    nextVersion: 
 - packageId: com.unity.xr.magicleap@6.4.1
   testable: 0
   isDirectDependency: 0
@@ -4866,8 +5024,10 @@ m_ResolvedPackages:
     - 1.4.2
     - 1.4.3
     - 1.4.4
+    - 1.5.0
     compatible:
     - 1.4.4
+    - 1.5.0
     verified: 1.4.4
   dependencies:
   - name: com.unity.modules.uielements
@@ -4912,164 +5072,6 @@ m_ResolvedPackages:
     path: 
   unityLifecycle:
     version: 1.4.4
-    nextVersion: 
-- packageId: com.unity.xr.arsubsystems@4.2.7
-  testable: 0
-  isDirectDependency: 0
-  version: 4.2.7
-  source: 1
-  resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\School layout\Library\PackageCache\com.unity.xr.arsubsystems@4.2.7
-  assetPath: Packages/com.unity.xr.arsubsystems
-  name: com.unity.xr.arsubsystems
-  displayName: AR Subsystems
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: asset
-  description: Contains definitions for AR Subsystems. This package is a dependency
-    of provider packages, as well as AR Foundation.
-  status: 0
-  errors: []
-  versions:
-    all:
-    - 2.0.2
-    - 2.1.0-preview.1
-    - 2.1.0-preview.2
-    - 2.1.0
-    - 2.1.1
-    - 2.1.2
-    - 2.1.3
-    - 2.1.14
-    - 2.1.16
-    - 2.1.18
-    - 2.1.19
-    - 2.2.0-preview.2
-    - 2.2.0-preview.3
-    - 2.2.0-preview.6
-    - 3.0.0-preview.1
-    - 3.0.0-preview.2
-    - 3.0.0-preview.3
-    - 3.0.0-preview.4
-    - 3.0.0
-    - 3.0.2
-    - 3.1.0-preview.1
-    - 3.1.0-preview.2
-    - 3.1.0-preview.4
-    - 3.1.0-preview.6
-    - 3.1.0-preview.7
-    - 3.1.0-preview.8
-    - 3.1.3
-    - 3.1.5
-    - 3.1.6
-    - 3.1.10
-    - 4.0.0-preview.1
-    - 4.0.0-preview.3
-    - 4.0.1
-    - 4.0.8
-    - 4.0.9
-    - 4.0.10
-    - 4.0.12
-    - 4.1.0-preview.1
-    - 4.1.0-preview.2
-    - 4.1.0-preview.3
-    - 4.1.0-preview.5
-    - 4.1.0-preview.6
-    - 4.1.0-preview.7
-    - 4.1.0-preview.9
-    - 4.1.0-preview.10
-    - 4.1.0-preview.11
-    - 4.1.0-preview.12
-    - 4.1.0-preview.13
-    - 4.1.1
-    - 4.1.3
-    - 4.1.5
-    - 4.1.7
-    - 4.1.9
-    - 4.1.10
-    - 4.1.12
-    - 4.1.13
-    - 4.2.0-pre.2
-    - 4.2.0-pre.3
-    - 4.2.0-pre.4
-    - 4.2.0-pre.5
-    - 4.2.0-pre.7
-    - 4.2.0-pre.8
-    - 4.2.0-pre.9
-    - 4.2.0-pre.10
-    - 4.2.0-pre.12
-    - 4.2.0
-    - 4.2.1
-    - 4.2.2
-    - 4.2.3
-    - 4.2.6
-    - 4.2.7
-    - 5.0.0-pre.5
-    - 5.0.0-pre.6
-    - 5.0.0-pre.7
-    - 5.0.0-pre.8
-    - 5.0.0-pre.9
-    - 5.0.0-pre.12
-    - 5.0.0-pre.13
-    - 5.0.2
-    compatible:
-    - 4.2.7
-    - 5.0.0-pre.5
-    - 5.0.0-pre.6
-    - 5.0.0-pre.7
-    - 5.0.0-pre.8
-    - 5.0.0-pre.9
-    - 5.0.0-pre.12
-    - 5.0.0-pre.13
-    - 5.0.2
-    verified: 4.2.7
-  dependencies:
-  - name: com.unity.subsystemregistration
-    version: 1.1.0
-  - name: com.unity.xr.management
-    version: 4.0.1
-  resolvedDependencies:
-  - name: com.unity.subsystemregistration
-    version: 1.1.0
-  - name: com.unity.modules.subsystems
-    version: 1.0.0
-  - name: com.unity.modules.jsonserialize
-    version: 1.0.0
-  - name: com.unity.xr.management
-    version: 4.2.0
-  - name: com.unity.modules.vr
-    version: 1.0.0
-  - name: com.unity.modules.physics
-    version: 1.0.0
-  - name: com.unity.modules.xr
-    version: 1.0.0
-  - name: com.unity.xr.legacyinputhelpers
-    version: 2.1.10
-  keywords:
-  - subsystem
-  - XR
-  - AR
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-  hideInEditor: 0
-  isAssetStorePackage: 0
-  datePublishedTicks: 638034330150000000
-  documentationUrl: 
-  hasRepository: 1
-  repository:
-    type: git
-    url: https://github.cds.internal.unity3d.com/unity/arfoundation.git
-    revision: f49c023e846a14016db6ff2bc4c5d0d2e421bef6
-    path: 
-  unityLifecycle:
-    version: 4.2.7
     nextVersion: 
 - packageId: com.unity.xr.interactionsubsystems@1.0.1
   testable: 0
