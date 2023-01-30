@@ -33,7 +33,7 @@ public class Algorithm : MonoBehaviour
     {
         Console.WriteLine(ARSession.CheckAvailability());
         //var pointCloudPos = _pointCloud.positions;
-        PosPers posPers = startPosPers();     
+        posPers = startPosPers();     
                             
     }
 
@@ -73,12 +73,9 @@ public class Algorithm : MonoBehaviour
 
         //This transform from local to world space
         transform.TransformPoint(camPosition);
-
-        transform.Translate(Vector3.up * Input.GetAxis("Vertical"));
-        transform.Translate(Vector3.right * Input.GetAxis("Horizontal"));
-        
+     
         // Call the setPosPers method in the PosPers class
-        posPers.setPosPers(transform.localPosition.x, transform.localPosition.y, transform.localPosition.z, Input.GetAxis("Vertical"), Input.GetAxis("Horizontal"));
+        posPers.setPosPers(transform.position.x, transform.position.y, transform.position.z, Input.GetAxis("Vertical"), Input.GetAxis("Horizontal"));
 
     }
 
@@ -96,7 +93,6 @@ public class Algorithm : MonoBehaviour
 
             // Set the ARPoseDriver's target transform to the ARReferencePoint
             var map_long_lat = UnityEngine.Quaternion.AngleAxis(device_long, -Vector3.up) * UnityEngine.Quaternion.AngleAxis(device_lat, -Vector3.right) * new Vector3(0, 0, 1);
-
             _arPoseDriver.transform.TransformPoint(map_long_lat);       
             _arPoseDriver.enabled = true;
         }
@@ -143,6 +139,7 @@ public class Algorithm : MonoBehaviour
         init_z = _pointCloud.transform.position.z;
         init_horizontal = Input.GetAxis("Horizontal");
         init_vertical = Input.GetAxis("Vertical");
+        transform.SetParent(_pointCloud.transform); // sets the parent location
 
         // Initilize a new PosPers object that will be called in the constructor as reference
         posPers = new PosPers(init_x, init_y, init_z, init_vertical, init_horizontal); // Sets the initial 
