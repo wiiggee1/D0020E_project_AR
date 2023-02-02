@@ -3940,8 +3940,10 @@ m_ResolvedPackages:
     - 1.1.0-pre.2
     - 1.1.0
     - 1.1.1
+    - 1.2.2
     compatible:
     - 1.1.1
+    - 1.2.2
     verified: 1.1.1
   dependencies: []
   resolvedDependencies: []
