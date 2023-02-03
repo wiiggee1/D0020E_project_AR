@@ -13,6 +13,7 @@ using System.Numerics;
 using Vector3 = UnityEngine.Vector3;
 using UnityEngine.XR.OpenXR.Input;
 using UnityEngine.XR.ARCore;
+using UnityEngine.XR.ARSubsystems;
 
 public class Algorithm : MonoBehaviour
 {
@@ -58,6 +59,12 @@ public class Algorithm : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        generateAlgorithmLocation();
+
+    }
+
+    private void generateAlgorithmLocation()
+    {
         // The transform object is attached to the gameobject 
 
         //Vector3 camPosition = arCameraObject.gameObject.transform.position;
@@ -68,15 +75,15 @@ public class Algorithm : MonoBehaviour
 
 
         //This will set the local space from the camera position vector
+        _pointCloud.transform.SetLocalPositionAndRotation(camPosition,catRotation);
         transform.localPosition = camPosition;
         transform.localRotation = catRotation;
 
         //This transform from local to world space
         transform.TransformPoint(camPosition);
-     
+
         // Call the setPosPers method in the PosPers class
         posPers.setPosPers(transform.position.x, transform.position.y, transform.position.z, Input.GetAxis("Vertical"), Input.GetAxis("Horizontal"));
-
     }
 
     private void ARSessionStateChanged(ARSessionStateChangedEventArgs args)
