@@ -3,10 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using UnityEngine;
 using System.IO;
-using CsvHelper;
-using CsvHelper.Configuration;
 using System;
-using ServiceStack.Text;
 
 // Inherits the parent base class of the "AlgorithmClass"
 public class SaveData : Algorithm
@@ -19,8 +16,8 @@ public class SaveData : Algorithm
     {
         _posPers.Add("lat", new List<float>());
         _posPers.Add("long", new List<float>());
-        _posPers.Add("safeZone_lat", );
-        _posPers.Add("safeZone_long", sz_long);
+        //_posPers.Add("safeZone_lat", );
+        //_posPers.Add("safeZone_long", sz_long);
     }
 
     public void SavePosPersAndTime()
@@ -39,20 +36,6 @@ public class SaveData : Algorithm
     public void saveToFile()
     {
         // Should save the data of the run into a local file (csv)
-
-        var config = new CsvConfiguration(CultureInfo.InvariantCulture)
-        {
-            NewLine = Environment.NewLine,
-        };
-
-        using (var writer = new StreamWriter("path\\to\\location_data.csv"))
-        using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
-        {
-            csv.WriteRecords(_posPers);
-        }
-
-
-
 
     }
 

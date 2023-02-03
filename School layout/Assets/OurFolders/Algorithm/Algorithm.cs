@@ -17,30 +17,42 @@ using UnityEngine.XR.ARSubsystems;
 
 public class Algorithm : MonoBehaviour
 {
-    public ARCameraManager arCameraObject; //ARCore device gameobject
+    private ARCameraManager arCameraObject; //ARCore device gameobject
     private PosPers posPers;
-    private float[] startPosition;
     private ARPointCloud _pointCloud; // The AR Foundation PointCloud script
     private ARSessionOrigin _arSessionOrigin;
-    private ARTrackable _arTrackable;
     private ARSession _arSession;
     private ARAnchor _arPoseDriver;
 
+    private UnityEngine.Vector2 deviceLocation;
     private float device_lat; //device geodata
     private float device_long; //device geodata
+    private Vector3 arCameraPosition;
+    private UnityEngine.Quaternion arCameraRotation;
+    private float arHorizontal;
+    private float arVertical;
 
-    [Obsolete]
-    public Algorithm()
+    void Awake()
     {
-        Console.WriteLine(ARSession.CheckAvailability());
-        //var pointCloudPos = _pointCloud.positions;
-        posPers = startPosPers();     
-                            
+        // initialize the AR Session Origin component as reference during awake state of application. 
+        _arSessionOrigin = GetComponent<ARSessionOrigin>();
+        _pointCloud = GetComponent<ARPointCloud>();
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        if (ARSession.state == ARSessionState.Unsupported)
+        {
+            Debug.Log(ARSession.CheckAvailability());
+        }
+        else
+        {
+            // Start the AR session
+            _arSession.enabled = true;
+        }
+                  
+
         // Request permission to access the device's location (ANDROID)
         if (!Permission.HasUserAuthorizedPermission(Permission.FineLocation))
         {
@@ -52,38 +64,43 @@ public class Algorithm : MonoBehaviour
         }
         
         ARSession.stateChanged += ARSessionStateChanged;
-  
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        generateAlgorithmLocation();
+        mapCameraLocationData();
+        Debug.Log("x: "+_arSessionOrigin.transform.position.x+", y: "+_arSessionOrigin.transform.position.y + ", z: " + _arSessionOrigin.transform.position.z);
+    }
 
+    private void mapCameraLocationData()
+    {
+        // The transform object is attached to the gameobject 
+
+        //Vector3 camPositionCloud = _pointCloud.transform.position;
+        arCameraPosition = _arSessionOrigin.camera.transform.position;
+
+        //UnityEngine.Quaternion catRotation = _pointCloud.transform.rotation;
+        arCameraRotation = _arSessionOrigin.camera.transform.rotation;
+
+        // gets the euler angle for the horizontal and vertical movment in float
+        Vector3  arEulerAngles = arCameraRotation.eulerAngles;
+        arHorizontal = arEulerAngles.y;
+        arVertical = arEulerAngles.x;
+
+        //This will set the AR session space to world space in unity
+        _arSessionOrigin.camera.transform.SetPositionAndRotation(arCameraPosition, arCameraRotation);
+        Vector3 deviceToWorldLocation = _arSessionOrigin.camera.transform.localToWorldMatrix.GetPosition();
+        _arSessionOrigin.transform.position = deviceToWorldLocation;
+
+        // Call the setPosPers method in the PosPers class
+        posPers.setPosPers(arCameraPosition.x, arCameraPosition.y, arCameraPosition.z, arVertical, arHorizontal);
     }
 
     private void generateAlgorithmLocation()
     {
-        // The transform object is attached to the gameobject 
-
-        //Vector3 camPosition = arCameraObject.gameObject.transform.position;
-        Vector3 camPosition = _pointCloud.transform.position;
-
-        //UnityEngine.Quaternion catRotation = arCameraObject.transform.rotation;
-        UnityEngine.Quaternion catRotation = _pointCloud.transform.rotation;
-
-
-        //This will set the local space from the camera position vector
-        _pointCloud.transform.SetLocalPositionAndRotation(camPosition,catRotation);
-        transform.localPosition = camPosition;
-        transform.localRotation = catRotation;
-
-        //This transform from local to world space
-        transform.TransformPoint(camPosition);
-
-        // Call the setPosPers method in the PosPers class
-        posPers.setPosPers(_pointCloud.transform.position.x, _pointCloud.transform.position.y, _pointCloud.transform.position.z, Input.GetAxis("Vertical"), Input.GetAxis("Horizontal"));
+        // SLAM and pointCloud??????
     }
 
     private void ARSessionStateChanged(ARSessionStateChangedEventArgs args)
@@ -96,6 +113,8 @@ public class Algorithm : MonoBehaviour
             // Using the android device's current geolocation
             device_lat = Input.location.lastData.latitude;
             device_long = Input.location.lastData.longitude;
+            deviceLocation = new UnityEngine.Vector2(device_lat, device_long);
+
             Input.location.Stop(); // stops the location service updates only need reference point
 
             // Set the ARPoseDriver's target transform to the ARReferencePoint
