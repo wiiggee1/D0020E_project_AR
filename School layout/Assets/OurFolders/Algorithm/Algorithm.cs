@@ -83,7 +83,7 @@ public class Algorithm : MonoBehaviour
         transform.TransformPoint(camPosition);
 
         // Call the setPosPers method in the PosPers class
-        posPers.setPosPers(transform.position.x, transform.position.y, transform.position.z, Input.GetAxis("Vertical"), Input.GetAxis("Horizontal"));
+        posPers.setPosPers(_pointCloud.transform.position.x, _pointCloud.transform.position.y, _pointCloud.transform.position.z, Input.GetAxis("Vertical"), Input.GetAxis("Horizontal"));
     }
 
     private void ARSessionStateChanged(ARSessionStateChangedEventArgs args)
@@ -130,8 +130,7 @@ public class Algorithm : MonoBehaviour
         
         try
         {
-            _arSession.enabled = true; //will start the AR session
-            
+            _arSession.enabled = true; //will start the AR session        
         }
         catch 
         {
@@ -152,7 +151,6 @@ public class Algorithm : MonoBehaviour
         posPers = new PosPers(init_x, init_y, init_z, init_vertical, init_horizontal); // Sets the initial 
 
         return posPers;
-
     }
 
     public ARSession arSession
@@ -168,7 +166,6 @@ public class Algorithm : MonoBehaviour
 
     public bool safeZoneReached()
     {
-
         bool isReached = false;
         return isReached;
     }
