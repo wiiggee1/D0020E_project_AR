@@ -971,19 +971,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MockRuntime_ReceiveScriptEvent_m4A8AAF0A
 		if (L_1)
 		{
 			G_B2_0 = L_1;
-			goto IL_000a;
+			goto IL_000b;
 		}
 	}
 	{
-		return;
+		goto IL_0013;
 	}
 
-IL_000a:
+IL_000b:
 	{
 		int32_t L_2 = ___evt0;
 		uint64_t L_3 = ___param1;
 		NullCheck(G_B2_0);
 		ScriptEventDelegate_Invoke_m41274335D95A563973BC60763CF3853920443403_inline(G_B2_0, L_2, L_3, NULL);
+	}
+
+IL_0013:
+	{
 		return;
 	}
 }
@@ -991,6 +995,8 @@ IL_000a:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t MockRuntime_BeforeFunctionCallback_m70AB6148D0D9FCD315ACDB6B46131514D128380D (String_t* ___function0, const RuntimeMethod* method) 
 {
 	BeforeFunctionDelegate_t767D515AE77977BF5EA389123E37EB685DDADDDA* V_0 = NULL;
+	bool V_1 = false;
+	int32_t V_2 = 0;
 	{
 		// var callback = GetBeforeFunctionCallback(function);
 		String_t* L_0 = ___function0;
@@ -999,31 +1005,43 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t MockRuntime_BeforeFunctionCallback_m7
 		V_0 = L_1;
 		// if(null == callback)
 		BeforeFunctionDelegate_t767D515AE77977BF5EA389123E37EB685DDADDDA* L_2 = V_0;
-		if (L_2)
+		V_1 = (bool)((((RuntimeObject*)(BeforeFunctionDelegate_t767D515AE77977BF5EA389123E37EB685DDADDDA*)L_2) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_3 = V_1;
+		if (!L_3)
 		{
-			goto IL_000c;
+			goto IL_0014;
 		}
 	}
 	{
 		// return XrResult.Success;
-		return (int32_t)(0);
+		V_2 = 0;
+		goto IL_001e;
 	}
 
-IL_000c:
+IL_0014:
 	{
 		// return callback(function);
-		BeforeFunctionDelegate_t767D515AE77977BF5EA389123E37EB685DDADDDA* L_3 = V_0;
-		String_t* L_4 = ___function0;
-		NullCheck(L_3);
-		int32_t L_5;
-		L_5 = BeforeFunctionDelegate_Invoke_mAA46B0A8103DF4E9C729D21D736BB9E6A38C70CA_inline(L_3, L_4, NULL);
-		return L_5;
+		BeforeFunctionDelegate_t767D515AE77977BF5EA389123E37EB685DDADDDA* L_4 = V_0;
+		String_t* L_5 = ___function0;
+		NullCheck(L_4);
+		int32_t L_6;
+		L_6 = BeforeFunctionDelegate_Invoke_mAA46B0A8103DF4E9C729D21D736BB9E6A38C70CA_inline(L_4, L_5, NULL);
+		V_2 = L_6;
+		goto IL_001e;
+	}
+
+IL_001e:
+	{
+		// }
+		int32_t L_7 = V_2;
+		return L_7;
 	}
 }
 // System.Void UnityEngine.XR.OpenXR.Features.Mock.MockRuntime::AfterFunctionCallback(System.String,UnityEngine.XR.OpenXR.NativeTypes.XrResult)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MockRuntime_AfterFunctionCallback_mFBBF94D9868CA6870E3A6A78D831145376372D46 (String_t* ___function0, int32_t ___result1, const RuntimeMethod* method) 
 {
 	AfterFunctionDelegate_t2794658426C2B81F53841DCC65EED4E864522552* V_0 = NULL;
+	bool V_1 = false;
 	{
 		// var callback = GetAfterFunctionCallback(function);
 		String_t* L_0 = ___function0;
@@ -1032,24 +1050,30 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MockRuntime_AfterFunctionCallback_mFBBF9
 		V_0 = L_1;
 		// if (null == callback)
 		AfterFunctionDelegate_t2794658426C2B81F53841DCC65EED4E864522552* L_2 = V_0;
-		if (L_2)
+		V_1 = (bool)((((RuntimeObject*)(AfterFunctionDelegate_t2794658426C2B81F53841DCC65EED4E864522552*)L_2) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_3 = V_1;
+		if (!L_3)
 		{
-			goto IL_000b;
+			goto IL_0012;
 		}
 	}
 	{
 		// return;
-		return;
+		goto IL_001b;
 	}
 
-IL_000b:
+IL_0012:
 	{
 		// callback(function, result);
-		AfterFunctionDelegate_t2794658426C2B81F53841DCC65EED4E864522552* L_3 = V_0;
-		String_t* L_4 = ___function0;
-		int32_t L_5 = ___result1;
-		NullCheck(L_3);
-		AfterFunctionDelegate_Invoke_mF8B0A0BF8DCC84E37AB367200F2D081B9706A115_inline(L_3, L_4, L_5, NULL);
+		AfterFunctionDelegate_t2794658426C2B81F53841DCC65EED4E864522552* L_4 = V_0;
+		String_t* L_5 = ___function0;
+		int32_t L_6 = ___result1;
+		NullCheck(L_4);
+		AfterFunctionDelegate_Invoke_mF8B0A0BF8DCC84E37AB367200F2D081B9706A115_inline(L_4, L_5, L_6, NULL);
+	}
+
+IL_001b:
+	{
 		// }
 		return;
 	}
@@ -1077,71 +1101,87 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MockRuntime_SetFunctionCallback_m476A001
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	BeforeFunctionDelegate_t767D515AE77977BF5EA389123E37EB685DDADDDA* G_B17_0 = NULL;
+	bool V_0 = false;
+	bool V_1 = false;
+	bool V_2 = false;
+	bool V_3 = false;
+	bool V_4 = false;
+	bool V_5 = false;
+	bool V_6 = false;
+	bool V_7 = false;
 	BeforeFunctionDelegate_t767D515AE77977BF5EA389123E37EB685DDADDDA* G_B19_0 = NULL;
-	BeforeFunctionDelegate_t767D515AE77977BF5EA389123E37EB685DDADDDA* G_B18_0 = NULL;
-	AfterFunctionDelegate_t2794658426C2B81F53841DCC65EED4E864522552* G_B20_0 = NULL;
-	BeforeFunctionDelegate_t767D515AE77977BF5EA389123E37EB685DDADDDA* G_B20_1 = NULL;
+	BeforeFunctionDelegate_t767D515AE77977BF5EA389123E37EB685DDADDDA* G_B21_0 = NULL;
+	BeforeFunctionDelegate_t767D515AE77977BF5EA389123E37EB685DDADDDA* G_B20_0 = NULL;
+	AfterFunctionDelegate_t2794658426C2B81F53841DCC65EED4E864522552* G_B22_0 = NULL;
+	BeforeFunctionDelegate_t767D515AE77977BF5EA389123E37EB685DDADDDA* G_B22_1 = NULL;
 	{
 		// if (beforeCallback != null)
 		BeforeFunctionDelegate_t767D515AE77977BF5EA389123E37EB685DDADDDA* L_0 = ___beforeCallback1;
-		if (!L_0)
+		V_0 = (bool)((!(((RuntimeObject*)(BeforeFunctionDelegate_t767D515AE77977BF5EA389123E37EB685DDADDDA*)L_0) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
 		{
-			goto IL_0022;
+			goto IL_0030;
 		}
 	}
 	{
 		// if (null == s_BeforeFunctionCallbacks)
-		Dictionary_2_tE800B4C2237603A792FFCCFB9BFC21EA79CB7F3F* L_1 = ((MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_StaticFields*)il2cpp_codegen_static_fields_for(MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_il2cpp_TypeInfo_var))->___s_BeforeFunctionCallbacks_17;
-		if (L_1)
+		Dictionary_2_tE800B4C2237603A792FFCCFB9BFC21EA79CB7F3F* L_2 = ((MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_StaticFields*)il2cpp_codegen_static_fields_for(MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_il2cpp_TypeInfo_var))->___s_BeforeFunctionCallbacks_17;
+		V_1 = (bool)((((RuntimeObject*)(Dictionary_2_tE800B4C2237603A792FFCCFB9BFC21EA79CB7F3F*)L_2) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_3 = V_1;
+		if (!L_3)
 		{
-			goto IL_0014;
+			goto IL_0020;
 		}
 	}
 	{
 		// s_BeforeFunctionCallbacks = new Dictionary<string, BeforeFunctionDelegate>();
-		Dictionary_2_tE800B4C2237603A792FFCCFB9BFC21EA79CB7F3F* L_2 = (Dictionary_2_tE800B4C2237603A792FFCCFB9BFC21EA79CB7F3F*)il2cpp_codegen_object_new(Dictionary_2_tE800B4C2237603A792FFCCFB9BFC21EA79CB7F3F_il2cpp_TypeInfo_var);
-		NullCheck(L_2);
-		Dictionary_2__ctor_m9C4D0FB47A0BF06B9963582354883C7F4922A84D(L_2, Dictionary_2__ctor_m9C4D0FB47A0BF06B9963582354883C7F4922A84D_RuntimeMethod_var);
-		((MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_StaticFields*)il2cpp_codegen_static_fields_for(MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_il2cpp_TypeInfo_var))->___s_BeforeFunctionCallbacks_17 = L_2;
-		Il2CppCodeGenWriteBarrier((void**)(&((MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_StaticFields*)il2cpp_codegen_static_fields_for(MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_il2cpp_TypeInfo_var))->___s_BeforeFunctionCallbacks_17), (void*)L_2);
+		Dictionary_2_tE800B4C2237603A792FFCCFB9BFC21EA79CB7F3F* L_4 = (Dictionary_2_tE800B4C2237603A792FFCCFB9BFC21EA79CB7F3F*)il2cpp_codegen_object_new(Dictionary_2_tE800B4C2237603A792FFCCFB9BFC21EA79CB7F3F_il2cpp_TypeInfo_var);
+		NullCheck(L_4);
+		Dictionary_2__ctor_m9C4D0FB47A0BF06B9963582354883C7F4922A84D(L_4, Dictionary_2__ctor_m9C4D0FB47A0BF06B9963582354883C7F4922A84D_RuntimeMethod_var);
+		((MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_StaticFields*)il2cpp_codegen_static_fields_for(MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_il2cpp_TypeInfo_var))->___s_BeforeFunctionCallbacks_17 = L_4;
+		Il2CppCodeGenWriteBarrier((void**)(&((MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_StaticFields*)il2cpp_codegen_static_fields_for(MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_il2cpp_TypeInfo_var))->___s_BeforeFunctionCallbacks_17), (void*)L_4);
 	}
 
-IL_0014:
+IL_0020:
 	{
 		// s_BeforeFunctionCallbacks[function] = beforeCallback;
-		Dictionary_2_tE800B4C2237603A792FFCCFB9BFC21EA79CB7F3F* L_3 = ((MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_StaticFields*)il2cpp_codegen_static_fields_for(MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_il2cpp_TypeInfo_var))->___s_BeforeFunctionCallbacks_17;
-		String_t* L_4 = ___function0;
-		BeforeFunctionDelegate_t767D515AE77977BF5EA389123E37EB685DDADDDA* L_5 = ___beforeCallback1;
-		NullCheck(L_3);
-		Dictionary_2_set_Item_m17C6500F4A39584F230E69E055B6EDCF7CE4032E(L_3, L_4, L_5, Dictionary_2_set_Item_m17C6500F4A39584F230E69E055B6EDCF7CE4032E_RuntimeMethod_var);
-		goto IL_0047;
+		Dictionary_2_tE800B4C2237603A792FFCCFB9BFC21EA79CB7F3F* L_5 = ((MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_StaticFields*)il2cpp_codegen_static_fields_for(MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_il2cpp_TypeInfo_var))->___s_BeforeFunctionCallbacks_17;
+		String_t* L_6 = ___function0;
+		BeforeFunctionDelegate_t767D515AE77977BF5EA389123E37EB685DDADDDA* L_7 = ___beforeCallback1;
+		NullCheck(L_5);
+		Dictionary_2_set_Item_m17C6500F4A39584F230E69E055B6EDCF7CE4032E(L_5, L_6, L_7, Dictionary_2_set_Item_m17C6500F4A39584F230E69E055B6EDCF7CE4032E_RuntimeMethod_var);
+		goto IL_0061;
 	}
 
-IL_0022:
+IL_0030:
 	{
 		// else if (s_BeforeFunctionCallbacks != null)
-		Dictionary_2_tE800B4C2237603A792FFCCFB9BFC21EA79CB7F3F* L_6 = ((MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_StaticFields*)il2cpp_codegen_static_fields_for(MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_il2cpp_TypeInfo_var))->___s_BeforeFunctionCallbacks_17;
-		if (!L_6)
+		Dictionary_2_tE800B4C2237603A792FFCCFB9BFC21EA79CB7F3F* L_8 = ((MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_StaticFields*)il2cpp_codegen_static_fields_for(MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_il2cpp_TypeInfo_var))->___s_BeforeFunctionCallbacks_17;
+		V_2 = (bool)((!(((RuntimeObject*)(Dictionary_2_tE800B4C2237603A792FFCCFB9BFC21EA79CB7F3F*)L_8) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
+		bool L_9 = V_2;
+		if (!L_9)
 		{
-			goto IL_0047;
+			goto IL_0061;
 		}
 	}
 	{
 		// s_BeforeFunctionCallbacks.Remove(function);
-		Dictionary_2_tE800B4C2237603A792FFCCFB9BFC21EA79CB7F3F* L_7 = ((MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_StaticFields*)il2cpp_codegen_static_fields_for(MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_il2cpp_TypeInfo_var))->___s_BeforeFunctionCallbacks_17;
-		String_t* L_8 = ___function0;
-		NullCheck(L_7);
-		bool L_9;
-		L_9 = Dictionary_2_Remove_m1D16C2805D2C90CE9E9F75DD087A02771665799C(L_7, L_8, Dictionary_2_Remove_m1D16C2805D2C90CE9E9F75DD087A02771665799C_RuntimeMethod_var);
-		// if (s_BeforeFunctionCallbacks.Count == 0)
 		Dictionary_2_tE800B4C2237603A792FFCCFB9BFC21EA79CB7F3F* L_10 = ((MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_StaticFields*)il2cpp_codegen_static_fields_for(MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_il2cpp_TypeInfo_var))->___s_BeforeFunctionCallbacks_17;
+		String_t* L_11 = ___function0;
 		NullCheck(L_10);
-		int32_t L_11;
-		L_11 = Dictionary_2_get_Count_m53A2E81E4273B7F237467FD0E411CD76F6A335D0(L_10, Dictionary_2_get_Count_m53A2E81E4273B7F237467FD0E411CD76F6A335D0_RuntimeMethod_var);
-		if (L_11)
+		bool L_12;
+		L_12 = Dictionary_2_Remove_m1D16C2805D2C90CE9E9F75DD087A02771665799C(L_10, L_11, Dictionary_2_Remove_m1D16C2805D2C90CE9E9F75DD087A02771665799C_RuntimeMethod_var);
+		// if (s_BeforeFunctionCallbacks.Count == 0)
+		Dictionary_2_tE800B4C2237603A792FFCCFB9BFC21EA79CB7F3F* L_13 = ((MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_StaticFields*)il2cpp_codegen_static_fields_for(MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_il2cpp_TypeInfo_var))->___s_BeforeFunctionCallbacks_17;
+		NullCheck(L_13);
+		int32_t L_14;
+		L_14 = Dictionary_2_get_Count_m53A2E81E4273B7F237467FD0E411CD76F6A335D0(L_13, Dictionary_2_get_Count_m53A2E81E4273B7F237467FD0E411CD76F6A335D0_RuntimeMethod_var);
+		V_3 = (bool)((((int32_t)L_14) == ((int32_t)0))? 1 : 0);
+		bool L_15 = V_3;
+		if (!L_15)
 		{
-			goto IL_0047;
+			goto IL_0060;
 		}
 	}
 	{
@@ -1150,67 +1190,79 @@ IL_0022:
 		Il2CppCodeGenWriteBarrier((void**)(&((MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_StaticFields*)il2cpp_codegen_static_fields_for(MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_il2cpp_TypeInfo_var))->___s_BeforeFunctionCallbacks_17), (void*)(Dictionary_2_tE800B4C2237603A792FFCCFB9BFC21EA79CB7F3F*)NULL);
 	}
 
-IL_0047:
+IL_0060:
+	{
+	}
+
+IL_0061:
 	{
 		// if (afterCallback != null)
-		AfterFunctionDelegate_t2794658426C2B81F53841DCC65EED4E864522552* L_12 = ___afterCallback2;
-		if (!L_12)
+		AfterFunctionDelegate_t2794658426C2B81F53841DCC65EED4E864522552* L_16 = ___afterCallback2;
+		V_4 = (bool)((!(((RuntimeObject*)(AfterFunctionDelegate_t2794658426C2B81F53841DCC65EED4E864522552*)L_16) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
+		bool L_17 = V_4;
+		if (!L_17)
 		{
-			goto IL_0069;
+			goto IL_0094;
 		}
 	}
 	{
 		// if (null == s_AfterFunctionCallbacks)
-		Dictionary_2_t07B33916E5B9BFBEDDE5C206E597C4A2071ED5E6* L_13 = ((MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_StaticFields*)il2cpp_codegen_static_fields_for(MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_il2cpp_TypeInfo_var))->___s_AfterFunctionCallbacks_16;
-		if (L_13)
+		Dictionary_2_t07B33916E5B9BFBEDDE5C206E597C4A2071ED5E6* L_18 = ((MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_StaticFields*)il2cpp_codegen_static_fields_for(MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_il2cpp_TypeInfo_var))->___s_AfterFunctionCallbacks_16;
+		V_5 = (bool)((((RuntimeObject*)(Dictionary_2_t07B33916E5B9BFBEDDE5C206E597C4A2071ED5E6*)L_18) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_19 = V_5;
+		if (!L_19)
 		{
-			goto IL_005b;
+			goto IL_0084;
 		}
 	}
 	{
 		// s_AfterFunctionCallbacks = new Dictionary<string, AfterFunctionDelegate>();
-		Dictionary_2_t07B33916E5B9BFBEDDE5C206E597C4A2071ED5E6* L_14 = (Dictionary_2_t07B33916E5B9BFBEDDE5C206E597C4A2071ED5E6*)il2cpp_codegen_object_new(Dictionary_2_t07B33916E5B9BFBEDDE5C206E597C4A2071ED5E6_il2cpp_TypeInfo_var);
-		NullCheck(L_14);
-		Dictionary_2__ctor_m17FD7D5D71E4212B62A691A7F0CD5526EAC6AC39(L_14, Dictionary_2__ctor_m17FD7D5D71E4212B62A691A7F0CD5526EAC6AC39_RuntimeMethod_var);
-		((MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_StaticFields*)il2cpp_codegen_static_fields_for(MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_il2cpp_TypeInfo_var))->___s_AfterFunctionCallbacks_16 = L_14;
-		Il2CppCodeGenWriteBarrier((void**)(&((MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_StaticFields*)il2cpp_codegen_static_fields_for(MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_il2cpp_TypeInfo_var))->___s_AfterFunctionCallbacks_16), (void*)L_14);
+		Dictionary_2_t07B33916E5B9BFBEDDE5C206E597C4A2071ED5E6* L_20 = (Dictionary_2_t07B33916E5B9BFBEDDE5C206E597C4A2071ED5E6*)il2cpp_codegen_object_new(Dictionary_2_t07B33916E5B9BFBEDDE5C206E597C4A2071ED5E6_il2cpp_TypeInfo_var);
+		NullCheck(L_20);
+		Dictionary_2__ctor_m17FD7D5D71E4212B62A691A7F0CD5526EAC6AC39(L_20, Dictionary_2__ctor_m17FD7D5D71E4212B62A691A7F0CD5526EAC6AC39_RuntimeMethod_var);
+		((MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_StaticFields*)il2cpp_codegen_static_fields_for(MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_il2cpp_TypeInfo_var))->___s_AfterFunctionCallbacks_16 = L_20;
+		Il2CppCodeGenWriteBarrier((void**)(&((MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_StaticFields*)il2cpp_codegen_static_fields_for(MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_il2cpp_TypeInfo_var))->___s_AfterFunctionCallbacks_16), (void*)L_20);
 	}
 
-IL_005b:
+IL_0084:
 	{
 		// s_AfterFunctionCallbacks[function] = afterCallback;
-		Dictionary_2_t07B33916E5B9BFBEDDE5C206E597C4A2071ED5E6* L_15 = ((MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_StaticFields*)il2cpp_codegen_static_fields_for(MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_il2cpp_TypeInfo_var))->___s_AfterFunctionCallbacks_16;
-		String_t* L_16 = ___function0;
-		AfterFunctionDelegate_t2794658426C2B81F53841DCC65EED4E864522552* L_17 = ___afterCallback2;
-		NullCheck(L_15);
-		Dictionary_2_set_Item_mEB67AD45031F043BBC4B9E563EC2D2518BAFDE22(L_15, L_16, L_17, Dictionary_2_set_Item_mEB67AD45031F043BBC4B9E563EC2D2518BAFDE22_RuntimeMethod_var);
-		goto IL_008e;
+		Dictionary_2_t07B33916E5B9BFBEDDE5C206E597C4A2071ED5E6* L_21 = ((MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_StaticFields*)il2cpp_codegen_static_fields_for(MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_il2cpp_TypeInfo_var))->___s_AfterFunctionCallbacks_16;
+		String_t* L_22 = ___function0;
+		AfterFunctionDelegate_t2794658426C2B81F53841DCC65EED4E864522552* L_23 = ___afterCallback2;
+		NullCheck(L_21);
+		Dictionary_2_set_Item_mEB67AD45031F043BBC4B9E563EC2D2518BAFDE22(L_21, L_22, L_23, Dictionary_2_set_Item_mEB67AD45031F043BBC4B9E563EC2D2518BAFDE22_RuntimeMethod_var);
+		goto IL_00c9;
 	}
 
-IL_0069:
+IL_0094:
 	{
 		// else if (s_AfterFunctionCallbacks != null)
-		Dictionary_2_t07B33916E5B9BFBEDDE5C206E597C4A2071ED5E6* L_18 = ((MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_StaticFields*)il2cpp_codegen_static_fields_for(MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_il2cpp_TypeInfo_var))->___s_AfterFunctionCallbacks_16;
-		if (!L_18)
+		Dictionary_2_t07B33916E5B9BFBEDDE5C206E597C4A2071ED5E6* L_24 = ((MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_StaticFields*)il2cpp_codegen_static_fields_for(MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_il2cpp_TypeInfo_var))->___s_AfterFunctionCallbacks_16;
+		V_6 = (bool)((!(((RuntimeObject*)(Dictionary_2_t07B33916E5B9BFBEDDE5C206E597C4A2071ED5E6*)L_24) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
+		bool L_25 = V_6;
+		if (!L_25)
 		{
-			goto IL_008e;
+			goto IL_00c9;
 		}
 	}
 	{
 		// s_AfterFunctionCallbacks.Remove(function);
-		Dictionary_2_t07B33916E5B9BFBEDDE5C206E597C4A2071ED5E6* L_19 = ((MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_StaticFields*)il2cpp_codegen_static_fields_for(MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_il2cpp_TypeInfo_var))->___s_AfterFunctionCallbacks_16;
-		String_t* L_20 = ___function0;
-		NullCheck(L_19);
-		bool L_21;
-		L_21 = Dictionary_2_Remove_m786082F7C7C48014E4310D38AEC2BEB53FD2869C(L_19, L_20, Dictionary_2_Remove_m786082F7C7C48014E4310D38AEC2BEB53FD2869C_RuntimeMethod_var);
+		Dictionary_2_t07B33916E5B9BFBEDDE5C206E597C4A2071ED5E6* L_26 = ((MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_StaticFields*)il2cpp_codegen_static_fields_for(MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_il2cpp_TypeInfo_var))->___s_AfterFunctionCallbacks_16;
+		String_t* L_27 = ___function0;
+		NullCheck(L_26);
+		bool L_28;
+		L_28 = Dictionary_2_Remove_m786082F7C7C48014E4310D38AEC2BEB53FD2869C(L_26, L_27, Dictionary_2_Remove_m786082F7C7C48014E4310D38AEC2BEB53FD2869C_RuntimeMethod_var);
 		// if (s_AfterFunctionCallbacks.Count == 0)
-		Dictionary_2_t07B33916E5B9BFBEDDE5C206E597C4A2071ED5E6* L_22 = ((MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_StaticFields*)il2cpp_codegen_static_fields_for(MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_il2cpp_TypeInfo_var))->___s_AfterFunctionCallbacks_16;
-		NullCheck(L_22);
-		int32_t L_23;
-		L_23 = Dictionary_2_get_Count_m9C89607F22DE5CBC0F10E446E79188543493C0E1(L_22, Dictionary_2_get_Count_m9C89607F22DE5CBC0F10E446E79188543493C0E1_RuntimeMethod_var);
-		if (L_23)
+		Dictionary_2_t07B33916E5B9BFBEDDE5C206E597C4A2071ED5E6* L_29 = ((MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_StaticFields*)il2cpp_codegen_static_fields_for(MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_il2cpp_TypeInfo_var))->___s_AfterFunctionCallbacks_16;
+		NullCheck(L_29);
+		int32_t L_30;
+		L_30 = Dictionary_2_get_Count_m9C89607F22DE5CBC0F10E446E79188543493C0E1(L_29, Dictionary_2_get_Count_m9C89607F22DE5CBC0F10E446E79188543493C0E1_RuntimeMethod_var);
+		V_7 = (bool)((((int32_t)L_30) == ((int32_t)0))? 1 : 0);
+		bool L_31 = V_7;
+		if (!L_31)
 		{
-			goto IL_008e;
+			goto IL_00c8;
 		}
 	}
 	{
@@ -1219,58 +1271,62 @@ IL_0069:
 		Il2CppCodeGenWriteBarrier((void**)(&((MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_StaticFields*)il2cpp_codegen_static_fields_for(MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_il2cpp_TypeInfo_var))->___s_AfterFunctionCallbacks_16), (void*)(Dictionary_2_t07B33916E5B9BFBEDDE5C206E597C4A2071ED5E6*)NULL);
 	}
 
-IL_008e:
+IL_00c8:
+	{
+	}
+
+IL_00c9:
 	{
 		// MockRuntime_RegisterFunctionCallbacks(
 		//     s_BeforeFunctionCallbacks != null ? BeforeFunctionCallback : (BeforeFunctionDelegate)null,
 		//     s_AfterFunctionCallbacks != null ? AfterFunctionCallback : (AfterFunctionDelegate)null);
-		Dictionary_2_tE800B4C2237603A792FFCCFB9BFC21EA79CB7F3F* L_24 = ((MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_StaticFields*)il2cpp_codegen_static_fields_for(MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_il2cpp_TypeInfo_var))->___s_BeforeFunctionCallbacks_17;
-		if (L_24)
+		Dictionary_2_tE800B4C2237603A792FFCCFB9BFC21EA79CB7F3F* L_32 = ((MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_StaticFields*)il2cpp_codegen_static_fields_for(MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_il2cpp_TypeInfo_var))->___s_BeforeFunctionCallbacks_17;
+		if (L_32)
 		{
-			goto IL_0098;
+			goto IL_00d3;
 		}
 	}
 	{
-		G_B17_0 = ((BeforeFunctionDelegate_t767D515AE77977BF5EA389123E37EB685DDADDDA*)(NULL));
-		goto IL_00a4;
+		G_B19_0 = ((BeforeFunctionDelegate_t767D515AE77977BF5EA389123E37EB685DDADDDA*)(NULL));
+		goto IL_00df;
 	}
 
-IL_0098:
+IL_00d3:
 	{
-		BeforeFunctionDelegate_t767D515AE77977BF5EA389123E37EB685DDADDDA* L_25 = (BeforeFunctionDelegate_t767D515AE77977BF5EA389123E37EB685DDADDDA*)il2cpp_codegen_object_new(BeforeFunctionDelegate_t767D515AE77977BF5EA389123E37EB685DDADDDA_il2cpp_TypeInfo_var);
-		NullCheck(L_25);
-		BeforeFunctionDelegate__ctor_m42A11E8DDD8B3706497D8CF87F6853D961D0C832(L_25, NULL, (intptr_t)((void*)MockRuntime_BeforeFunctionCallback_m70AB6148D0D9FCD315ACDB6B46131514D128380D_RuntimeMethod_var), NULL);
-		G_B17_0 = L_25;
+		BeforeFunctionDelegate_t767D515AE77977BF5EA389123E37EB685DDADDDA* L_33 = (BeforeFunctionDelegate_t767D515AE77977BF5EA389123E37EB685DDADDDA*)il2cpp_codegen_object_new(BeforeFunctionDelegate_t767D515AE77977BF5EA389123E37EB685DDADDDA_il2cpp_TypeInfo_var);
+		NullCheck(L_33);
+		BeforeFunctionDelegate__ctor_m42A11E8DDD8B3706497D8CF87F6853D961D0C832(L_33, NULL, (intptr_t)((void*)MockRuntime_BeforeFunctionCallback_m70AB6148D0D9FCD315ACDB6B46131514D128380D_RuntimeMethod_var), NULL);
+		G_B19_0 = L_33;
 	}
 
-IL_00a4:
+IL_00df:
 	{
-		Dictionary_2_t07B33916E5B9BFBEDDE5C206E597C4A2071ED5E6* L_26 = ((MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_StaticFields*)il2cpp_codegen_static_fields_for(MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_il2cpp_TypeInfo_var))->___s_AfterFunctionCallbacks_16;
-		G_B18_0 = G_B17_0;
-		if (L_26)
+		Dictionary_2_t07B33916E5B9BFBEDDE5C206E597C4A2071ED5E6* L_34 = ((MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_StaticFields*)il2cpp_codegen_static_fields_for(MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_il2cpp_TypeInfo_var))->___s_AfterFunctionCallbacks_16;
+		G_B20_0 = G_B19_0;
+		if (L_34)
 		{
-			G_B19_0 = G_B17_0;
-			goto IL_00ae;
+			G_B21_0 = G_B19_0;
+			goto IL_00e9;
 		}
 	}
 	{
-		G_B20_0 = ((AfterFunctionDelegate_t2794658426C2B81F53841DCC65EED4E864522552*)(NULL));
-		G_B20_1 = G_B18_0;
-		goto IL_00ba;
+		G_B22_0 = ((AfterFunctionDelegate_t2794658426C2B81F53841DCC65EED4E864522552*)(NULL));
+		G_B22_1 = G_B20_0;
+		goto IL_00f5;
 	}
 
-IL_00ae:
+IL_00e9:
 	{
-		AfterFunctionDelegate_t2794658426C2B81F53841DCC65EED4E864522552* L_27 = (AfterFunctionDelegate_t2794658426C2B81F53841DCC65EED4E864522552*)il2cpp_codegen_object_new(AfterFunctionDelegate_t2794658426C2B81F53841DCC65EED4E864522552_il2cpp_TypeInfo_var);
-		NullCheck(L_27);
-		AfterFunctionDelegate__ctor_m70B1A5F67C275B7064C9E1731B27326B97913F96(L_27, NULL, (intptr_t)((void*)MockRuntime_AfterFunctionCallback_mFBBF94D9868CA6870E3A6A78D831145376372D46_RuntimeMethod_var), NULL);
-		G_B20_0 = L_27;
-		G_B20_1 = G_B19_0;
+		AfterFunctionDelegate_t2794658426C2B81F53841DCC65EED4E864522552* L_35 = (AfterFunctionDelegate_t2794658426C2B81F53841DCC65EED4E864522552*)il2cpp_codegen_object_new(AfterFunctionDelegate_t2794658426C2B81F53841DCC65EED4E864522552_il2cpp_TypeInfo_var);
+		NullCheck(L_35);
+		AfterFunctionDelegate__ctor_m70B1A5F67C275B7064C9E1731B27326B97913F96(L_35, NULL, (intptr_t)((void*)MockRuntime_AfterFunctionCallback_mFBBF94D9868CA6870E3A6A78D831145376372D46_RuntimeMethod_var), NULL);
+		G_B22_0 = L_35;
+		G_B22_1 = G_B21_0;
 	}
 
-IL_00ba:
+IL_00f5:
 	{
-		MockRuntime_MockRuntime_RegisterFunctionCallbacks_m8FE38D5A0491C53530C2765EA4BA2CFDCA278A58(G_B20_1, G_B20_0, NULL);
+		MockRuntime_MockRuntime_RegisterFunctionCallbacks_m8FE38D5A0491C53530C2765EA4BA2CFDCA278A58(G_B22_1, G_B22_0, NULL);
 		// }
 		return;
 	}
@@ -1314,42 +1370,59 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR BeforeFunctionDelegate_t767D515AE77977BF5EA38
 		s_Il2CppMethodInitialized = true;
 	}
 	BeforeFunctionDelegate_t767D515AE77977BF5EA389123E37EB685DDADDDA* V_0 = NULL;
+	bool V_1 = false;
+	BeforeFunctionDelegate_t767D515AE77977BF5EA389123E37EB685DDADDDA* V_2 = NULL;
+	bool V_3 = false;
 	{
 		// if (null == s_BeforeFunctionCallbacks)
 		Dictionary_2_tE800B4C2237603A792FFCCFB9BFC21EA79CB7F3F* L_0 = ((MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_StaticFields*)il2cpp_codegen_static_fields_for(MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_il2cpp_TypeInfo_var))->___s_BeforeFunctionCallbacks_17;
-		if (L_0)
+		V_1 = (bool)((((RuntimeObject*)(Dictionary_2_tE800B4C2237603A792FFCCFB9BFC21EA79CB7F3F*)L_0) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_1 = V_1;
+		if (!L_1)
 		{
-			goto IL_0009;
+			goto IL_0011;
 		}
 	}
 	{
 		// return null;
-		return (BeforeFunctionDelegate_t767D515AE77977BF5EA389123E37EB685DDADDDA*)NULL;
+		V_2 = (BeforeFunctionDelegate_t767D515AE77977BF5EA389123E37EB685DDADDDA*)NULL;
+		goto IL_002d;
 	}
 
-IL_0009:
+IL_0011:
 	{
 		// if (!s_BeforeFunctionCallbacks.TryGetValue(function, out var callback))
-		Dictionary_2_tE800B4C2237603A792FFCCFB9BFC21EA79CB7F3F* L_1 = ((MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_StaticFields*)il2cpp_codegen_static_fields_for(MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_il2cpp_TypeInfo_var))->___s_BeforeFunctionCallbacks_17;
-		String_t* L_2 = ___function0;
-		NullCheck(L_1);
-		bool L_3;
-		L_3 = Dictionary_2_TryGetValue_m18B2157D65C4F2FC765F9AF4B4EBF7B8FF174E4F(L_1, L_2, (&V_0), Dictionary_2_TryGetValue_m18B2157D65C4F2FC765F9AF4B4EBF7B8FF174E4F_RuntimeMethod_var);
-		if (L_3)
+		Dictionary_2_tE800B4C2237603A792FFCCFB9BFC21EA79CB7F3F* L_2 = ((MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_StaticFields*)il2cpp_codegen_static_fields_for(MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_il2cpp_TypeInfo_var))->___s_BeforeFunctionCallbacks_17;
+		String_t* L_3 = ___function0;
+		NullCheck(L_2);
+		bool L_4;
+		L_4 = Dictionary_2_TryGetValue_m18B2157D65C4F2FC765F9AF4B4EBF7B8FF174E4F(L_2, L_3, (&V_0), Dictionary_2_TryGetValue_m18B2157D65C4F2FC765F9AF4B4EBF7B8FF174E4F_RuntimeMethod_var);
+		V_3 = (bool)((((int32_t)L_4) == ((int32_t)0))? 1 : 0);
+		bool L_5 = V_3;
+		if (!L_5)
 		{
-			goto IL_001a;
+			goto IL_0029;
 		}
 	}
 	{
 		// return null;
-		return (BeforeFunctionDelegate_t767D515AE77977BF5EA389123E37EB685DDADDDA*)NULL;
+		V_2 = (BeforeFunctionDelegate_t767D515AE77977BF5EA389123E37EB685DDADDDA*)NULL;
+		goto IL_002d;
 	}
 
-IL_001a:
+IL_0029:
 	{
 		// return callback;
-		BeforeFunctionDelegate_t767D515AE77977BF5EA389123E37EB685DDADDDA* L_4 = V_0;
-		return L_4;
+		BeforeFunctionDelegate_t767D515AE77977BF5EA389123E37EB685DDADDDA* L_6 = V_0;
+		V_2 = L_6;
+		goto IL_002d;
+	}
+
+IL_002d:
+	{
+		// }
+		BeforeFunctionDelegate_t767D515AE77977BF5EA389123E37EB685DDADDDA* L_7 = V_2;
+		return L_7;
 	}
 }
 // UnityEngine.XR.OpenXR.Features.Mock.MockRuntime/AfterFunctionDelegate UnityEngine.XR.OpenXR.Features.Mock.MockRuntime::GetAfterFunctionCallback(System.String)
@@ -1363,42 +1436,59 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AfterFunctionDelegate_t2794658426C2B81F53841D
 		s_Il2CppMethodInitialized = true;
 	}
 	AfterFunctionDelegate_t2794658426C2B81F53841DCC65EED4E864522552* V_0 = NULL;
+	bool V_1 = false;
+	AfterFunctionDelegate_t2794658426C2B81F53841DCC65EED4E864522552* V_2 = NULL;
+	bool V_3 = false;
 	{
 		// if (null == s_AfterFunctionCallbacks)
 		Dictionary_2_t07B33916E5B9BFBEDDE5C206E597C4A2071ED5E6* L_0 = ((MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_StaticFields*)il2cpp_codegen_static_fields_for(MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_il2cpp_TypeInfo_var))->___s_AfterFunctionCallbacks_16;
-		if (L_0)
+		V_1 = (bool)((((RuntimeObject*)(Dictionary_2_t07B33916E5B9BFBEDDE5C206E597C4A2071ED5E6*)L_0) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_1 = V_1;
+		if (!L_1)
 		{
-			goto IL_0009;
+			goto IL_0011;
 		}
 	}
 	{
 		// return null;
-		return (AfterFunctionDelegate_t2794658426C2B81F53841DCC65EED4E864522552*)NULL;
+		V_2 = (AfterFunctionDelegate_t2794658426C2B81F53841DCC65EED4E864522552*)NULL;
+		goto IL_002d;
 	}
 
-IL_0009:
+IL_0011:
 	{
 		// if (!s_AfterFunctionCallbacks.TryGetValue(function, out var callback))
-		Dictionary_2_t07B33916E5B9BFBEDDE5C206E597C4A2071ED5E6* L_1 = ((MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_StaticFields*)il2cpp_codegen_static_fields_for(MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_il2cpp_TypeInfo_var))->___s_AfterFunctionCallbacks_16;
-		String_t* L_2 = ___function0;
-		NullCheck(L_1);
-		bool L_3;
-		L_3 = Dictionary_2_TryGetValue_mC24ED42B1D62F196005DEF99454A30DCEF6E0A5F(L_1, L_2, (&V_0), Dictionary_2_TryGetValue_mC24ED42B1D62F196005DEF99454A30DCEF6E0A5F_RuntimeMethod_var);
-		if (L_3)
+		Dictionary_2_t07B33916E5B9BFBEDDE5C206E597C4A2071ED5E6* L_2 = ((MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_StaticFields*)il2cpp_codegen_static_fields_for(MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF_il2cpp_TypeInfo_var))->___s_AfterFunctionCallbacks_16;
+		String_t* L_3 = ___function0;
+		NullCheck(L_2);
+		bool L_4;
+		L_4 = Dictionary_2_TryGetValue_mC24ED42B1D62F196005DEF99454A30DCEF6E0A5F(L_2, L_3, (&V_0), Dictionary_2_TryGetValue_mC24ED42B1D62F196005DEF99454A30DCEF6E0A5F_RuntimeMethod_var);
+		V_3 = (bool)((((int32_t)L_4) == ((int32_t)0))? 1 : 0);
+		bool L_5 = V_3;
+		if (!L_5)
 		{
-			goto IL_001a;
+			goto IL_0029;
 		}
 	}
 	{
 		// return null;
-		return (AfterFunctionDelegate_t2794658426C2B81F53841DCC65EED4E864522552*)NULL;
+		V_2 = (AfterFunctionDelegate_t2794658426C2B81F53841DCC65EED4E864522552*)NULL;
+		goto IL_002d;
 	}
 
-IL_001a:
+IL_0029:
 	{
 		// return callback;
-		AfterFunctionDelegate_t2794658426C2B81F53841DCC65EED4E864522552* L_4 = V_0;
-		return L_4;
+		AfterFunctionDelegate_t2794658426C2B81F53841DCC65EED4E864522552* L_6 = V_0;
+		V_2 = L_6;
+		goto IL_002d;
+	}
+
+IL_002d:
+	{
+		// }
+		AfterFunctionDelegate_t2794658426C2B81F53841DCC65EED4E864522552* L_7 = V_2;
+		return L_7;
 	}
 }
 // System.Void UnityEngine.XR.OpenXR.Features.Mock.MockRuntime::ClearFunctionCallbacks()
@@ -1802,6 +1892,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MockRuntime_MockRuntime_RegisterFunction
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MockRuntime__ctor_mB159112DF9A71505BB0C77424F107CCF5906699F (MockRuntime_tC5F1019CA2D3E89010E3A3BFC89834251257B2AF* __this, const RuntimeMethod* method) 
 {
 	{
+		// public bool ignoreValidationErrors = false;
+		__this->___ignoreValidationErrors_20 = (bool)0;
 		OpenXRFeature__ctor_m120460E34ECC22ED2DB96797A6DCB5C870E78852(__this, NULL);
 		return;
 	}
