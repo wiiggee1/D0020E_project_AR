@@ -9,17 +9,6 @@ public class Main : MonoBehaviour
     public Timer timer;
     public bool QRscanned;
     public bool checkForQR;
-    
-
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    { 
-    }
 
     //When player pressed button to try and scan QR
     void QRscan() {
@@ -40,6 +29,7 @@ public class Main : MonoBehaviour
     void initGame() {
         if (QRscanned == true) {
             Debug.Log("Methods initialize game");
+        //SceneManager.LoadScene("GameScene");
         //obstacles.placeObstacles();
         //posPers.startPosPers();
         //timer.startTimer();

@@ -5,14 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public void PlayGame () {
+    public void Scan () {
         //Debug.Log("Pressed Scan QR");
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("ScanScene");
+    }
 
+        public void PlayGame () {
+        //Debug.Log("Pressed Scan QR");
+        SceneManager.LoadScene("GameScene");
     }
 
     public void QuitGame () {
-        //Debug.Log("Pressed Quit");
+        Debug.Log("Pressed Quit");
         Application.Quit();
 
     }
