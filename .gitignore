@@ -5,6 +5,10 @@
 [Bb]uild/
 [Bb]uilds/
 [Ll]ogs/
+<<<<<<< HEAD
+=======
+[Uu]ser[Ss]ettings/
+>>>>>>> Jenny_copy
 
 # Never ignore Asset meta data
 ![Aa]ssets/**/*.meta
