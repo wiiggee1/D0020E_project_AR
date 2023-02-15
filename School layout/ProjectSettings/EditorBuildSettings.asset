@@ -11,15 +11,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ScanScene.unity
     guid: e6a58ee66f7cf2f56a67a99a49505a96
-  - enabled: 1
-    path: Assets/Scenes/GameScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/BlankAR.unity
     guid: 6bdce89659816455b9f906fc62d19910
   - enabled: 1
     path: Assets/Scenes/Endscreen.unity
     guid: 447e13bdd547f69f1a0c9359966d7b06
+  - enabled: 1
+    path: Assets/Scenes/GameScene.unity
+    guid: d121a2f714e0f3246906ea46fc9fe67e
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 23b3a275f841053d5a44fec13852cdbd,
       type: 2}
