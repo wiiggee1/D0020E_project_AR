@@ -19,6 +19,7 @@ public class Main : MonoBehaviour
     void QRdetected() {
             QRscanned = true;
             checkForQR = false;
+            initGame();
     }
 
     //handler of issue #17
@@ -31,7 +32,6 @@ public class Main : MonoBehaviour
             Debug.Log("Methods initialize game");
         //SceneManager.LoadScene("GameScene");
         //obstacles.placeObstacles();
-        //posPers.startPosPers();
         //timer.startTimer();
         }
     }
