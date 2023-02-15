@@ -94,11 +94,11 @@ void Start()
         // The transform object is attached to the gameobject 
 
         //Vector3 camPositionCloud = _pointCloud.transform.position;
-        arCameraPosition = _arSessionOrigin.Camera.transform.position;
+        arCameraPosition = _arSessionOrigin.camera.transform.position;
         //arCameraPosition = _arPoseDriver.gameObject.transform.position;
 
         //UnityEngine.Quaternion catRotation = _pointCloud.transform.rotation;
-        arCameraRotation = _arSessionOrigin.Camera.transform.rotation;
+        arCameraRotation = _arSessionOrigin.camera.transform.rotation;
         //arCameraRotation = _arPoseDriver.gameObject.transform.rotation;
 
 
@@ -109,7 +109,7 @@ void Start()
 
         //This will set the AR session space to world space in unity
         //_arPoseDriver.gameObject.transform.SetPositionAndRotation(arCameraPosition, arCameraRotation);
-        Vector3 deviceToWorldLocation = _arSessionOrigin.Camera.transform.localToWorldMatrix.GetPosition();
+        Vector3 deviceToWorldLocation = _arSessionOrigin.camera.transform.localToWorldMatrix.GetPosition();
         //_arPoseDriver.gameObject.transform.position = deviceToWorldLocation;
 
         // Call the setCurrentPosPers method...

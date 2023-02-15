@@ -15,8 +15,8 @@ public class UIObject : MonoBehaviour
         var x = posData.arCameraPosition.x;
         var y = posData.arCameraPosition.y;
         var z = posData.arCameraPosition.z;
-        this.PositionText.text = "x: "+x.ToString() + ", " + "y: "+ y.ToString() + ", "+"z: "+z.ToString();
-        
+        PositionText.text = "x: "+x.ToString() + ", " + "y: "+ y.ToString() + ", "+"z: "+z.ToString();
+        //
     }
 }
 
