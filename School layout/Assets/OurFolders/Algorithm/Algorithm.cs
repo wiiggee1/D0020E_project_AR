@@ -16,17 +16,19 @@ using UnityEngine.XR.ARCore;
 using UnityEngine.XR.ARSubsystems;
 using UnityEngine.UI;
 using Unity.XR.CoreUtils;
-//using Accord.Math;
+//using MySqlConnector;
+using System.Threading.Tasks;
 
 public class Algorithm : MonoBehaviour
 {
     private ARCameraManager arCameraObject; //ARCore device gameobject
-    //private PosPers posPers;
     private ARPointCloud _pointCloud; // The AR Foundation PointCloud script
     private ARSessionOrigin _arSessionOrigin;
     private ARSession _arSession;
     private ARPoseDriver _arPoseDriver;
 
+    //public event Action<ARCameraFrameEventArgs> frameReceived;
+    public Text positionTextNew;
     private UnityEngine.Vector2 deviceLocation;
     private float device_lat; //device geodata
     private float device_long; //device geodata
@@ -34,31 +36,25 @@ public class Algorithm : MonoBehaviour
     public UnityEngine.Quaternion arCameraRotation;
     private float arHorizontal;
     private float arVertical;
-    private UnityEngine.Matrix4x4 pointCloudMatrix;
 
     float[] xPos = new float[] {};
     float[] yPos = new float[] {};
     float[] zPos = new float[] {};
     float[] verticalPos = new float[] {};
     float[] horizontalPos = new float[] {};
-    IDictionary<string, float[]> positionData = new Dictionary<string, float[]>();
+    public long? timeStampOutput;
+    float[] timeStampData = new float[] {};
+    Dictionary<string, float[]> positionData = new Dictionary<string, float[]>();
 
-    void Awake()
-    {
-        // initialize the AR Session Origin component as reference during awake state of application. 
-        _arSessionOrigin = GetComponent<ARSessionOrigin>();
-        _pointCloud = GetComponent<ARPointCloud>();
-        _arPoseDriver = GetComponent<ARPoseDriver>();
 
-}
 
-// Start is called before the first frame update
-void Start()
+    // Start is called before the first frame update
+    void Start()
     {
 
         if (ARSession.state == ARSessionState.Unsupported)
         {
-            Debug.Log(ARSession.CheckAvailability());
+            _arSession.enabled = false;
         }
         else
         {
@@ -76,17 +72,53 @@ void Start()
         {
             Input.location.Start(); //get's the android device current location.
         }
-        
+
+        //arCameraObject = FindObjectOfType<ARCameraManager>();
+        //arCameraObject.frameReceived += OnFrameReceived;
         ARSession.stateChanged += ARSessionStateChanged;
         
+    }
+    
+    void OnFrameReceived(ARCameraFrameEventArgs eventArgs)
+    {
+        var timeStampOutputFrame = eventArgs.timestampNs;
+        timeStampOutput = timeStampOutputFrame;
+        
+        var positionOutput = "Position data: x: " + arCameraPosition.x + ", y: "
+            + arCameraPosition.y + ", z: " + arCameraPosition.z;
+
+        //positionTextNew.text = positionOutput;
+        positionTextNew.text = positionOutput + ", timestamp: " + timeStampOutputFrame.ToString();
+    }
+
+    void OnEnable()
+    {
+        // initialize the AR Session Origin component as reference during awake state of application. 
+        _arSessionOrigin = GetComponent<ARSessionOrigin>();
+        _arSession = GetComponent<ARSession>();
+        _pointCloud = GetComponent<ARPointCloud>();
+        _arPoseDriver = GetComponent<ARPoseDriver>();
+        arCameraObject = GetComponent<ARCameraManager>();
+
+        arCameraObject.frameReceived += OnFrameReceived;
+    }
+
+    void OnDisable()
+    {
+        arCameraObject.frameReceived -= OnFrameReceived;
     }
 
     // Update is called once per frame
     void Update()
     {
+
         mapCameraLocationData();
-        var showpos = ("x: " + arCameraPosition.x + ", y: " + arCameraPosition.y + ", z: " + arCameraPosition.z);
-        
+
+        var positionOutput = "Position data: x: " + arCameraPosition.x + ", y: " 
+            + arCameraPosition.y + ", z: " + arCameraPosition.z;
+       
+        positionTextNew.text = positionOutput;
+        //positionTextNew.text = positionOutput + ", timestamp: " + timeStampOutput.ToString();
     }
 
     private void mapCameraLocationData()
@@ -95,12 +127,9 @@ void Start()
 
         //Vector3 camPositionCloud = _pointCloud.transform.position;
         arCameraPosition = _arSessionOrigin.camera.transform.position;
-        //arCameraPosition = _arPoseDriver.gameObject.transform.position;
 
         //UnityEngine.Quaternion catRotation = _pointCloud.transform.rotation;
         arCameraRotation = _arSessionOrigin.camera.transform.rotation;
-        //arCameraRotation = _arPoseDriver.gameObject.transform.rotation;
-
 
         // gets the euler angle for the horizontal and vertical movment in float
         Vector3 arEulerAngles = arCameraRotation.eulerAngles;
@@ -108,32 +137,12 @@ void Start()
         arVertical = arEulerAngles.x;
 
         //This will set the AR session space to world space in unity
-        //_arPoseDriver.gameObject.transform.SetPositionAndRotation(arCameraPosition, arCameraRotation);
-        Vector3 deviceToWorldLocation = _arSessionOrigin.camera.transform.localToWorldMatrix.GetPosition();
-        //_arPoseDriver.gameObject.transform.position = deviceToWorldLocation;
-
+        //Vector3 deviceToWorldLocation = _arSessionOrigin.camera.transform.localToWorldMatrix.GetPosition();
+        
         // Call the setCurrentPosPers method...
         setCurrentPosPers(arCameraPosition.x, arCameraPosition.y, arCameraPosition.z, arVertical, arHorizontal);
     }
-
-
-    private Vector3[] generateAlgorithmLocation(Vector3[] currentFramePoints, UnityEngine.Matrix4x4 pointCloudMatrix)
-    {
-        // SLAM and pointCloud matching, for finding the "iterative closest point (ICP) & NDT algorithms
-        // data structure backend for comparing features/detected landmarks (previously measured positions)
-        // PointCloud for map construction, generally movment is estimated sequentially by matching the point clouds. 
-
-        // prior frame pointcloud compares to the current frame pointcloud with its confidence????
-        Vector3[] mapped_points = new Vector3[currentFramePoints.Length];
-        int i = 0; 
-        while(i < currentFramePoints.Length)
-        {
-            mapped_points[i] = pointCloudMatrix.MultiplyPoint3x4(currentFramePoints[i]);
-            i++;
-        }
-        //Accord.Math.Matrix.ArgMin;
-        return mapped_points;
-    }
+ 
 
     private void ARSessionStateChanged(ARSessionStateChangedEventArgs args)
     {
@@ -165,44 +174,43 @@ void Start()
 
         verticalPos = verticalPos.Append(vertical).ToArray();
         horizontalPos = horizontalPos.Append(horizontal).ToArray();
+
+        timeStampData = timeStampData.Append((float)timeStampOutput).ToArray();
     }
 
     // Should be of type PosPers instead of double!
-    public float startPosPers()
+    public Dictionary<string, float[]> getPositionData()
     {
-        //QRScanner position should have a method for returning its coordinates and if QR is scanned? (readQR???)
-        float init_x;
-        float init_y;
-        float init_z;
-        float init_horizontal;
-        float init_vertical;
+        positionData.Add("x_position", xPos);
+        positionData.Add("y_position", yPos);
+        positionData.Add("z_position", zPos);
+
+        positionData.Add("vertical_position", verticalPos);
+        positionData.Add("horizontal_position", horizontalPos);
+
+        positionData.Add("timestamp", timeStampData);
+
+        return positionData;
+    }
+
+    /*
+    public async Task sqlHandlerAsync(string username, string password)
+    {
         
-        //init_x = _pointCloud.transform.position.x;
-        //init_y = _pointCloud.transform.position.y;
-        //init_z = _pointCloud.transform.position.z;
-        //init_horizontal = Input.GetAxis("Horizontal");
-        //init_vertical = Input.GetAxis("Vertical");
-        //transform.SetParent(_pointCloud.transform); // sets the parent location
+        MySqlConnectionStringBuilder credentials = new MySqlConnectionStringBuilder
+        {
+            Server = "127.0.0.1",
+            Port = 000,
+            UserID = username,
+            Password = password,
+        };
 
+        var connection = new MySqlConnection(credentials.ConnectionString);
+        await connection.OpenAsync();
 
-        return 0;
-    }
-
-    public ARSession arSession
-    {
-        get { return _arSession; }
-        set { _arSession = value; }
-    }
-
-    public void ResetButtonTrigger()
-    {
-        _arSession.Reset();
-    }
-
-    public bool safeZoneReached()
-    {
-        bool isReached = false;
-        return isReached;
-    }
+        var query = new MySqlCommand("INSERT INTO table_name (col1, col2...) VALUES (val1, val2...);", connection);
+        var query_output = await query.ExecuteReaderAsync();
+       
+} */
 
 }
