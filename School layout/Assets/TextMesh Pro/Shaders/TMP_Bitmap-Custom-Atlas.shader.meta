@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:School layout/Assets/ExampleAssets/Shaders/PlaneOcclusionShader.shader.meta
+guid: 77019c5445dccaf45bce9463f9c22924
+========
+guid: 48bb5f55d8670e349b6e614913f9d910
+>>>>>>>> Jenny_copy:School layout/Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader.meta
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  preprocessorOverride: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

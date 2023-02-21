@@ -5,29 +5,29 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638103374641955734
-    m_Hash: 1233157779
+      ticks: 638120619691437098
+    m_Hash: 2128873883
   m_LockFileStatus:
     m_FilePath: G:/Unity Projects/D0020E_project_AR/School layout/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638103374641955734
-    m_Hash: 3531985300
+      ticks: 638120619691477106
+    m_Hash: 3911204
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
   m_LocalFileStatus: []
 m_ProjectPath: G:/Unity Projects/D0020E_project_AR/School layout/Packages
-m_EditorVersion: 2021.3.13f1 (9e7d58001ecf)
+m_EditorVersion: 2021.3.15f1 (e8e88683f834)
 m_ResolvedPackages:
-- packageId: com.unity.collab-proxy@1.17.6
+- packageId: com.unity.collab-proxy@1.17.7
   testable: 0
   isDirectDependency: 1
-  version: 1.17.6
+  version: 1.17.7
   source: 1
-  resolvedPath: G:\Unity Projects\D0020E_project_AR\School layout\Library\PackageCache\com.unity.collab-proxy@1.17.6
+  resolvedPath: G:\Unity Projects\D0020E_project_AR\School layout\Library\PackageCache\com.unity.collab-proxy@1.17.7
   assetPath: Packages/com.unity.collab-proxy
   name: com.unity.collab-proxy
   displayName: Version Control
@@ -109,7 +109,6 @@ m_ResolvedPackages:
     - 2.1.0-preview.5
     - 2.1.0-preview.6
     compatible:
-    - 1.17.6
     - 1.17.7
     - 2.0.0-preview.6
     - 2.0.0-preview.8
@@ -128,7 +127,7 @@ m_ResolvedPackages:
     version: 1.0.1
   resolvedDependencies:
   - name: com.unity.services.core
-    version: 1.5.2
+    version: 1.6.0
   - name: com.unity.modules.unitywebrequest
     version: 1.0.0
   - name: com.unity.nuget.newtonsoft-json
@@ -159,16 +158,16 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 0
   isAssetStorePackage: 0
-  datePublishedTicks: 638009928240000000
+  datePublishedTicks: 638036787040000000
   documentationUrl: 
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.cloud.collaborate.git
-    revision: 3744f24b80468ef1336fbc234c93625c4a6287b0
+    revision: 1641a631fd39029595decb52bdfb641b32ed194c
     path: 
   unityLifecycle:
-    version: 1.17.6
+    version: 1.17.7
     nextVersion: 
 - packageId: com.unity.feature.ar@1.0.0
   testable: 0
@@ -211,7 +210,7 @@ m_ResolvedPackages:
     version: default
   resolvedDependencies:
   - name: com.unity.xr.arfoundation
-    version: 4.2.6
+    version: 4.2.7
   - name: com.unity.xr.arsubsystems
     version: 4.2.7
   - name: com.unity.subsystemregistration
@@ -221,7 +220,7 @@ m_ResolvedPackages:
   - name: com.unity.modules.jsonserialize
     version: 1.0.0
   - name: com.unity.xr.management
-    version: 4.2.0
+    version: 4.2.1
   - name: com.unity.modules.vr
     version: 1.0.0
   - name: com.unity.modules.physics
@@ -233,7 +232,7 @@ m_ResolvedPackages:
   - name: com.unity.modules.particlesystem
     version: 1.0.0
   - name: com.unity.xr.arkit
-    version: 4.2.6
+    version: 4.2.7
   - name: com.unity.editorcoroutines
     version: 1.0.0
   - name: com.unity.xr.arcore
@@ -257,11 +256,11 @@ m_ResolvedPackages:
   - name: com.unity.xr.interactionsubsystems
     version: 1.0.1
   - name: com.unity.xr.arkit-face-tracking
-    version: 4.2.6
+    version: 4.2.7
   - name: com.unity.xr.openxr
     version: 1.5.3
   - name: com.unity.inputsystem
-    version: 1.4.3
+    version: 1.4.4
   - name: com.unity.modules.uielements
     version: 1.0.0
   - name: com.unity.modules.uielementsnative
@@ -342,7 +341,7 @@ m_ResolvedPackages:
   - name: com.unity.modules.jsonserialize
     version: 1.0.0
   - name: com.unity.ide.rider
-    version: 3.0.15
+    version: 3.0.16
   - name: com.unity.ide.vscode
     version: 1.2.5
   - name: com.unity.editorcoroutines
@@ -350,7 +349,7 @@ m_ResolvedPackages:
   - name: com.unity.performance.profile-analyzer
     version: 1.1.1
   - name: com.unity.testtools.codecoverage
-    version: 1.0.1
+    version: 1.2.2
   - name: com.unity.settings-manager
     version: 1.0.3
   keywords: []
@@ -375,12 +374,12 @@ m_ResolvedPackages:
   unityLifecycle:
     version: 1.0.1
     nextVersion: 
-- packageId: com.unity.ide.rider@3.0.15
+- packageId: com.unity.ide.rider@3.0.16
   testable: 0
   isDirectDependency: 1
-  version: 3.0.15
+  version: 3.0.16
   source: 1
-  resolvedPath: G:\Unity Projects\D0020E_project_AR\School layout\Library\PackageCache\com.unity.ide.rider@3.0.15
+  resolvedPath: G:\Unity Projects\D0020E_project_AR\School layout\Library\PackageCache\com.unity.ide.rider@3.0.16
   assetPath: Packages/com.unity.ide.rider
   name: com.unity.ide.rider
   displayName: JetBrains Rider Editor
@@ -432,7 +431,6 @@ m_ResolvedPackages:
     - 3.0.17
     - 3.0.18
     compatible:
-    - 3.0.15
     - 3.0.16
     - 3.0.17
     - 3.0.18
@@ -454,16 +452,16 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 0
   isAssetStorePackage: 0
-  datePublishedTicks: 637914298700000000
+  datePublishedTicks: 638011833630000000
   documentationUrl: 
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.rider.git
-    revision: b61ff0378932fdf03b5891e09c91728337de674c
+    revision: 9b718d58b8f7a34e564f2c79af6d2ca788e929d4
     path: 
   unityLifecycle:
-    version: 3.0.15
+    version: 3.0.16
     nextVersion: 
 - packageId: com.unity.ide.visualstudio@2.0.16
   testable: 0
@@ -778,6 +776,7 @@ m_ResolvedPackages:
     - 1.3.0
     - 1.3.1
     - 1.3.2
+    - 1.3.3
     - 2.0.1-exp.1
     - 2.0.1-exp.2
     - 2.0.1-pre.12
@@ -788,6 +787,7 @@ m_ResolvedPackages:
     - 1.3.0
     - 1.3.1
     - 1.3.2
+    - 1.3.3
     - 2.0.1-exp.1
     - 2.0.1-exp.2
     - 2.0.1-pre.12
@@ -1093,7 +1093,9 @@ m_ResolvedPackages:
     - 1.7.0
     - 1.7.1
     - 1.7.2
+    - 1.7.3
     - 1.8.0
+    - 1.8.1
     compatible:
     - 1.6.4
     - 1.7.0-pre.1
@@ -1101,7 +1103,9 @@ m_ResolvedPackages:
     - 1.7.0
     - 1.7.1
     - 1.7.2
+    - 1.7.3
     - 1.8.0
+    - 1.8.1
     verified: 1.6.4
   dependencies:
   - name: com.unity.modules.director
@@ -1424,8 +1428,8 @@ m_ResolvedPackages:
     - 5.0.3
     - 5.1.0-pre.1
     - 5.1.0-pre.2
+    - 5.1.0-pre.3
     compatible:
-    - 4.2.6
     - 4.2.7
     - 5.0.0-pre.5
     - 5.0.0-pre.6
@@ -1438,6 +1442,7 @@ m_ResolvedPackages:
     - 5.0.3
     - 5.1.0-pre.1
     - 5.1.0-pre.2
+    - 5.1.0-pre.3
     verified: 4.2.7
   dependencies:
   - name: com.unity.xr.arsubsystems
@@ -1458,7 +1463,7 @@ m_ResolvedPackages:
   - name: com.unity.modules.jsonserialize
     version: 1.0.0
   - name: com.unity.xr.management
-    version: 4.2.0
+    version: 4.2.1
   - name: com.unity.modules.vr
     version: 1.0.0
   - name: com.unity.modules.physics
@@ -1497,14 +1502,14 @@ m_ResolvedPackages:
     revision: f49c023e846a14016db6ff2bc4c5d0d2e421bef6
     path: 
   unityLifecycle:
-    version: 4.2.6
+    version: 4.2.7
     nextVersion: 
-- packageId: com.unity.xr.management@4.2.0
+- packageId: com.unity.xr.management@4.2.1
   testable: 0
   isDirectDependency: 1
-  version: 4.2.0
+  version: 4.2.1
   source: 1
-  resolvedPath: G:\Unity Projects\D0020E_project_AR\School layout\Library\PackageCache\com.unity.xr.management@4.2.0
+  resolvedPath: G:\Unity Projects\D0020E_project_AR\School layout\Library\PackageCache\com.unity.xr.management@4.2.1
   assetPath: Packages/com.unity.xr.management
   name: com.unity.xr.management
   displayName: XR Plugin Management
@@ -1620,16 +1625,259 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 0
   isAssetStorePackage: 0
-  datePublishedTicks: 637704350680000000
+  datePublishedTicks: 637769778170000000
   documentationUrl: 
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/xr.sdk.management.git
-    revision: c8fb6583d6d04516909a8d2ab999a1dbe90ade50
+    revision: 9c99228887ff65cc0729434b3b9371d22b707cb9
     path: 
   unityLifecycle:
     version: 4.2.0
+    nextVersion: 
+- packageId: com.unity.xr.oculus@3.2.2
+  testable: 0
+  isDirectDependency: 1
+  version: 3.2.2
+  source: 1
+  resolvedPath: G:\Unity Projects\D0020E_project_AR\School layout\Library\PackageCache\com.unity.xr.oculus@3.2.2
+  assetPath: Packages/com.unity.xr.oculus
+  name: com.unity.xr.oculus
+  displayName: Oculus XR Plugin
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: asset
+  description: Provides display and input support for Oculus devices.
+  status: 0
+  errors: []
+  versions:
+    all:
+    - 0.0.9-preview
+    - 0.1.2-preview.1
+    - 0.8.4-preview
+    - 1.0.0-preview.4
+    - 1.0.0
+    - 1.0.2
+    - 1.0.3-preview.1
+    - 1.1.0-preview
+    - 1.1.0
+    - 1.1.1
+    - 1.1.2-preview
+    - 1.1.2
+    - 1.1.3-preview
+    - 1.1.3-preview.1
+    - 1.1.4-preview
+    - 1.1.4-preview.1
+    - 1.1.4
+    - 1.1.5-preview
+    - 1.1.5
+    - 1.2.0-preview.1
+    - 1.2.0
+    - 1.3.1
+    - 1.3.3
+    - 1.3.4
+    - 1.4.0-preview.1
+    - 1.4.0-preview.2
+    - 1.4.0
+    - 1.4.3
+    - 1.5.0
+    - 1.5.1
+    - 1.6.0-preview.1
+    - 1.6.0-preview.2
+    - 1.6.1
+    - 1.7.0-preview.1
+    - 1.7.0-preview.2
+    - 1.7.0
+    - 1.8.1
+    - 1.9.0-preview.1
+    - 1.9.0
+    - 1.9.1
+    - 1.10.0-preview.1
+    - 1.10.0-preview.2
+    - 1.10.0
+    - 1.10.1-preview.3
+    - 1.11.0
+    - 1.11.2
+    - 1.12.0
+    - 1.12.1
+    - 1.13.0
+    - 2.0.0-preview.1
+    - 2.0.0-preview.2
+    - 2.0.0-preview.4
+    - 2.0.0-preview.5
+    - 2.0.2-preview.1
+    - 2.2.0-preview.1
+    - 3.0.0-pre.1
+    - 3.0.0-pre.2
+    - 3.0.0-pre.4
+    - 3.0.0
+    - 3.0.1
+    - 3.0.2
+    - 3.1.1
+    - 3.2.1
+    - 3.2.2-pre.1
+    - 3.2.2
+    compatible:
+    - 3.2.2
+    verified: 3.2.2
+  dependencies:
+  - name: com.unity.xr.management
+    version: 4.2.0
+  resolvedDependencies:
+  - name: com.unity.xr.management
+    version: 4.2.1
+  - name: com.unity.modules.subsystems
+    version: 1.0.0
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  - name: com.unity.modules.vr
+    version: 1.0.0
+  - name: com.unity.modules.physics
+    version: 1.0.0
+  - name: com.unity.modules.xr
+    version: 1.0.0
+  - name: com.unity.xr.legacyinputhelpers
+    version: 2.1.10
+  - name: com.unity.subsystemregistration
+    version: 1.1.0
+  keywords:
+  - oculus
+  - xr
+  - vr
+  - virtual
+  - rift
+  - quest
+  - xreditorsubsystem
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 0
+  isAssetStorePackage: 0
+  datePublishedTicks: 638042781360000000
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/xr.sdk.oculus.git
+    revision: e0d7d1acf8e05596d7a3d4867a597a752986af81
+    path: 
+  unityLifecycle:
+    version: 3.2.2
+    nextVersion: 
+- packageId: com.unity.xr.openxr@1.5.3
+  testable: 0
+  isDirectDependency: 1
+  version: 1.5.3
+  source: 1
+  resolvedPath: G:\Unity Projects\D0020E_project_AR\School layout\Library\PackageCache\com.unity.xr.openxr@1.5.3
+  assetPath: Packages/com.unity.xr.openxr
+  name: com.unity.xr.openxr
+  displayName: OpenXR Plugin
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: asset
+  description: OpenXR is an open, royalty-free standard developed by Khronos that
+    aims to simplify AR/VR development by allowing developers to target a wide range
+    of AR/VR devices. Use this plug-in to enable OpenXR in XR Plug-in Management.
+  status: 0
+  errors: []
+  versions:
+    all:
+    - 0.1.1-preview.1
+    - 0.1.2-preview.2
+    - 1.0.0-pre.1
+    - 1.0.2
+    - 1.0.3
+    - 1.1.1
+    - 1.2.0
+    - 1.2.2
+    - 1.2.3
+    - 1.2.8
+    - 1.3.0
+    - 1.3.1
+    - 1.4.0
+    - 1.4.1
+    - 1.4.2
+    - 1.5.0-exp.1
+    - 1.5.0
+    - 1.5.1
+    - 1.5.3
+    - 1.6.0
+    compatible:
+    - 1.5.3
+    - 1.6.0
+    verified: 1.5.3
+  dependencies:
+  - name: com.unity.xr.management
+    version: 4.0.1
+  - name: com.unity.xr.legacyinputhelpers
+    version: 2.1.2
+  - name: com.unity.inputsystem
+    version: 1.4.2
+  resolvedDependencies:
+  - name: com.unity.xr.management
+    version: 4.2.1
+  - name: com.unity.modules.subsystems
+    version: 1.0.0
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  - name: com.unity.modules.vr
+    version: 1.0.0
+  - name: com.unity.modules.physics
+    version: 1.0.0
+  - name: com.unity.modules.xr
+    version: 1.0.0
+  - name: com.unity.xr.legacyinputhelpers
+    version: 2.1.10
+  - name: com.unity.subsystemregistration
+    version: 1.1.0
+  - name: com.unity.inputsystem
+    version: 1.4.4
+  - name: com.unity.modules.uielements
+    version: 1.0.0
+  - name: com.unity.modules.ui
+    version: 1.0.0
+  - name: com.unity.modules.imgui
+    version: 1.0.0
+  - name: com.unity.modules.uielementsnative
+    version: 1.0.0
+  keywords:
+  - openxr
+  - xr
+  - reality
+  - xreditorsubsystem
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 0
+  isAssetStorePackage: 0
+  datePublishedTicks: 638000767940000000
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/xr.sdk.openxr.git
+    revision: f465b6468dde9034f804c326cd531c81dcb8e2c3
+    path: 
+  unityLifecycle:
+    version: 1.5.3
     nextVersion: 
 - packageId: com.unity.modules.ai@1.0.0
   testable: 0
@@ -3500,6 +3748,112 @@ m_ResolvedPackages:
   unityLifecycle:
     version: 2.1.10
     nextVersion: 
+- packageId: com.unity.inputsystem@1.4.4
+  testable: 0
+  isDirectDependency: 0
+  version: 1.4.4
+  source: 1
+  resolvedPath: G:\Unity Projects\D0020E_project_AR\School layout\Library\PackageCache\com.unity.inputsystem@1.4.4
+  assetPath: Packages/com.unity.inputsystem
+  name: com.unity.inputsystem
+  displayName: Input System
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: asset
+  description: A new input system which can be used as a more extensible and customizable
+    alternative to Unity's classic input system in UnityEngine.Input.
+  status: 0
+  errors: []
+  versions:
+    all:
+    - 0.1.2-preview
+    - 0.2.0-preview
+    - 0.2.1-preview
+    - 0.2.6-preview
+    - 0.2.8-preview
+    - 0.2.10-preview
+    - 0.9.0-preview
+    - 0.9.1-preview
+    - 0.9.2-preview
+    - 0.9.3-preview
+    - 0.9.4-preview
+    - 0.9.5-preview
+    - 0.9.6-preview
+    - 1.0.0-preview
+    - 1.0.0-preview.1
+    - 1.0.0-preview.2
+    - 1.0.0-preview.3
+    - 1.0.0-preview.4
+    - 1.0.0-preview.5
+    - 1.0.0-preview.6
+    - 1.0.0-preview.7
+    - 1.0.0
+    - 1.0.1
+    - 1.0.2
+    - 1.1.0-pre.5
+    - 1.1.0-pre.6
+    - 1.1.0-preview.1
+    - 1.1.0-preview.2
+    - 1.1.0-preview.3
+    - 1.1.1
+    - 1.2.0
+    - 1.3.0
+    - 1.4.1
+    - 1.4.2
+    - 1.4.3
+    - 1.4.4
+    - 1.5.0
+    compatible:
+    - 1.4.4
+    - 1.5.0
+    verified: 1.4.4
+  dependencies:
+  - name: com.unity.modules.uielements
+    version: 1.0.0
+  resolvedDependencies:
+  - name: com.unity.modules.uielements
+    version: 1.0.0
+  - name: com.unity.modules.ui
+    version: 1.0.0
+  - name: com.unity.modules.imgui
+    version: 1.0.0
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  - name: com.unity.modules.uielementsnative
+    version: 1.0.0
+  keywords:
+  - input
+  - events
+  - keyboard
+  - mouse
+  - gamepad
+  - touch
+  - vr
+  - xr
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 0
+  isAssetStorePackage: 0
+  datePublishedTicks: 638030660210000000
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.com/Unity-Technologies/InputSystem.git
+    revision: 59db7b7bcc31bad254947e3189e6ec125f67e3e7
+    path: 
+  unityLifecycle:
+    version: 1.4.4
+    nextVersion: 
 - packageId: com.unity.subsystemregistration@1.1.0
   testable: 0
   isDirectDependency: 0
@@ -3667,7 +4021,6 @@ m_ResolvedPackages:
     - 5.0.0-pre.13
     - 5.0.2
     compatible:
-    - 4.2.6
     - 4.2.7
     - 5.0.0-pre.5
     - 5.0.0-pre.6
@@ -3691,7 +4044,7 @@ m_ResolvedPackages:
   - name: com.unity.modules.jsonserialize
     version: 1.0.0
   - name: com.unity.xr.management
-    version: 4.2.0
+    version: 4.2.1
   - name: com.unity.modules.vr
     version: 1.0.0
   - name: com.unity.modules.physics
@@ -3723,7 +4076,7 @@ m_ResolvedPackages:
     revision: f49c023e846a14016db6ff2bc4c5d0d2e421bef6
     path: 
   unityLifecycle:
-    version: 4.2.6
+    version: 4.2.7
     nextVersion: 
 - packageId: com.unity.ext.nunit@1.0.6
   testable: 0
@@ -3969,12 +4322,12 @@ m_ResolvedPackages:
   unityLifecycle:
     version: 1.1.1
     nextVersion: 
-- packageId: com.unity.testtools.codecoverage@1.0.1
+- packageId: com.unity.testtools.codecoverage@1.2.2
   testable: 0
   isDirectDependency: 0
-  version: 1.0.1
+  version: 1.2.2
   source: 1
-  resolvedPath: G:\Unity Projects\D0020E_project_AR\School layout\Library\PackageCache\com.unity.testtools.codecoverage@1.0.1
+  resolvedPath: G:\Unity Projects\D0020E_project_AR\School layout\Library\PackageCache\com.unity.testtools.codecoverage@1.2.2
   assetPath: Packages/com.unity.testtools.codecoverage
   name: com.unity.testtools.codecoverage
   displayName: Code Coverage
@@ -4021,20 +4374,8 @@ m_ResolvedPackages:
     - 1.2.1
     - 1.2.2
     compatible:
-    - 1.0.1
-    - 1.1.0
-    - 1.1.1
-    - 1.2.0-exp.1
-    - 1.2.0-exp.2
-    - 1.2.0-exp.3
-    - 1.2.0-exp.4
-    - 1.2.0-exp.5
-    - 1.2.0-exp.6
-    - 1.2.0-exp.7
-    - 1.2.0
-    - 1.2.1
     - 1.2.2
-    verified: 1.0.1
+    verified: 1.2.2
   dependencies:
   - name: com.unity.test-framework
     version: 1.0.16
@@ -4066,23 +4407,23 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 0
   isAssetStorePackage: 0
-  datePublishedTicks: 637594767130000000
+  datePublishedTicks: 638047147810000000
   documentationUrl: 
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.testtools.codecoverage.git
-    revision: 2777556fc6ade4006a02ea7febbae1dd3257eb7d
+    revision: 4178e047a15e206f715d23af69b02acd367bb000
     path: 
   unityLifecycle:
-    version: 1.0.1
+    version: 1.2.2
     nextVersion: 
-- packageId: com.unity.xr.arfoundation@4.2.6
+- packageId: com.unity.xr.arfoundation@4.2.7
   testable: 0
   isDirectDependency: 0
-  version: 4.2.6
+  version: 4.2.7
   source: 1
-  resolvedPath: G:\Unity Projects\D0020E_project_AR\School layout\Library\PackageCache\com.unity.xr.arfoundation@4.2.6
+  resolvedPath: G:\Unity Projects\D0020E_project_AR\School layout\Library\PackageCache\com.unity.xr.arfoundation@4.2.7
   assetPath: Packages/com.unity.xr.arfoundation
   name: com.unity.xr.arfoundation
   displayName: AR Foundation
@@ -4197,8 +4538,8 @@ m_ResolvedPackages:
     - 5.0.3
     - 5.1.0-pre.1
     - 5.1.0-pre.2
+    - 5.1.0-pre.3
     compatible:
-    - 4.2.6
     - 4.2.7
     - 5.0.0-pre.5
     - 5.0.0-pre.6
@@ -4211,10 +4552,11 @@ m_ResolvedPackages:
     - 5.0.3
     - 5.1.0-pre.1
     - 5.1.0-pre.2
+    - 5.1.0-pre.3
     verified: 4.2.7
   dependencies:
   - name: com.unity.xr.arsubsystems
-    version: 4.2.6
+    version: 4.2.7
   - name: com.unity.xr.management
     version: 4.0.1
   - name: com.unity.modules.particlesystem
@@ -4229,7 +4571,7 @@ m_ResolvedPackages:
   - name: com.unity.modules.jsonserialize
     version: 1.0.0
   - name: com.unity.xr.management
-    version: 4.2.0
+    version: 4.2.1
   - name: com.unity.modules.vr
     version: 1.0.0
   - name: com.unity.modules.physics
@@ -4259,23 +4601,23 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 0
   isAssetStorePackage: 0
-  datePublishedTicks: 637986083800000000
+  datePublishedTicks: 638034330250000000
   documentationUrl: 
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/arfoundation.git
-    revision: ce431a269662645e01b2fb844b51b04d9c97bbdd
+    revision: f49c023e846a14016db6ff2bc4c5d0d2e421bef6
     path: 
   unityLifecycle:
-    version: 4.2.6
+    version: 4.2.7
     nextVersion: 
-- packageId: com.unity.xr.arkit@4.2.6
+- packageId: com.unity.xr.arkit@4.2.7
   testable: 0
   isDirectDependency: 0
-  version: 4.2.6
+  version: 4.2.7
   source: 1
-  resolvedPath: G:\Unity Projects\D0020E_project_AR\School layout\Library\PackageCache\com.unity.xr.arkit@4.2.6
+  resolvedPath: G:\Unity Projects\D0020E_project_AR\School layout\Library\PackageCache\com.unity.xr.arkit@4.2.7
   assetPath: Packages/com.unity.xr.arkit
   name: com.unity.xr.arkit
   displayName: ARKit XR Plugin
@@ -4410,8 +4752,8 @@ m_ResolvedPackages:
     - 5.0.3
     - 5.1.0-pre.1
     - 5.1.0-pre.2
+    - 5.1.0-pre.3
     compatible:
-    - 4.2.6
     - 4.2.7
     - 5.0.0-pre.5
     - 5.0.0-pre.6
@@ -4424,12 +4766,13 @@ m_ResolvedPackages:
     - 5.0.3
     - 5.1.0-pre.1
     - 5.1.0-pre.2
+    - 5.1.0-pre.3
     verified: 4.2.7
   dependencies:
   - name: com.unity.editorcoroutines
     version: 1.0.0
   - name: com.unity.xr.arsubsystems
-    version: 4.2.6
+    version: 4.2.7
   - name: com.unity.xr.management
     version: 4.0.1
   resolvedDependencies:
@@ -4444,7 +4787,7 @@ m_ResolvedPackages:
   - name: com.unity.modules.jsonserialize
     version: 1.0.0
   - name: com.unity.xr.management
-    version: 4.2.0
+    version: 4.2.1
   - name: com.unity.modules.vr
     version: 1.0.0
   - name: com.unity.modules.physics
@@ -4469,16 +4812,16 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 0
   isAssetStorePackage: 0
-  datePublishedTicks: 637986083750000000
+  datePublishedTicks: 638034330210000000
   documentationUrl: 
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/arfoundation.git
-    revision: ce431a269662645e01b2fb844b51b04d9c97bbdd
+    revision: f49c023e846a14016db6ff2bc4c5d0d2e421bef6
     path: 
   unityLifecycle:
-    version: 4.2.6
+    version: 4.2.7
     nextVersion: 
 - packageId: com.unity.xr.magicleap@6.4.1
   testable: 0
@@ -4603,7 +4946,7 @@ m_ResolvedPackages:
   - name: com.unity.subsystemregistration
     version: 1.1.0
   - name: com.unity.xr.management
-    version: 4.2.0
+    version: 4.2.1
   - name: com.unity.xr.legacyinputhelpers
     version: 2.1.10
   - name: com.unity.xr.interactionsubsystems
@@ -4636,12 +4979,12 @@ m_ResolvedPackages:
   unityLifecycle:
     version: 6.4.1
     nextVersion: 
-- packageId: com.unity.xr.arkit-face-tracking@4.2.6
+- packageId: com.unity.xr.arkit-face-tracking@4.2.7
   testable: 0
   isDirectDependency: 0
-  version: 4.2.6
+  version: 4.2.7
   source: 1
-  resolvedPath: G:\Unity Projects\D0020E_project_AR\School layout\Library\PackageCache\com.unity.xr.arkit-face-tracking@4.2.6
+  resolvedPath: G:\Unity Projects\D0020E_project_AR\School layout\Library\PackageCache\com.unity.xr.arkit-face-tracking@4.2.7
   assetPath: Packages/com.unity.xr.arkit-face-tracking
   name: com.unity.xr.arkit-face-tracking
   displayName: ARKit Face Tracking
@@ -4739,7 +5082,6 @@ m_ResolvedPackages:
     - 5.0.0-pre.13
     - 5.0.2
     compatible:
-    - 4.2.6
     - 4.2.7
     - 5.0.0-pre.5
     - 5.0.0-pre.6
@@ -4752,12 +5094,12 @@ m_ResolvedPackages:
     verified: 4.2.7
   dependencies:
   - name: com.unity.xr.arkit
-    version: 4.2.6
+    version: 4.2.7
   - name: com.unity.xr.arsubsystems
-    version: 4.2.6
+    version: 4.2.7
   resolvedDependencies:
   - name: com.unity.xr.arkit
-    version: 4.2.6
+    version: 4.2.7
   - name: com.unity.editorcoroutines
     version: 1.0.0
   - name: com.unity.xr.arsubsystems
@@ -4769,7 +5111,7 @@ m_ResolvedPackages:
   - name: com.unity.modules.jsonserialize
     version: 1.0.0
   - name: com.unity.xr.management
-    version: 4.2.0
+    version: 4.2.1
   - name: com.unity.modules.vr
     version: 1.0.0
   - name: com.unity.modules.physics
@@ -4789,129 +5131,23 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 0
   isAssetStorePackage: 0
-  datePublishedTicks: 637986083770000000
+  datePublishedTicks: 638034330230000000
   documentationUrl: 
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/arfoundation.git
-    revision: ce431a269662645e01b2fb844b51b04d9c97bbdd
+    revision: f49c023e846a14016db6ff2bc4c5d0d2e421bef6
     path: 
   unityLifecycle:
-    version: 4.2.6
+    version: 4.2.7
     nextVersion: 
-- packageId: com.unity.xr.openxr@1.5.3
+- packageId: com.unity.services.core@1.6.0
   testable: 0
   isDirectDependency: 0
-  version: 1.5.3
+  version: 1.6.0
   source: 1
-  resolvedPath: G:\Unity Projects\D0020E_project_AR\School layout\Library\PackageCache\com.unity.xr.openxr@1.5.3
-  assetPath: Packages/com.unity.xr.openxr
-  name: com.unity.xr.openxr
-  displayName: OpenXR Plugin
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: asset
-  description: OpenXR is an open, royalty-free standard developed by Khronos that
-    aims to simplify AR/VR development by allowing developers to target a wide range
-    of AR/VR devices. Use this plug-in to enable OpenXR in XR Plug-in Management.
-  status: 0
-  errors: []
-  versions:
-    all:
-    - 0.1.1-preview.1
-    - 0.1.2-preview.2
-    - 1.0.0-pre.1
-    - 1.0.2
-    - 1.0.3
-    - 1.1.1
-    - 1.2.0
-    - 1.2.2
-    - 1.2.3
-    - 1.2.8
-    - 1.3.0
-    - 1.3.1
-    - 1.4.0
-    - 1.4.1
-    - 1.4.2
-    - 1.5.0-exp.1
-    - 1.5.0
-    - 1.5.1
-    - 1.5.3
-    - 1.6.0
-    compatible:
-    - 1.5.3
-    - 1.6.0
-    verified: 1.5.3
-  dependencies:
-  - name: com.unity.xr.management
-    version: 4.0.1
-  - name: com.unity.xr.legacyinputhelpers
-    version: 2.1.2
-  - name: com.unity.inputsystem
-    version: 1.4.2
-  resolvedDependencies:
-  - name: com.unity.xr.management
-    version: 4.2.0
-  - name: com.unity.modules.subsystems
-    version: 1.0.0
-  - name: com.unity.modules.jsonserialize
-    version: 1.0.0
-  - name: com.unity.modules.vr
-    version: 1.0.0
-  - name: com.unity.modules.physics
-    version: 1.0.0
-  - name: com.unity.modules.xr
-    version: 1.0.0
-  - name: com.unity.xr.legacyinputhelpers
-    version: 2.1.10
-  - name: com.unity.subsystemregistration
-    version: 1.1.0
-  - name: com.unity.inputsystem
-    version: 1.4.3
-  - name: com.unity.modules.uielements
-    version: 1.0.0
-  - name: com.unity.modules.ui
-    version: 1.0.0
-  - name: com.unity.modules.imgui
-    version: 1.0.0
-  - name: com.unity.modules.uielementsnative
-    version: 1.0.0
-  keywords:
-  - openxr
-  - xr
-  - reality
-  - xreditorsubsystem
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-  hideInEditor: 0
-  isAssetStorePackage: 0
-  datePublishedTicks: 638000767940000000
-  documentationUrl: 
-  hasRepository: 1
-  repository:
-    type: git
-    url: https://github.cds.internal.unity3d.com/unity/xr.sdk.openxr.git
-    revision: f465b6468dde9034f804c326cd531c81dcb8e2c3
-    path: 
-  unityLifecycle:
-    version: 1.5.3
-    nextVersion: 
-- packageId: com.unity.services.core@1.5.2
-  testable: 0
-  isDirectDependency: 0
-  version: 1.5.2
-  source: 1
-  resolvedPath: G:\Unity Projects\D0020E_project_AR\School layout\Library\PackageCache\com.unity.services.core@1.5.2
+  resolvedPath: G:\Unity Projects\D0020E_project_AR\School layout\Library\PackageCache\com.unity.services.core@1.6.0
   assetPath: Packages/com.unity.services.core
   name: com.unity.services.core
   displayName: Services Core
@@ -4950,11 +5186,10 @@ m_ResolvedPackages:
     - 1.7.0
     - 1.7.1
     compatible:
-    - 1.5.2
     - 1.6.0
     - 1.7.0
     - 1.7.1
-    verified: 1.5.2
+    verified: 1.6.0
   dependencies:
   - name: com.unity.modules.unitywebrequest
     version: 1.0.0
@@ -4980,123 +5215,16 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 0
   isAssetStorePackage: 0
-  datePublishedTicks: 638018550440000000
+  datePublishedTicks: 638030857680000000
   documentationUrl: 
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/operate-services-sdk.git
-    revision: e040465b79d519da3eae1f3ee97816020574dd5e
+    revision: 815a0c96703c69956fde4fc798e35dd8d0cc3af1
     path: 
   unityLifecycle:
-    version: 1.5.2
-    nextVersion: 
-- packageId: com.unity.inputsystem@1.4.3
-  testable: 0
-  isDirectDependency: 0
-  version: 1.4.3
-  source: 1
-  resolvedPath: G:\Unity Projects\D0020E_project_AR\School layout\Library\PackageCache\com.unity.inputsystem@1.4.3
-  assetPath: Packages/com.unity.inputsystem
-  name: com.unity.inputsystem
-  displayName: Input System
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: asset
-  description: A new input system which can be used as a more extensible and customizable
-    alternative to Unity's classic input system in UnityEngine.Input.
-  status: 0
-  errors: []
-  versions:
-    all:
-    - 0.1.2-preview
-    - 0.2.0-preview
-    - 0.2.1-preview
-    - 0.2.6-preview
-    - 0.2.8-preview
-    - 0.2.10-preview
-    - 0.9.0-preview
-    - 0.9.1-preview
-    - 0.9.2-preview
-    - 0.9.3-preview
-    - 0.9.4-preview
-    - 0.9.5-preview
-    - 0.9.6-preview
-    - 1.0.0-preview
-    - 1.0.0-preview.1
-    - 1.0.0-preview.2
-    - 1.0.0-preview.3
-    - 1.0.0-preview.4
-    - 1.0.0-preview.5
-    - 1.0.0-preview.6
-    - 1.0.0-preview.7
-    - 1.0.0
-    - 1.0.1
-    - 1.0.2
-    - 1.1.0-pre.5
-    - 1.1.0-pre.6
-    - 1.1.0-preview.1
-    - 1.1.0-preview.2
-    - 1.1.0-preview.3
-    - 1.1.1
-    - 1.2.0
-    - 1.3.0
-    - 1.4.1
-    - 1.4.2
-    - 1.4.3
-    - 1.4.4
-    - 1.5.0
-    compatible:
-    - 1.4.3
-    - 1.4.4
-    - 1.5.0
-    verified: 1.4.4
-  dependencies:
-  - name: com.unity.modules.uielements
-    version: 1.0.0
-  resolvedDependencies:
-  - name: com.unity.modules.uielements
-    version: 1.0.0
-  - name: com.unity.modules.ui
-    version: 1.0.0
-  - name: com.unity.modules.imgui
-    version: 1.0.0
-  - name: com.unity.modules.jsonserialize
-    version: 1.0.0
-  - name: com.unity.modules.uielementsnative
-    version: 1.0.0
-  keywords:
-  - input
-  - events
-  - keyboard
-  - mouse
-  - gamepad
-  - touch
-  - vr
-  - xr
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-  hideInEditor: 0
-  isAssetStorePackage: 0
-  datePublishedTicks: 638000569960000000
-  documentationUrl: 
-  hasRepository: 1
-  repository:
-    type: git
-    url: https://github.com/Unity-Technologies/InputSystem.git
-    revision: 4176ff70ca01b934b7818035a5727c07bcaabb0d
-    path: 
-  unityLifecycle:
-    version: 1.4.3
+    version: 1.6.0
     nextVersion: 
 - packageId: com.unity.xr.interactionsubsystems@1.0.1
   testable: 0

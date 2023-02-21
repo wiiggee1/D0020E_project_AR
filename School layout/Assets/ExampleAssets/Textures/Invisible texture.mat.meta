@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:School layout/Assets/ExampleAssets/Textures/Invisible texture.mat.meta
 guid: a5464c8dadbad124e909ee90b4d58042
+========
+guid: 498f854107201d798afc9e731df84b64
+>>>>>>>> Jenny_copy:School layout/Assets/XR/Settings/Mock HMD Build Settings.asset.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 2100000
