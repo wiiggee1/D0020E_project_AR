@@ -97,7 +97,6 @@ public class Algorithm : MonoBehaviour
         var positionOutput = "Position data: x: " + arCameraPosition.x + ", y: "
             + arCameraPosition.y + ", z: " + arCameraPosition.z;
 
-        //positionTextNew.text = positionOutput;
         positionTextNew.text = positionOutput + ", timestamp: " + timeStampOutputFrame.ToString();
 
     }
@@ -105,7 +104,6 @@ public class Algorithm : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         mapCameraLocationData();
 
         var positionOutput = "Position data: x: " + arCameraPosition.x + ", y: "
@@ -189,20 +187,13 @@ public class Algorithm : MonoBehaviour
         positionData.Add("x_position", xPos);
         positionData.Add("y_position", yPos);
         positionData.Add("z_position", zPos);
-
         positionData.Add("vertical_position", verticalPos);
         positionData.Add("horizontal_position", horizontalPos);
-
         positionData.Add("timestamp", timeStampData);
 
         return positionData;
     }
 
-    // CREATE BUTTON THAT SHOW UI THAT WILL SHOWCASE THE DICTIONARY "positiondata" AND OPTION TO SAVE CURRENT GAME ITERATION
-    public void buttonPositionAction()
-    {
-
-    }
     public void resetPositionDataState()
     {
         positionData = positionData = new Dictionary<string, float[]>();
@@ -235,24 +226,19 @@ public class Algorithm : MonoBehaviour
         var dbName = "d0020e";
         var connectionString = "server=" + server+";uid="+userID+";pwd="+password+";database="+dbName;
 
-        //if-branch for checking if safe-zone is reached if OK then run try-branch
-
         try
         {
 
             var connection = new MySqlConnection();
             connection.ConnectionString = connectionString;
             await connection.OpenAsync();
-
-            var positionDataRun = positionData;
-                        
-                
-            var x_val = positionData["x_position"];
-            var y_val = positionData["y_position"];
-            var z_val = positionData["z_position"];
-            var vertical_val = positionData["vertical_position"];
-            var horizontal_val = positionData["horizontal_position"];
-            var timestamp_val = positionData["timestamp"];
+                                        
+            var x_val = getPositionData()["x_position"];
+            var y_val = getPositionData()["y_position"];
+            var z_val = getPositionData()["z_position"];
+            var vertical_val = getPositionData()["vertical_position"];
+            var horizontal_val = getPositionData()["horizontal_position"];
+            var timestamp_val = getPositionData()["timestamp"];
 
             var row_count = timestamp_val.Length;
             var col_names = positionData.Keys.ToArray();
@@ -267,8 +253,6 @@ public class Algorithm : MonoBehaviour
             }
             
             await connection.CloseAsync();
-
-
         }
         catch (MySqlException ex)
         {
