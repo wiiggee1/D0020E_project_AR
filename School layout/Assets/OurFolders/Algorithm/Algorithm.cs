@@ -217,7 +217,8 @@ public class Algorithm : MonoBehaviour
     public void ifSafeZoneReachedSqlAction()
     {
         // if the query was successfully executed reset/restore positionData dictionary!
-        if (true)
+        bool safeZoneReached = true; 
+        if (safeZoneReached)
         {
             _ = sqlHandlerAsync("");
             resetPositionDataState();
