@@ -32,6 +32,7 @@ public class Algorithm : MonoBehaviour
     //public event Action<ARCameraFrameEventArgs> frameReceived;
     private bool trackingflag = false;
     public Text positionTextNew;
+    public InputField passwordInput;
     private UnityEngine.Vector2 deviceLocation;
     private float device_lat; //device geodata
     private float device_long; //device geodata
@@ -211,13 +212,14 @@ public class Algorithm : MonoBehaviour
         bool safeZoneReached = true; 
         if (safeZoneReached)
         {
-            _ = sqlHandlerAsync("");
+            passwordInput.contentType = InputField.ContentType.Password;
+            _ = sqlHandlerAsync(passwordInput.contentType);
             resetPositionDataState();
         }
     }
 
 
-    public async System.Threading.Tasks.Task sqlHandlerAsync(string passwrd)
+    public async System.Threading.Tasks.Task sqlHandlerAsync(InputField.ContentType passwrd)
     {
         
         var password = passwrd;
