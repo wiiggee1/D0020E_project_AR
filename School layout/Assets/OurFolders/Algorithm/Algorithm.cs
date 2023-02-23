@@ -16,8 +16,10 @@ using UnityEngine.XR.ARCore;
 using UnityEngine.XR.ARSubsystems;
 using UnityEngine.UI;
 using Unity.XR.CoreUtils;
-//using MySqlConnector;
+using MySql.Data.MySqlClient;
 using System.Threading.Tasks;
+using UnityEditor.VersionControl;
+using System.Xml.Linq;
 
 public class Algorithm : MonoBehaviour
 {
@@ -28,22 +30,24 @@ public class Algorithm : MonoBehaviour
     private ARPoseDriver _arPoseDriver;
 
     //public event Action<ARCameraFrameEventArgs> frameReceived;
+    private bool trackingflag = false;
     public Text positionTextNew;
     private UnityEngine.Vector2 deviceLocation;
     private float device_lat; //device geodata
     private float device_long; //device geodata
+    public Vector3 previousArCameraPosition;
     public Vector3 arCameraPosition;
     public UnityEngine.Quaternion arCameraRotation;
     private float arHorizontal;
     private float arVertical;
 
-    float[] xPos = new float[] {};
-    float[] yPos = new float[] {};
-    float[] zPos = new float[] {};
-    float[] verticalPos = new float[] {};
-    float[] horizontalPos = new float[] {};
+    float[] xPos = new float[] { };
+    float[] yPos = new float[] { };
+    float[] zPos = new float[] { };
+    float[] verticalPos = new float[] { };
+    float[] horizontalPos = new float[] { };
     public long? timeStampOutput;
-    float[] timeStampData = new float[] {};
+    float[] timeStampData = new float[] { };
     Dictionary<string, float[]> positionData = new Dictionary<string, float[]>();
 
 
@@ -61,7 +65,7 @@ public class Algorithm : MonoBehaviour
             // Start the AR session
             _arSession.enabled = true;
         }
-                  
+
 
         // Request permission to access the device's location (ANDROID)
         if (!Permission.HasUserAuthorizedPermission(Permission.FineLocation))
@@ -73,26 +77,6 @@ public class Algorithm : MonoBehaviour
             Input.location.Start(); //get's the android device current location.
         }
 
-        //arCameraObject = FindObjectOfType<ARCameraManager>();
-        //arCameraObject.frameReceived += OnFrameReceived;
-        ARSession.stateChanged += ARSessionStateChanged;
-        
-    }
-    
-    void OnFrameReceived(ARCameraFrameEventArgs eventArgs)
-    {
-        var timeStampOutputFrame = eventArgs.timestampNs;
-        timeStampOutput = timeStampOutputFrame;
-        
-        var positionOutput = "Position data: x: " + arCameraPosition.x + ", y: "
-            + arCameraPosition.y + ", z: " + arCameraPosition.z;
-
-        //positionTextNew.text = positionOutput;
-        positionTextNew.text = positionOutput + ", timestamp: " + timeStampOutputFrame.ToString();
-    }
-
-    void OnEnable()
-    {
         // initialize the AR Session Origin component as reference during awake state of application. 
         _arSessionOrigin = GetComponent<ARSessionOrigin>();
         _arSession = GetComponent<ARSession>();
@@ -101,11 +85,21 @@ public class Algorithm : MonoBehaviour
         arCameraObject = GetComponent<ARCameraManager>();
 
         arCameraObject.frameReceived += OnFrameReceived;
+        ARSession.stateChanged += ARSessionStateChanged;
+
     }
 
-    void OnDisable()
+    void OnFrameReceived(ARCameraFrameEventArgs eventArgs)
     {
-        arCameraObject.frameReceived -= OnFrameReceived;
+        var timeStampOutputFrame = eventArgs.timestampNs;
+        timeStampOutput = timeStampOutputFrame;
+
+        var positionOutput = "Position data: x: " + arCameraPosition.x + ", y: "
+            + arCameraPosition.y + ", z: " + arCameraPosition.z;
+
+        //positionTextNew.text = positionOutput;
+        positionTextNew.text = positionOutput + ", timestamp: " + timeStampOutputFrame.ToString();
+
     }
 
     // Update is called once per frame
@@ -114,11 +108,12 @@ public class Algorithm : MonoBehaviour
 
         mapCameraLocationData();
 
-        var positionOutput = "Position data: x: " + arCameraPosition.x + ", y: " 
+        var positionOutput = "Position data: x: " + arCameraPosition.x + ", y: "
             + arCameraPosition.y + ", z: " + arCameraPosition.z;
-       
+
         positionTextNew.text = positionOutput;
-        //positionTextNew.text = positionOutput + ", timestamp: " + timeStampOutput.ToString();
+
+        ifSafeZoneReachedSqlAction();
     }
 
     private void mapCameraLocationData()
@@ -136,13 +131,23 @@ public class Algorithm : MonoBehaviour
         arHorizontal = arEulerAngles.y;
         arVertical = arEulerAngles.x;
 
+        if (!trackingflag)
+        {
+            trackingflag = true;
+            previousArCameraPosition = _arSessionOrigin.camera.transform.position;
+        }
+
+        // delta position (position difference)
+        Vector3 deltaArPosition = arCameraPosition - previousArCameraPosition;
+        previousArCameraPosition = arCameraPosition;
+
         //This will set the AR session space to world space in unity
         //Vector3 deviceToWorldLocation = _arSessionOrigin.camera.transform.localToWorldMatrix.GetPosition();
-        
+
         // Call the setCurrentPosPers method...
         setCurrentPosPers(arCameraPosition.x, arCameraPosition.y, arCameraPosition.z, arVertical, arHorizontal);
     }
- 
+
 
     private void ARSessionStateChanged(ARSessionStateChangedEventArgs args)
     {
@@ -160,7 +165,7 @@ public class Algorithm : MonoBehaviour
 
             // Set the ARPoseDriver's target transform to the ARReferencePoint
             var map_long_lat = UnityEngine.Quaternion.AngleAxis(device_long, -Vector3.up) * UnityEngine.Quaternion.AngleAxis(device_lat, -Vector3.right) * new Vector3(0, 0, 1);
-            _arPoseDriver.transform.TransformPoint(map_long_lat);       
+            _arPoseDriver.transform.TransformPoint(map_long_lat);
             _arPoseDriver.enabled = true;
         }
     }
@@ -193,24 +198,82 @@ public class Algorithm : MonoBehaviour
         return positionData;
     }
 
-    /*
-    public async Task sqlHandlerAsync(string username, string password)
+    // CREATE BUTTON THAT SHOW UI THAT WILL SHOWCASE THE DICTIONARY "positiondata" AND OPTION TO SAVE CURRENT GAME ITERATION
+    public void buttonPositionAction()
+    {
+
+    }
+    public void resetPositionDataState()
+    {
+        positionData = positionData = new Dictionary<string, float[]>();
+        xPos = new float[] { };
+        yPos = new float[] { };
+        zPos = new float[] { };
+        verticalPos = new float[] { };
+        horizontalPos = new float[] { };
+        timeStampData = new float[] { };
+    }
+
+    public void ifSafeZoneReachedSqlAction()
+    {
+        // if the query was successfully executed reset/restore positionData dictionary!
+        if (true)
+        {
+            _ = sqlHandlerAsync("");
+            resetPositionDataState();
+        }
+    }
+
+
+    public async System.Threading.Tasks.Task sqlHandlerAsync(string passwrd)
     {
         
-        MySqlConnectionStringBuilder credentials = new MySqlConnectionStringBuilder
+        var password = passwrd;
+        var server = "130.240.202.127";
+        var userID = "projectmember";
+        var dbName = "d0020e";
+        var connectionString = "server=" + server+";uid="+userID+";pwd="+password+";database="+dbName;
+
+        //if-branch for checking if safe-zone is reached if OK then run try-branch
+
+        try
         {
-            Server = "127.0.0.1",
-            Port = 000,
-            UserID = username,
-            Password = password,
-        };
 
-        var connection = new MySqlConnection(credentials.ConnectionString);
-        await connection.OpenAsync();
+            var connection = new MySqlConnection();
+            connection.ConnectionString = connectionString;
+            await connection.OpenAsync();
 
-        var query = new MySqlCommand("INSERT INTO table_name (col1, col2...) VALUES (val1, val2...);", connection);
-        var query_output = await query.ExecuteReaderAsync();
-       
-} */
+            var positionDataRun = positionData;
+                        
+                
+            var x_val = positionData["x_position"];
+            var y_val = positionData["y_position"];
+            var z_val = positionData["z_position"];
+            var vertical_val = positionData["vertical_position"];
+            var horizontal_val = positionData["horizontal_position"];
+            var timestamp_val = positionData["timestamp"];
+
+            var row_count = timestamp_val.Length;
+            var col_names = positionData.Keys.ToArray();
+            string col_name_join = string.Join(",", col_names);
+            
+            for (int i = 0 ; i<=row_count ; i++)
+            {
+                object[] row_values = { x_val.ElementAt(i), y_val.ElementAt(i), z_val.ElementAt(i), vertical_val.ElementAt(i), horizontal_val.ElementAt(i), timestamp_val.ElementAt(i) };
+                string row_val_join = string.Join(",", row_values); 
+                var query = new MySqlCommand("INSERT INTO d0020e ("+col_name_join+") VALUES (+"+row_val_join+");", connection);
+                var query_output = await query.ExecuteNonQueryAsync();
+            }
+            
+            await connection.CloseAsync();
+
+
+        }
+        catch (MySqlException ex)
+        {
+            Debug.LogError(ex.Message);
+        }
+
+    }
 
 }
