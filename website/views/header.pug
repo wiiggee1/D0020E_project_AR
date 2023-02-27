@@ -1,0 +1,17 @@
+doctype html
+html
+   head
+      meta(charset="UTF-8")
+      title D0020E - Visualization
+      script(src="./app.js")
+      link(rel='stylesheet', media='all and (orientation:landscape)' type='text/css', href='/horizontal.css')
+      link(rel='stylesheet', media='all and (orientation:portrait)' type='text/css', href='/vertical.css')
+   body
+      div.all
+         div#title 
+            block logo
+            p 
+               a#indexA(href="/") Gamification of evacuation drills - admin view
+            button.red(onclick='location.href="/walkthroughs";') Walkthroughs
+            button.red(onclick='location.href="/courses";') Courses
+         block content
