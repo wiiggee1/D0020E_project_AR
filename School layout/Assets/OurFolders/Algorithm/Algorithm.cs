@@ -5,9 +5,7 @@ using UnityEngine.XR.ARFoundation;
 using UnityEngine.Android;
 using Vector3 = UnityEngine.Vector3;
 using UnityEngine.UI;
-using MySqlConnector;
 using System.Net;
-using UnityEditor.PackageManager;
 
 public class Algorithm : MonoBehaviour
 {
@@ -207,6 +205,12 @@ public class Algorithm : MonoBehaviour
 
     public void webclientSqlHandler()
     {
+        // add getter method here for fetching data from other classes such as:
+        //1. starting point... 
+        //2. obstacle_course...
+        var startingPoint = Obstacle.spawn;
+        var obstacle_course = Obstacle.course;
+
         var gameData = getPositionData();
         string toJson = Newtonsoft.Json.JsonConvert.SerializeObject(gameData);
         string server_url = "http://130.240.202.127/server_repo/gameSqlHandler.php";
@@ -215,50 +219,5 @@ public class Algorithm : MonoBehaviour
         webClient.Headers[HttpRequestHeader.ContentType] = "application/json";
         _ = webClient.UploadString(server_url, "POST", toJson);
     }
-
-    /*
-    public async System.Threading.Tasks.Task sqlHandlerAsync(InputField.ContentType passwrd)
-    {
-        
-        var password = passwrd;
-        var server = "130.240.202.127";
-        var userID = "projectmember";
-        var dbName = "d0020e";
-        var connectionString = "server=" + server+";uid="+userID+";pwd="+password+";database="+dbName;
-
-        try
-        {
-
-            var connection = new MySqlConnection();
-            connection.ConnectionString = connectionString;
-            await connection.OpenAsync();
-                                        
-            var x_val = getPositionData()["x_position"];
-            var y_val = getPositionData()["y_position"];
-            var z_val = getPositionData()["z_position"];
-            var vertical_val = getPositionData()["vertical_position"];
-            var horizontal_val = getPositionData()["horizontal_position"];
-            var timestamp_val = getPositionData()["timestamp"];
-
-            var row_count = timestamp_val.Length;
-            var col_names = positionData.Keys.ToArray();
-            string col_name_join = string.Join(",", col_names);
-            
-            for (int i = 0 ; i<=row_count ; i++)
-            {
-                object[] row_values = { x_val.ElementAt(i), y_val.ElementAt(i), z_val.ElementAt(i), vertical_val.ElementAt(i), horizontal_val.ElementAt(i), timestamp_val.ElementAt(i) };
-                string row_val_join = string.Join(",", row_values); 
-                var query = new MySqlCommand("INSERT INTO d0020e ("+col_name_join+") VALUES (+"+row_val_join+");", connection);
-                var query_output = await query.ExecuteNonQueryAsync();
-            }
-            
-            await connection.CloseAsync();
-        }
-        catch (MySqlException ex)
-        {
-            Debug.LogError(ex.Message);
-        }
-
-    }*/
 
 }
