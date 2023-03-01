@@ -1,6 +1,8 @@
 const mysql = require('mysql2');
 const { Client } = require('ssh2');
 const sshClient = new Client();
+
+// Rename example.env to .env and fill in values
 require('dotenv').config();
 
 const dbServer = {
