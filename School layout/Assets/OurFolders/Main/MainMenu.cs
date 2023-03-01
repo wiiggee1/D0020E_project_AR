@@ -5,19 +5,28 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public void Scan () {
-        //Debug.Log("Pressed Scan QR");
-        SceneManager.LoadScene("ScanScene");
-    }
+    int spawn;
+    int course;
 
-        public void PlayGame () {
-        //Debug.Log("Pressed Scan QR");
+    public void playGame () 
+    {
+        Obstacle.spawn = spawn;
+        Obstacle.course = course;
         SceneManager.LoadScene("GameScene");
     }
 
-    public void QuitGame () {
-        Debug.Log("Pressed Quit");
+    public void quitGame()
+    {
         Application.Quit();
+    }
 
+    public void setSpawn(int inSpawn)
+    {
+        spawn = inSpawn;
+    }
+
+    public void setCourse(int inCourse)
+    {
+        course = inCourse;
     }
 }

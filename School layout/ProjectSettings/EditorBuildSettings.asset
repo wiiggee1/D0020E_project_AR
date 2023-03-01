@@ -11,18 +11,30 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/ScanScene.unity
     guid: e6a58ee66f7cf2f56a67a99a49505a96
+<<<<<<< HEAD
   - enabled: 0
     path: Assets/Scenes/BlankAR.unity
     guid: 6bdce89659816455b9f906fc62d19910
   - enabled: 0
+=======
+  - enabled: 1
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
     path: Assets/Scenes/Endscreen.unity
     guid: 447e13bdd547f69f1a0c9359966d7b06
   - enabled: 0
     path: Assets/Scenes/GameScene.unity
     guid: d121a2f714e0f3246906ea46fc9fe67e
   - enabled: 1
+<<<<<<< HEAD
     path: Assets/Scenes/Viktor_test.unity
     guid: d3e3ca80314265847adff8551a580f50
+=======
+    path: Assets/Scenes/Victory.unity
+    guid: 5b83c36cedd983a4983cdd2b2469f82e
+  - enabled: 1
+    path: Assets/Scenes/YouDied.unity
+    guid: a78df2e5453db4b42b75bfbc33f4f14f
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 23b3a275f841053d5a44fec13852cdbd,
       type: 2}

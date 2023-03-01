@@ -1,28 +1,48 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
+<<<<<<< HEAD
     m_FilePath: C:/Users/vikto/Desktop/D0020E_project_AR/D0020E_project_AR/School
       layout/Packages/manifest.json
+=======
+    m_FilePath: G:/Unity Projects/test/D0020E_project_AR/School layout/Packages/manifest.json
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
+<<<<<<< HEAD
       ticks: 638121505918456869
     m_Hash: 1068063783
   m_LockFileStatus:
     m_FilePath: C:/Users/vikto/Desktop/D0020E_project_AR/D0020E_project_AR/School
       layout/Packages/packages-lock.json
+=======
+      ticks: 638121563922821250
+    m_Hash: 3676822537
+  m_LockFileStatus:
+    m_FilePath: G:/Unity Projects/test/D0020E_project_AR/School layout/Packages/packages-lock.json
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
+<<<<<<< HEAD
       ticks: 638121505918501356
     m_Hash: 1566602990
+=======
+      ticks: 638121563922871259
+    m_Hash: 2024390572
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
   m_LocalFileStatus: []
+<<<<<<< HEAD
 m_ProjectPath: C:/Users/vikto/Desktop/D0020E_project_AR/D0020E_project_AR/School
   layout/Packages
+=======
+m_ProjectPath: G:/Unity Projects/test/D0020E_project_AR/School layout/Packages
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
 m_EditorVersion: 2021.3.15f1 (e8e88683f834)
 m_ResolvedPackages:
 - packageId: com.unity.collab-proxy@1.17.7
@@ -30,8 +50,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.17.7
   source: 1
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.collab-proxy@1.17.7
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.collab-proxy@1.17.7
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.collab-proxy
   name: com.unity.collab-proxy
   displayName: Version Control
@@ -302,8 +326,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.feature.ar@1.0.0
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.feature.ar@1.0.0
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.feature.ar
   name: com.unity.feature.ar
   displayName: AR
@@ -421,8 +449,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.1
   source: 2
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.feature.development@1.0.1
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.feature.development@1.0.1
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.feature.development
   name: com.unity.feature.development
   displayName: Engineering
@@ -509,8 +541,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 3.0.16
   source: 1
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.ide.rider@3.0.16
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.ide.rider@3.0.16
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.ide.rider
   name: com.unity.ide.rider
   displayName: JetBrains Rider Editor
@@ -599,8 +635,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.0.17
   source: 1
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.ide.visualstudio@2.0.17
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.ide.visualstudio@2.0.16
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.ide.visualstudio
   name: com.unity.ide.visualstudio
   displayName: Visual Studio Editor
@@ -680,8 +720,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.2.5
   source: 1
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.ide.vscode@1.2.5
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.ide.vscode@1.2.5
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.ide.vscode
   name: com.unity.ide.vscode
   displayName: Visual Studio Code Editor
@@ -743,8 +787,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.2.2
   source: 1
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.learn.iet-framework@2.2.2
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.learn.iet-framework@2.2.2
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.learn.iet-framework
   name: com.unity.learn.iet-framework
   displayName: Tutorial Framework
@@ -858,8 +906,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.1.33
   source: 1
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.test-framework@1.1.33
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.test-framework@1.1.31
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.test-framework
   name: com.unity.test-framework
   displayName: Test Framework
@@ -971,8 +1023,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 3.0.6
   source: 1
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.textmeshpro@3.0.6
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.textmeshpro@3.0.6
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.textmeshpro
   name: com.unity.textmeshpro
   displayName: TextMeshPro
@@ -1141,8 +1197,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.6.4
   source: 1
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.timeline@1.6.4
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.timeline@1.6.4
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.timeline
   name: com.unity.timeline
   displayName: Timeline
@@ -1295,8 +1355,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.ugui@1.0.0
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.ugui@1.0.0
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.ugui
   name: com.unity.ugui
   displayName: Unity UI
@@ -1359,8 +1423,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.7.8
   source: 1
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.visualscripting@1.7.8
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.visualscripting@1.7.8
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.visualscripting
   name: com.unity.visualscripting
   displayName: Visual Scripting
@@ -1448,8 +1516,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 4.2.7
   source: 1
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.xr.arcore@4.2.7
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.xr.arcore@4.2.7
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.xr.arcore
   name: com.unity.xr.arcore
   displayName: ARCore XR Plugin
@@ -1650,8 +1722,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.0.4
   source: 1
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.xr.interaction.toolkit@2.0.4
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.xr.interaction.toolkit@2.0.4
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.xr.interaction.toolkit
   name: com.unity.xr.interaction.toolkit
   displayName: XR Interaction Toolkit
@@ -1781,8 +1857,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 4.2.1
   source: 1
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.xr.management@4.2.1
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.xr.management@4.2.1
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.xr.management
   name: com.unity.xr.management
   displayName: XR Plugin Management
@@ -1916,8 +1996,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 3.2.2
   source: 1
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.xr.oculus@3.2.2
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.xr.oculus@3.2.2
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.xr.oculus
   name: com.unity.xr.oculus
   displayName: Oculus XR Plugin
@@ -2060,8 +2144,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.5.3
   source: 1
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.xr.openxr@1.5.3
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.xr.openxr@1.5.3
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.xr.openxr
   name: com.unity.xr.openxr
   displayName: OpenXR Plugin
@@ -2167,8 +2255,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.modules.ai@1.0.0
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.modules.ai@1.0.0
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.modules.ai
   name: com.unity.modules.ai
   displayName: AI
@@ -2217,8 +2309,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.modules.androidjni@1.0.0
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.modules.androidjni@1.0.0
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.modules.androidjni
   name: com.unity.modules.androidjni
   displayName: Android JNI
@@ -2266,8 +2362,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.modules.animation@1.0.0
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.modules.animation@1.0.0
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.modules.animation
   name: com.unity.modules.animation
   displayName: Animation
@@ -2316,8 +2416,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.modules.assetbundle@1.0.0
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.modules.assetbundle@1.0.0
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.modules.assetbundle
   name: com.unity.modules.assetbundle
   displayName: Asset Bundle
@@ -2366,8 +2470,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.modules.audio@1.0.0
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.modules.audio@1.0.0
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.modules.audio
   name: com.unity.modules.audio
   displayName: Audio
@@ -2416,8 +2524,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.modules.cloth@1.0.0
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.modules.cloth@1.0.0
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.modules.cloth
   name: com.unity.modules.cloth
   displayName: Cloth
@@ -2470,8 +2582,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.modules.director@1.0.0
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.modules.director@1.0.0
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.modules.director
   name: com.unity.modules.director
   displayName: Director
@@ -2528,8 +2644,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.modules.imageconversion@1.0.0
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.modules.imageconversion@1.0.0
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.modules.imageconversion
   name: com.unity.modules.imageconversion
   displayName: Image Conversion
@@ -2579,8 +2699,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.modules.imgui@1.0.0
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.modules.imgui@1.0.0
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.modules.imgui
   name: com.unity.modules.imgui
   displayName: IMGUI
@@ -2629,8 +2753,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.modules.jsonserialize@1.0.0
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.modules.jsonserialize@1.0.0
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.modules.jsonserialize
   name: com.unity.modules.jsonserialize
   displayName: JSONSerialize
@@ -2679,8 +2807,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.modules.particlesystem@1.0.0
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.modules.particlesystem@1.0.0
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.modules.particlesystem
   name: com.unity.modules.particlesystem
   displayName: Particle System
@@ -2729,8 +2861,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.modules.physics@1.0.0
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.modules.physics@1.0.0
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.modules.physics
   name: com.unity.modules.physics
   displayName: Physics
@@ -2779,8 +2915,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.modules.physics2d@1.0.0
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.modules.physics2d@1.0.0
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.modules.physics2d
   name: com.unity.modules.physics2d
   displayName: Physics 2D
@@ -2829,8 +2969,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.modules.screencapture@1.0.0
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.modules.screencapture@1.0.0
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.modules.screencapture
   name: com.unity.modules.screencapture
   displayName: Screen Capture
@@ -2883,8 +3027,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.modules.terrain@1.0.0
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.modules.terrain@1.0.0
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.modules.terrain
   name: com.unity.modules.terrain
   displayName: Terrain
@@ -2933,8 +3081,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.modules.terrainphysics@1.0.0
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.modules.terrainphysics@1.0.0
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.modules.terrainphysics
   name: com.unity.modules.terrainphysics
   displayName: Terrain Physics
@@ -2991,8 +3143,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.modules.tilemap@1.0.0
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.modules.tilemap@1.0.0
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.modules.tilemap
   name: com.unity.modules.tilemap
   displayName: Tilemap
@@ -3044,8 +3200,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.modules.ui@1.0.0
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.modules.ui@1.0.0
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.modules.ui
   name: com.unity.modules.ui
   displayName: UI
@@ -3094,8 +3254,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.modules.uielements@1.0.0
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.modules.uielements@1.0.0
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.modules.uielements
   name: com.unity.modules.uielements
   displayName: UIElements
@@ -3160,8 +3324,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.modules.umbra@1.0.0
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.modules.umbra@1.0.0
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.modules.umbra
   name: com.unity.modules.umbra
   displayName: Umbra
@@ -3210,8 +3378,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.modules.unityanalytics@1.0.0
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.modules.unityanalytics@1.0.0
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.modules.unityanalytics
   name: com.unity.modules.unityanalytics
   displayName: Unity Analytics
@@ -3268,8 +3440,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.modules.unitywebrequest
   name: com.unity.modules.unitywebrequest
   displayName: Unity Web Request
@@ -3318,8 +3494,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.modules.unitywebrequestassetbundle
   name: com.unity.modules.unitywebrequestassetbundle
   displayName: Unity Web Request Asset Bundle
@@ -3376,8 +3556,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.modules.unitywebrequestaudio
   name: com.unity.modules.unitywebrequestaudio
   displayName: Unity Web Request Audio
@@ -3434,8 +3618,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.modules.unitywebrequesttexture@1.0.0
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.modules.unitywebrequesttexture@1.0.0
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.modules.unitywebrequesttexture
   name: com.unity.modules.unitywebrequesttexture
   displayName: Unity Web Request Texture
@@ -3492,8 +3680,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.modules.unitywebrequestwww
   name: com.unity.modules.unitywebrequestwww
   displayName: Unity Web Request WWW
@@ -3566,8 +3758,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.modules.vehicles@1.0.0
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.modules.vehicles@1.0.0
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.modules.vehicles
   name: com.unity.modules.vehicles
   displayName: Vehicles
@@ -3620,8 +3816,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.modules.video@1.0.0
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.modules.video@1.0.0
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.modules.video
   name: com.unity.modules.video
   displayName: Video
@@ -3682,8 +3882,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.modules.vr@1.0.0
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.modules.vr@1.0.0
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.modules.vr
   name: com.unity.modules.vr
   displayName: VR
@@ -3746,8 +3950,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.modules.wind@1.0.0
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.modules.wind@1.0.0
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.modules.wind
   name: com.unity.modules.wind
   displayName: Wind
@@ -3796,8 +4004,12 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.modules.xr@1.0.0
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.modules.xr@1.0.0
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.modules.xr
   name: com.unity.modules.xr
   displayName: XR
@@ -3858,8 +4070,12 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.0
   source: 2
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.modules.subsystems@1.0.0
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.modules.subsystems@1.0.0
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.modules.subsystems
   name: com.unity.modules.subsystems
   displayName: Subsystems
@@ -3912,8 +4128,12 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.0
   source: 2
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.modules.uielementsnative@1.0.0
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.modules.uielementsnative@1.0.0
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.modules.uielementsnative
   name: com.unity.modules.uielementsnative
   displayName: UIElements Native
@@ -3973,8 +4193,12 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 2.1.10
   source: 1
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.xr.legacyinputhelpers@2.1.10
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.xr.legacyinputhelpers@2.1.10
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.xr.legacyinputhelpers
   name: com.unity.xr.legacyinputhelpers
   displayName: XR Legacy Input Helpers
@@ -4070,8 +4294,12 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.4.4
   source: 1
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.inputsystem@1.4.4
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.inputsystem@1.4.4
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.inputsystem
   name: com.unity.inputsystem
   displayName: Input System
@@ -4177,8 +4405,12 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.1.0
   source: 1
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.subsystemregistration@1.1.0
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.subsystemregistration@1.1.0
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.subsystemregistration
   name: com.unity.subsystemregistration
   displayName: Subsystem Registration
@@ -4244,8 +4476,12 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 2.0.0
   source: 1
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.xr.core-utils@2.0.0
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.xr.core-utils@2.0.0
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.xr.core-utils
   name: com.unity.xr.core-utils
   displayName: XR Core Utilities
@@ -4334,8 +4570,12 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 4.2.7
   source: 1
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.xr.arsubsystems@4.2.7
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.xr.arsubsystems@4.2.7
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.xr.arsubsystems
   name: com.unity.xr.arsubsystems
   displayName: AR Subsystems
@@ -4493,8 +4733,12 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.6
   source: 1
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.ext.nunit@1.0.6
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.ext.nunit@1.0.6
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.ext.nunit
   name: com.unity.ext.nunit
   displayName: Custom NUnit
@@ -4555,8 +4799,12 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.0
   source: 1
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.editorcoroutines@1.0.0
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.editorcoroutines@1.0.0
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.editorcoroutines
   name: com.unity.editorcoroutines
   displayName: Editor Coroutines
@@ -4615,8 +4863,12 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.3
   source: 1
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.settings-manager@1.0.3
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.settings-manager@1.0.3
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.settings-manager
   name: com.unity.settings-manager
   displayName: Settings Manager
@@ -4674,8 +4926,12 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.1.1
   source: 1
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.performance.profile-analyzer@1.1.1
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.performance.profile-analyzer@1.1.1
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.performance.profile-analyzer
   name: com.unity.performance.profile-analyzer
   displayName: Profile Analyzer
@@ -4741,8 +4997,12 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.2.2
   source: 1
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.testtools.codecoverage@1.2.2
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.testtools.codecoverage@1.2.2
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.testtools.codecoverage
   name: com.unity.testtools.codecoverage
   displayName: Code Coverage
@@ -4838,8 +5098,12 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 4.2.7
   source: 1
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.xr.arfoundation@4.2.7
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.xr.arfoundation@4.2.7
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.xr.arfoundation
   name: com.unity.xr.arfoundation
   displayName: AR Foundation
@@ -5033,8 +5297,12 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 4.2.7
   source: 1
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.xr.arkit@4.2.7
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.xr.arkit@4.2.7
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.xr.arkit
   name: com.unity.xr.arkit
   displayName: ARKit XR Plugin
@@ -5245,8 +5513,12 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 6.4.1
   source: 1
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.xr.magicleap@6.4.1
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.xr.magicleap@6.4.1
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.xr.magicleap
   name: com.unity.xr.magicleap
   displayName: Magic Leap XR Plugin
@@ -5403,8 +5675,12 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 4.2.7
   source: 1
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.xr.arkit-face-tracking@4.2.7
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.xr.arkit-face-tracking@4.2.7
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.xr.arkit-face-tracking
   name: com.unity.xr.arkit-face-tracking
   displayName: ARKit Face Tracking
@@ -5752,8 +6028,12 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.6.0
   source: 1
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.services.core@1.6.0
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.services.core@1.6.0
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.services.core
   name: com.unity.services.core
   displayName: Services Core
@@ -5837,8 +6117,12 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.1
   source: 1
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.xr.interactionsubsystems@1.0.1
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.xr.interactionsubsystems@1.0.1
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.xr.interactionsubsystems
   name: com.unity.xr.interactionsubsystems
   displayName: XR Interaction Subsystems
@@ -5968,8 +6252,12 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 3.0.2
   source: 1
+<<<<<<< HEAD
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
     layout\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2
+=======
+  resolvedPath: G:\Unity Projects\test\D0020E_project_AR\School layout\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2
+>>>>>>> 2dcc62706ed772b9bca28561e926ed496ff8b2f4
   assetPath: Packages/com.unity.nuget.newtonsoft-json
   name: com.unity.nuget.newtonsoft-json
   displayName: Newtonsoft Json
