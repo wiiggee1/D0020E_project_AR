@@ -29,4 +29,15 @@ public class MainMenu : MonoBehaviour
     {
         course = inCourse;
     }
+
+    public void Scan () {
+        //Debug.Log("Pressed Scan QR");
+        SceneManager.LoadScene("ScanScene");
+    }
+
+    public void QuitGame () {
+        Debug.Log("Pressed Quit");
+        Application.Quit();
+
+    }
 }

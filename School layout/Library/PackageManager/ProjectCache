@@ -5,16 +5,26 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
+<<<<<<< HEAD
       ticks: 638121563922821250
     m_Hash: 3676822537
+=======
+      ticks: 638120619691437098
+    m_Hash: 2128873883
+>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_LockFileStatus:
     m_FilePath: G:/Unity Projects/D0020E_project_AR/School layout/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
+<<<<<<< HEAD
       ticks: 638121563922871259
     m_Hash: 2024390572
+=======
+      ticks: 638120619691477106
+    m_Hash: 3911204
+>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -1507,6 +1517,7 @@ m_ResolvedPackages:
   unityLifecycle:
     version: 4.2.7
     nextVersion: 
+<<<<<<< HEAD
 - packageId: com.unity.xr.interaction.toolkit@2.0.4
   testable: 0
   isDirectDependency: 1
@@ -1640,6 +1651,13 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 4.2.1
   source: 1
+=======
+- packageId: com.unity.xr.management@4.2.1
+  testable: 0
+  isDirectDependency: 1
+  version: 4.2.1
+  source: 1
+>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   resolvedPath: G:\Unity Projects\D0020E_project_AR\School layout\Library\PackageCache\com.unity.xr.management@4.2.1
   assetPath: Packages/com.unity.xr.management
   name: com.unity.xr.management
@@ -1838,14 +1856,20 @@ m_ResolvedPackages:
     - 1.12.0
     - 1.12.1
     - 1.13.0
+<<<<<<< HEAD
     - 1.13.1-preview.1
+=======
+>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
     - 2.0.0-preview.1
     - 2.0.0-preview.2
     - 2.0.0-preview.4
     - 2.0.0-preview.5
     - 2.0.2-preview.1
     - 2.2.0-preview.1
+<<<<<<< HEAD
     - 2.2.3-preview.1
+=======
+>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
     - 3.0.0-pre.1
     - 3.0.0-pre.2
     - 3.0.0-pre.4

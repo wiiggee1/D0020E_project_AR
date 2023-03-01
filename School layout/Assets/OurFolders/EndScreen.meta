@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:School layout/Assets/OurFolders/EndScreen.meta
 guid: a1181289b529c3d4c96a580e70708e3a
+========
+guid: 8e7e8f5a82a3a134e91c54efd2274ea9
+>>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/TextMesh Pro/Documentation.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

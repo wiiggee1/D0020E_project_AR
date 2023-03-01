@@ -1,8 +1,13 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:School layout/Assets/TextMesh Pro/Documentation.meta
 guid: 8e7e8f5a82a3a134e91c54efd2274ea9
+========
+guid: 512a49d95c0c4332bdd98131869c23c9
+>>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/TextMesh Pro/Resources/Sprite Assets.meta
 folderAsset: yes
+timeCreated: 1441876896
+licenseType: Pro
 DefaultImporter:
-  externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 

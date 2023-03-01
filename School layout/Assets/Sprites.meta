@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:School layout/Assets/Sprites.meta
 guid: 335e8608041f6d546a40a8447db86191
+========
+guid: d0603b6d5186471b96c778c3949c7ce2
+>>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/TextMesh Pro/Sprites.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
