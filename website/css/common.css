@@ -5,6 +5,14 @@ html {
 		rgba(255, 235, 205, 1) 0%,
 		rgba(211, 210, 250, 1) 100%
 	);
+
+    min-height: 100vh;
+    display:flex;
+    justify-content: center;
+}
+
+body {
+    display: flex;
 }
 
 .all {
