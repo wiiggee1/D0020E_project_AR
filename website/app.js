@@ -7,7 +7,7 @@ app.set("view engine", "pug");
 
 app.use(express.static(__dirname + '/views'));
 app.use('/js', express.static('js'));
-
+app.use('/css', express.static('css'));
 
 app.get('/', (req,res) => {
     res.render("index")
