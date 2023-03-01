@@ -1,25 +1,13 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
-using UnityEngine.XR;
-using UnityEngine.InputSystem.XR;
 using UnityEngine.Android;
-using UnityEditor;
-using System.Numerics;
 using Vector3 = UnityEngine.Vector3;
-using UnityEngine.XR.OpenXR.Input;
-using UnityEngine.XR.ARCore;
-using UnityEngine.XR.ARSubsystems;
 using UnityEngine.UI;
-using Unity.XR.CoreUtils;
-using System.Threading.Tasks;
-using UnityEditor.VersionControl;
-using System.Xml.Linq;
 using MySqlConnector;
+using System.Net;
+using UnityEditor.PackageManager;
 
 public class Algorithm : MonoBehaviour
 {
@@ -33,14 +21,15 @@ public class Algorithm : MonoBehaviour
     private bool trackingflag = false;
     public Text positionTextNew;
     public InputField passwordInput;
-    private UnityEngine.Vector2 deviceLocation;
+    private Vector2 deviceLocation;
     private float device_lat; //device geodata
     private float device_long; //device geodata
     public Vector3 previousArCameraPosition;
     public Vector3 arCameraPosition;
-    public UnityEngine.Quaternion arCameraRotation;
+    public Quaternion arCameraRotation;
     private float arHorizontal;
     private float arVertical;
+    public WinLose winLose;
 
     float[] xPos = new float[] { };
     float[] yPos = new float[] { };
@@ -209,16 +198,25 @@ public class Algorithm : MonoBehaviour
     public void ifSafeZoneReachedSqlAction()
     {
         // if the query was successfully executed reset/restore positionData dictionary!
-        bool safeZoneReached = true; 
-        if (safeZoneReached)
+        if (winLose.safeZoneReached == true)
         {
-            passwordInput.contentType = InputField.ContentType.Password;
-            _ = sqlHandlerAsync(passwordInput.contentType);
+            webclientSqlHandler();
             resetPositionDataState();
         }
     }
 
+    public void webclientSqlHandler()
+    {
+        var gameData = getPositionData();
+        string toJson = Newtonsoft.Json.JsonConvert.SerializeObject(gameData);
+        string server_url = "http://130.240.202.127/server_repo/gameSqlHandler.php";
+        WebClient webClient = new WebClient();
 
+        webClient.Headers[HttpRequestHeader.ContentType] = "application/json";
+        _ = webClient.UploadString(server_url, "POST", toJson);
+    }
+
+    /*
     public async System.Threading.Tasks.Task sqlHandlerAsync(InputField.ContentType passwrd)
     {
         
@@ -261,6 +259,6 @@ public class Algorithm : MonoBehaviour
             Debug.LogError(ex.Message);
         }
 
-    }
+    }*/
 
 }
