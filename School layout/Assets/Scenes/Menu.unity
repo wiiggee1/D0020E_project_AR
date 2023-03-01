@@ -38,15 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-<<<<<<< HEAD
   m_IndirectSpecularColor: {r: 0.44402242, g: 0.49316543, b: 0.5722324, a: 1}
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
-  m_IndirectSpecularColor: {r: 0.44402242, g: 0.49316543, b: 0.5722324, a: 1}
-========
-  m_IndirectSpecularColor: {r: 0.4440218, g: 0.49316478, b: 0.5722311, a: 1}
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -131,15 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
-<<<<<<< HEAD
 --- !u!1 &25664554
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
---- !u!1 &244325353
-========
---- !u!1 &271324275
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,27 +131,17 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
   - component: {fileID: 25664555}
   - component: {fileID: 25664558}
   - component: {fileID: 25664557}
   - component: {fileID: 25664556}
   m_Layer: 5
   m_Name: Spawn 2
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
-  - component: {fileID: 244325356}
-  - component: {fileID: 244325355}
-  - component: {fileID: 244325357}
-  m_Layer: 0
-  m_Name: EventSystem
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
 --- !u!224 &25664555
 RectTransform:
   m_ObjectHideFlags: 0
@@ -190,15 +164,11 @@ RectTransform:
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &25664556
-=======
---- !u!114 &244325355
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 25664554}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -275,24 +245,10 @@ MonoBehaviour:
         m_CallState: 2
 --- !u!114 &25664557
 MonoBehaviour:
-=======
-  m_GameObject: {fileID: 244325353}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
---- !u!4 &244325356
-Transform:
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 25664554}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -891,14 +847,10 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 121600149}
-=======
-  m_GameObject: {fileID: 244325353}
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-<<<<<<< HEAD
   m_Children:
   - {fileID: 1124560806}
   m_Father: {fileID: 1966914629}
@@ -1056,19 +1008,11 @@ RectTransform:
   m_SizeDelta: {x: 80, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &139599871
-=======
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &244325357
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 139599869}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1416,44 +1360,6 @@ CanvasRenderer:
   m_GameObject: {fileID: 269875077}
   m_CullTransparentMesh: 1
 --- !u!1 &271324275
-=======
-  m_GameObject: {fileID: 244325353}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
-  m_MoveRepeatDelay: 0.5
-  m_MoveRepeatRate: 0.1
-  m_XRTrackingOrigin: {fileID: 0}
-  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018,
-    type: 3}
-  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018,
-    type: 3}
-  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018,
-    type: 3}
-  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018,
-    type: 3}
-  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018,
-    type: 3}
-  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018,
-    type: 3}
-  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018,
-    type: 3}
-  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018,
-    type: 3}
-  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018,
-    type: 3}
-  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018,
-    type: 3}
-  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018,
-    type: 3}
-  m_DeselectOnBackgroundClick: 1
-  m_PointerBehavior: 0
-  m_CursorLockBehavior: 0
---- !u!1 &773168535
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1461,20 +1367,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
   - component: {fileID: 271324276}
   - component: {fileID: 271324278}
   - component: {fileID: 271324277}
-=======
-  - component: {fileID: 773168536}
-  - component: {fileID: 773168538}
-  - component: {fileID: 773168537}
-========
-  - component: {fileID: 271324276}
-  - component: {fileID: 271324278}
-  - component: {fileID: 271324277}
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -1482,43 +1377,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
 --- !u!224 &271324276
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
---- !u!224 &773168536
-========
---- !u!224 &271324276
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 271324275}
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
-  m_GameObject: {fileID: 773168535}
-========
-  m_GameObject: {fileID: 271324275}
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-<<<<<<< HEAD
   m_Father: {fileID: 1254959304}
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
-  m_Father: {fileID: 1341377892}
-========
-  m_Father: {fileID: 1254959304}
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1526,29 +1397,13 @@ RectTransform:
   m_AnchoredPosition: {x: -10.229, y: 0}
   m_SizeDelta: {x: 20.458, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
-<<<<<<< HEAD
 --- !u!114 &271324277
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
---- !u!114 &773168537
-========
---- !u!114 &271324277
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 271324275}
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
-  m_GameObject: {fileID: 773168535}
-========
-  m_GameObject: {fileID: 271324275}
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -1572,35 +1427,15 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-<<<<<<< HEAD
 --- !u!222 &271324278
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
---- !u!222 &773168538
-========
---- !u!222 &271324278
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 271324275}
   m_CullTransparentMesh: 1
 --- !u!1 &300480702
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
-  m_GameObject: {fileID: 773168535}
-  m_CullTransparentMesh: 1
---- !u!1 &958996954
-========
-  m_GameObject: {fileID: 271324275}
-  m_CullTransparentMesh: 1
---- !u!1 &298156528
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1608,45 +1443,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
   - component: {fileID: 300480703}
   - component: {fileID: 300480705}
   - component: {fileID: 300480704}
   m_Layer: 5
   m_Name: Text
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
-  - component: {fileID: 958996955}
-  - component: {fileID: 958996957}
-  - component: {fileID: 958996956}
-========
-  - component: {fileID: 298156529}
-  - component: {fileID: 298156531}
-  - component: {fileID: 298156530}
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
-  m_Layer: 5
-  m_Name: QRText
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
 --- !u!224 &300480703
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
---- !u!224 &958996955
-========
---- !u!224 &298156529
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 300480702}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -1654,56 +1466,20 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1683012096}
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
-  m_GameObject: {fileID: 958996954}
-========
-  m_GameObject: {fileID: 298156528}
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
-  m_Father: {fileID: 1751147347}
-========
-  m_Father: {fileID: 1947031863}
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-<<<<<<< HEAD
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &300480704
-=======
-  m_AnchoredPosition: {x: 11, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
---- !u!114 &958996956
-========
---- !u!114 &298156530
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 300480702}
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
-  m_GameObject: {fileID: 958996954}
-========
-  m_GameObject: {fileID: 298156528}
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -1717,15 +1493,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-<<<<<<< HEAD
   m_text: Go Back
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
-  m_text: RESTART
-========
-  m_text: SCAN QR
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1752,7 +1520,6 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-<<<<<<< HEAD
   m_fontSize: 72
   m_fontSizeBase: 72
   m_fontWeight: 400
@@ -1760,15 +1527,6 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-=======
-  m_fontSize: 60
-  m_fontSizeBase: 60
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1778,11 +1536,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-<<<<<<< HEAD
   m_enableWordWrapping: 1
-=======
-  m_enableWordWrapping: 0
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -1802,40 +1556,21 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-<<<<<<< HEAD
   m_margin: {x: -94.543564, y: -43.86261, z: -94.564575, w: -44.00244}
-=======
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
-<<<<<<< HEAD
 --- !u!222 &300480705
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
---- !u!222 &958996957
-========
---- !u!222 &298156531
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 300480702}
   m_CullTransparentMesh: 1
 --- !u!1 &306494688
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
-  m_GameObject: {fileID: 958996954}
-  m_CullTransparentMesh: 1
---- !u!1 &1011611834
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1843,24 +1578,14 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
   - component: {fileID: 306494689}
   m_Layer: 0
   m_Name: Main Title
-=======
-  - component: {fileID: 1011611835}
-  - component: {fileID: 1011611838}
-  - component: {fileID: 1011611837}
-  - component: {fileID: 1011611836}
-  m_Layer: 5
-  m_Name: QuitButton
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
 --- !u!4 &306494689
 Transform:
   m_ObjectHideFlags: 0
@@ -1898,15 +1623,11 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!224 &377143132
-=======
---- !u!224 &1011611835
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 377143131}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -2087,30 +1808,11 @@ RectTransform:
   m_SizeDelta: {x: 100, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &483984439
-=======
-  m_GameObject: {fileID: 1011611834}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1731610009}
-  m_Father: {fileID: 1034940740}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -3.434204, y: -225.33292}
-  m_SizeDelta: {x: -724.7623, y: -453.4458}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1011611836
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 483984436}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -2221,9 +1923,6 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 728231522}
-=======
-  m_GameObject: {fileID: 1011611834}
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -2238,13 +1937,8 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-<<<<<<< HEAD
     m_NormalColor: {r: 0, g: 0, b: 0, a: 0}
     m_HighlightedColor: {r: 0, g: 0, b: 0, a: 0.7372549}
-=======
-    m_NormalColor: {r: 0.28627452, g: 0.28627452, b: 0.28627452, a: 1}
-    m_HighlightedColor: {r: 0, g: 0, b: 0, a: 1}
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
     m_PressedColor: {r: 0, g: 0, b: 0, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -2262,7 +1956,6 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-<<<<<<< HEAD
   m_TargetGraphic: {fileID: 728231525}
   m_OnClick:
     m_PersistentCalls:
@@ -2271,16 +1964,6 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
-=======
-  m_TargetGraphic: {fileID: 1011611837}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1034940741}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: quitGame
-        m_Mode: 1
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2288,7 +1971,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-<<<<<<< HEAD
         m_CallState: 2
       - m_Target: {fileID: 1836388281}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
@@ -2315,31 +1997,19 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &728231525
-=======
-        m_CallState: 1
---- !u!114 &1011611837
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 728231522}
-=======
-  m_GameObject: {fileID: 1011611834}
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-<<<<<<< HEAD
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-=======
-  m_Color: {r: 0.2264151, g: 0.2264151, b: 0.2264151, a: 1}
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2356,30 +2026,15 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-<<<<<<< HEAD
 --- !u!222 &728231526
-=======
---- !u!222 &1011611838
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 728231522}
   m_CullTransparentMesh: 1
 --- !u!1 &771474228
-=======
-  m_GameObject: {fileID: 1011611834}
-  m_CullTransparentMesh: 1
---- !u!1 &1034940739
-========
-  m_GameObject: {fileID: 298156528}
-  m_CullTransparentMesh: 1
---- !u!1 &828128090
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2387,35 +2042,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
   - component: {fileID: 771474229}
   - component: {fileID: 771474231}
   - component: {fileID: 771474230}
   m_Layer: 5
   m_Name: Text
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
-  - component: {fileID: 1034940740}
-  - component: {fileID: 1034940741}
-  m_Layer: 5
-  m_Name: MainMenu
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
 --- !u!224 &771474229
-=======
---- !u!224 &1034940740
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 771474228}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -2431,31 +2073,11 @@ RectTransform:
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &771474230
-=======
-  m_GameObject: {fileID: 1034940739}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1751147347}
-  - {fileID: 1011611835}
-  m_Father: {fileID: 1341377892}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.527954, y: 108.020996}
-  m_SizeDelta: {x: 890.4, y: 391.5239}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1034940741
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 771474228}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -2548,15 +2170,6 @@ CanvasRenderer:
   m_GameObject: {fileID: 771474228}
   m_CullTransparentMesh: 1
 --- !u!1 &828128090
-=======
-  m_GameObject: {fileID: 1034940739}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fbf7a7e566f741ce873a5ad96b236e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &1092940853
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2564,17 +2177,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
   - component: {fileID: 828128092}
   - component: {fileID: 828128091}
-=======
-  - component: {fileID: 1092940855}
-  - component: {fileID: 1092940854}
-========
-  - component: {fileID: 828128092}
-  - component: {fileID: 828128091}
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -2582,29 +2186,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
 --- !u!108 &828128091
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
---- !u!108 &1092940854
-========
---- !u!108 &828128091
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 828128090}
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
-  m_GameObject: {fileID: 1092940853}
-========
-  m_GameObject: {fileID: 828128090}
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_Enabled: 1
   serializedVersion: 10
   m_Type: 1
@@ -2660,29 +2248,13 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
-<<<<<<< HEAD
 --- !u!4 &828128092
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
---- !u!4 &1092940855
-========
---- !u!4 &828128092
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 828128090}
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
-  m_GameObject: {fileID: 1092940853}
-========
-  m_GameObject: {fileID: 828128090}
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -2691,15 +2263,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
-<<<<<<< HEAD
 --- !u!1 &843250924
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
---- !u!1 &1341377888
-========
---- !u!1 &947456800
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2707,109 +2271,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
   - component: {fileID: 843250925}
   - component: {fileID: 843250927}
   - component: {fileID: 843250926}
   m_Layer: 5
   m_Name: Text
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
-  - component: {fileID: 1341377892}
-  - component: {fileID: 1341377891}
-  - component: {fileID: 1341377890}
-  - component: {fileID: 1341377889}
-  m_Layer: 5
-  m_Name: Victory screen
-========
-  - component: {fileID: 947456801}
-  - component: {fileID: 947456803}
-  - component: {fileID: 947456802}
-  m_Layer: 5
-  m_Name: QuitText
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
 --- !u!224 &843250925
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
---- !u!114 &1341377889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1341377888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &1341377890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1341377888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
---- !u!223 &1341377891
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1341377888}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
---- !u!224 &1341377892
-========
---- !u!224 &947456801
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 843250924}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -2817,71 +2294,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1396450331}
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
-  m_GameObject: {fileID: 1341377888}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 773168536}
-  - {fileID: 1589788773}
-  - {fileID: 1034940740}
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
---- !u!1 &1589788772
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1589788773}
-  - component: {fileID: 1589788775}
-  - component: {fileID: 1589788774}
-  m_Layer: 5
-  m_Name: MenuTitle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1589788773
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1589788772}
-========
-  m_GameObject: {fileID: 947456800}
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
-  m_Father: {fileID: 1341377892}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -5, y: 219}
-  m_SizeDelta: {x: -83.14197, y: -712.75305}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1589788774
-========
-  m_Father: {fileID: 2136894822}
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2889,26 +2301,13 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
-<<<<<<< HEAD
 --- !u!114 &843250926
-=======
---- !u!114 &947456802
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 843250924}
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
-  m_GameObject: {fileID: 1589788772}
-========
-  m_GameObject: {fileID: 947456800}
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -2922,17 +2321,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-<<<<<<< HEAD
   m_text: Course 2
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
-  m_text: 'VICTORY
-
-    YOU DIDN''T DIE'
-========
-  m_text: QUIT
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2959,7 +2348,6 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-<<<<<<< HEAD
   m_fontSize: 72
   m_fontSizeBase: 72
   m_fontWeight: 400
@@ -2967,20 +2355,6 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
-  m_fontSize: 70
-  m_fontSizeBase: 70
-========
-  m_fontSize: 60
-  m_fontSizeBase: 60
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -2990,7 +2364,6 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-<<<<<<< HEAD
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
@@ -3273,13 +2646,6 @@ MonoBehaviour:
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
-  m_enableWordWrapping: 1
-========
-  m_enableWordWrapping: 0
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -3305,21 +2671,12 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
-<<<<<<< HEAD
 --- !u!222 &872547528
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
---- !u!222 &1589788775
-========
---- !u!222 &947456803
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 872547525}
   m_CullTransparentMesh: 1
 --- !u!1 &984597886
@@ -3396,17 +2753,6 @@ MonoBehaviour:
     width: 1
     height: 1
 --- !u!1 &1029448126
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
-  m_GameObject: {fileID: 1589788772}
-  m_CullTransparentMesh: 1
---- !u!1 &1595162465
-========
-  m_GameObject: {fileID: 947456800}
-  m_CullTransparentMesh: 1
---- !u!1 &1029448126
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3414,20 +2760,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
   - component: {fileID: 1029448129}
   - component: {fileID: 1029448128}
   - component: {fileID: 1029448130}
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
-  - component: {fileID: 1595162468}
-  - component: {fileID: 1595162467}
-  - component: {fileID: 1595162466}
-========
-  - component: {fileID: 1029448129}
-  - component: {fileID: 1029448128}
-  - component: {fileID: 1029448127}
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -3435,29 +2770,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
-=======
---- !u!114 &1029448127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1029448126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 --- !u!114 &1029448128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3488,7 +2800,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!114 &1029448130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4385,8 +3696,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1224032215}
   m_CullTransparentMesh: 1
-=======
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 --- !u!1 &1254959300
 GameObject:
   m_ObjectHideFlags: 0
@@ -4480,15 +3789,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 271324276}
-<<<<<<< HEAD
   - {fileID: 483984437}
   - {fileID: 656181814}
   - {fileID: 1836388282}
   - {fileID: 1966914629}
-=======
-  - {fileID: 1877223860}
-  - {fileID: 1581755884}
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4497,7 +3801,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
-<<<<<<< HEAD
 --- !u!1 &1339748848
 GameObject:
   m_ObjectHideFlags: 0
@@ -4779,8 +4082,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1355098194}
   m_CullTransparentMesh: 1
-=======
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 --- !u!1 &1372685061
 GameObject:
   m_ObjectHideFlags: 0
@@ -4792,10 +4093,6 @@ GameObject:
   - component: {fileID: 1372685064}
   - component: {fileID: 1372685063}
   - component: {fileID: 1372685062}
-<<<<<<< HEAD
-=======
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4803,49 +4100,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
 --- !u!81 &1372685062
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
---- !u!81 &1595162466
-========
---- !u!81 &1372685062
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 1372685061}
   m_Enabled: 1
 --- !u!20 &1372685063
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
-  m_GameObject: {fileID: 1595162465}
-  m_Enabled: 1
---- !u!20 &1595162467
-========
-  m_GameObject: {fileID: 1372685061}
-  m_Enabled: 1
---- !u!20 &1372685063
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 Camera:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 1372685061}
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
-  m_GameObject: {fileID: 1595162465}
-========
-  m_GameObject: {fileID: 1372685061}
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
@@ -4864,11 +4133,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-<<<<<<< HEAD
   field of view: 60
-=======
-  field of view: 61.023464
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -4886,48 +4151,22 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
-<<<<<<< HEAD
 --- !u!4 &1372685064
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
---- !u!4 &1595162468
-========
---- !u!4 &1372685064
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 1372685061}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: -10}
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
-  m_GameObject: {fileID: 1595162465}
-========
-  m_GameObject: {fileID: 1372685061}
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 875, y: 402, z: -10}
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!1 &1378041700
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
---- !u!1 &1731610008
-========
---- !u!1 &1581755883
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4935,47 +4174,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
   - component: {fileID: 1378041701}
   - component: {fileID: 1378041703}
   - component: {fileID: 1378041702}
   m_Layer: 5
   m_Name: Text
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
-  - component: {fileID: 1731610009}
-  - component: {fileID: 1731610011}
-  - component: {fileID: 1731610010}
-  m_Layer: 5
-  m_Name: QuitText
-========
-  - component: {fileID: 1581755884}
-  - component: {fileID: 1581755886}
-  - component: {fileID: 1581755885}
-  m_Layer: 5
-  m_Name: MenuTitle
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
 --- !u!224 &1378041701
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
---- !u!224 &1731610009
-========
---- !u!224 &1581755884
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 1378041700}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -5258,19 +4472,11 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1478937714}
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
-  m_GameObject: {fileID: 1731610008}
-========
-  m_GameObject: {fileID: 1581755883}
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-<<<<<<< HEAD
   m_Father: {fileID: 483984437}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5407,10 +4613,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2038340486}
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
-  m_Father: {fileID: 1011611835}
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -5418,7 +4620,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
-<<<<<<< HEAD
 --- !u!114 &1599859451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6055,34 +5256,12 @@ RectTransform:
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1733727292
-=======
---- !u!114 &1731610010
-========
-  m_Father: {fileID: 1254959304}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -5, y: 147}
-  m_SizeDelta: {x: -83.14197, y: -712.75305}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1581755885
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 1733727290}
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
-  m_GameObject: {fileID: 1731610008}
-========
-  m_GameObject: {fileID: 1581755883}
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -6096,15 +5275,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-<<<<<<< HEAD
   m_text: Spawn 3
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
-  m_text: QUIT
-========
-  m_text: START MENU
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6131,7 +5302,6 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-<<<<<<< HEAD
   m_fontSize: 72
   m_fontSizeBase: 72
   m_fontWeight: 400
@@ -6269,19 +5439,11 @@ MonoBehaviour:
     rgba: 4294967295
   m_fontSize: 22
   m_fontSizeBase: 22
-=======
-  m_fontSize: 60
-  m_fontSizeBase: 60
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-<<<<<<< HEAD
   m_fontStyle: 1
-=======
-  m_fontStyle: 0
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -6291,15 +5453,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-<<<<<<< HEAD
   m_enableWordWrapping: 1
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
-  m_enableWordWrapping: 0
-========
-  m_enableWordWrapping: 1
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -6319,31 +5473,18 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-<<<<<<< HEAD
   m_margin: {x: -94.543564, y: 54.918392, z: -94.564575, w: -44.00244}
-=======
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
-<<<<<<< HEAD
 --- !u!222 &1757299767
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
---- !u!222 &1731610011
-========
---- !u!222 &1581755886
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 1757299764}
   m_CullTransparentMesh: 1
 --- !u!1 &1784992553
@@ -6505,17 +5646,6 @@ CanvasRenderer:
   m_GameObject: {fileID: 1784992553}
   m_CullTransparentMesh: 1
 --- !u!1 &1836388281
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
-  m_GameObject: {fileID: 1731610008}
-  m_CullTransparentMesh: 1
---- !u!1 &1751147346
-========
-  m_GameObject: {fileID: 1581755883}
-  m_CullTransparentMesh: 1
---- !u!1 &1877223859
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6523,7 +5653,6 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
   - component: {fileID: 1836388282}
   - component: {fileID: 1836388283}
   m_Layer: 5
@@ -6850,16 +5979,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1966914629}
   - component: {fileID: 1966914630}
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
-  - component: {fileID: 1751147347}
-  - component: {fileID: 1751147350}
-  - component: {fileID: 1751147349}
-  - component: {fileID: 1751147348}
-========
-  - component: {fileID: 1877223860}
-  - component: {fileID: 1877223861}
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -6867,17 +5986,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
 --- !u!224 &1966914629
-=======
---- !u!224 &1877223860
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 1966914628}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -6898,46 +6012,19 @@ RectTransform:
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1966914630
-=======
-  m_GameObject: {fileID: 1877223859}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1947031863}
-  - {fileID: 2136894822}
-  m_Father: {fileID: 1254959304}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.528, y: 108.021}
-  m_SizeDelta: {x: 890.4, y: 391.5239}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1877223861
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 1966914628}
-=======
-  m_GameObject: {fileID: 1877223859}
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6fbf7a7e566f741ce873a5ad96b236e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
   obstacleScript: {fileID: 0}
 --- !u!1 &2038340485
-=======
---- !u!1 &1947031862
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6945,42 +6032,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
   - component: {fileID: 2038340486}
   - component: {fileID: 2038340489}
   - component: {fileID: 2038340488}
   - component: {fileID: 2038340487}
   m_Layer: 5
   m_Name: Back
-=======
-  - component: {fileID: 1947031863}
-  - component: {fileID: 1947031866}
-  - component: {fileID: 1947031865}
-  - component: {fileID: 1947031864}
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
-  m_Layer: 5
-  m_Name: QRButton
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
 --- !u!224 &2038340486
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
---- !u!224 &1751147347
-========
---- !u!224 &1947031863
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 2038340485}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -6997,51 +6065,12 @@ RectTransform:
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2038340487
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
-  m_GameObject: {fileID: 1751147346}
-========
-  m_GameObject: {fileID: 1947031862}
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
-  - {fileID: 958996955}
-  m_Father: {fileID: 1034940740}
-========
-  - {fileID: 298156529}
-  m_Father: {fileID: 1877223860}
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -9.211212, y: -101.25081}
-  m_SizeDelta: {x: -586.8255, y: -471.07}
-  m_Pivot: {x: 0.5, y: 0.5}
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
---- !u!114 &1751147348
-========
---- !u!114 &1947031864
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 2038340485}
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
-  m_GameObject: {fileID: 1751147346}
-========
-  m_GameObject: {fileID: 1947031862}
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -7056,13 +6085,8 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-<<<<<<< HEAD
     m_NormalColor: {r: 0, g: 0, b: 0, a: 0}
     m_HighlightedColor: {r: 0, g: 0, b: 0, a: 0.7372549}
-=======
-    m_NormalColor: {r: 0.2830189, g: 0.2830189, b: 0.2830189, a: 1}
-    m_HighlightedColor: {r: 0, g: 0, b: 0, a: 1}
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
     m_PressedColor: {r: 0, g: 0, b: 0, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -7080,7 +6104,6 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-<<<<<<< HEAD
   m_TargetGraphic: {fileID: 2038340488}
   m_OnClick:
     m_PersistentCalls:
@@ -7101,26 +6124,6 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
-  m_TargetGraphic: {fileID: 1751147349}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1034940741}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: quitGame
-========
-  m_TargetGraphic: {fileID: 1947031865}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1877223861}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: Scan
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
-        m_Mode: 1
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7128,187 +6131,21 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-<<<<<<< HEAD
         m_CallState: 2
 --- !u!114 &2038340488
-=======
-        m_CallState: 1
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
---- !u!114 &1751147349
-========
---- !u!114 &1947031865
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 2038340485}
-=======
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
-  m_GameObject: {fileID: 1751147346}
-========
-  m_GameObject: {fileID: 1947031862}
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-<<<<<<< HEAD
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-=======
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
-  m_RaycastPadding: {x: -250, y: 0, z: -260, w: 0}
-========
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
---- !u!222 &1751147350
-========
---- !u!222 &1947031866
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-<<<<<<<< HEAD:School layout/Assets/Scenes/Victory.unity
-  m_GameObject: {fileID: 1751147346}
-========
-  m_GameObject: {fileID: 1947031862}
-  m_CullTransparentMesh: 1
---- !u!1 &2136894821
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2136894822}
-  - component: {fileID: 2136894825}
-  - component: {fileID: 2136894824}
-  - component: {fileID: 2136894823}
-  m_Layer: 5
-  m_Name: QuitButton
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2136894822
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2136894821}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 947456801}
-  m_Father: {fileID: 1877223860}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -3.434204, y: -225.33292}
-  m_SizeDelta: {x: -724.7623, y: -453.4458}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2136894823
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2136894821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 0.28627452, g: 0.28627452, b: 0.28627452, a: 1}
-    m_HighlightedColor: {r: 0, g: 0, b: 0, a: 1}
-    m_PressedColor: {r: 0, g: 0, b: 0, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 2136894824}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1877223861}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: QuitGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
---- !u!114 &2136894824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2136894821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.2264151, g: 0.2264151, b: 0.2264151, a: 1}
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7325,17 +6162,12 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-<<<<<<< HEAD
 --- !u!222 &2038340489
-=======
---- !u!222 &2136894825
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 2038340485}
   m_CullTransparentMesh: 1
 --- !u!1 &2118053033
@@ -7472,8 +6304,4 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2118053033}
-=======
-  m_GameObject: {fileID: 2136894821}
->>>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3:School layout/Assets/Scenes/Menu.unity
->>>>>>> 83966ba64f65633bfb7a1aad91115e685daf75c3
   m_CullTransparentMesh: 1

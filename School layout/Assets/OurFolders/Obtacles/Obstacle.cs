@@ -371,6 +371,8 @@ public class Obstacle : MonoBehaviour
     private void fireAndSmoke13AlarmAndTimer(){
         fire13.SetActive(true);
         smoke13.SetActive(true);
+        alarm.SetActive(true);
+        timer.SetActive(true);
     }
 
     private void fireAndSmoke1(){
