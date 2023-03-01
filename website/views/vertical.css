@@ -122,3 +122,8 @@ div#timer {
 #indexA:active {
     color: green;
 }
+
+.courses {
+    max-width: 100%;
+    padding-top: 120px;
+}

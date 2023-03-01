@@ -6,6 +6,7 @@ app.set("views", "./views");
 app.set("view engine", "pug");
 
 app.use(express.static(__dirname + '/views'));
+app.use('/js', express.static('js'));
 
 
 app.get('/', (req,res) => {
@@ -17,7 +18,7 @@ app.get('/walkthroughs', (req,res) => {
 });
 
 app.get('/courses', (req,res) => {
-    res.render("courses")
+    res.render("courses");
 });
 
 app.listen(port, () => console.log("Listening on port " + port));
