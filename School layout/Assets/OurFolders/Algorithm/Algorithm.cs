@@ -16,10 +16,10 @@ using UnityEngine.XR.ARCore;
 using UnityEngine.XR.ARSubsystems;
 using UnityEngine.UI;
 using Unity.XR.CoreUtils;
-using MySql.Data.MySqlClient;
 using System.Threading.Tasks;
 using UnityEditor.VersionControl;
 using System.Xml.Linq;
+using MySqlConnector;
 
 public class Algorithm : MonoBehaviour
 {
