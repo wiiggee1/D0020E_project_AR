@@ -6,6 +6,9 @@ using UnityEngine.Android;
 using Vector3 = UnityEngine.Vector3;
 using UnityEngine.UI;
 using System.Net;
+using System.Collections;
+using UnityEngine.Networking;
+using System;
 
 public class Algorithm : MonoBehaviour
 {
@@ -223,21 +226,34 @@ public class Algorithm : MonoBehaviour
         }
     }
 
-    public void webclientSqlHandler()
+    public IEnumerator webclientSqlHandler()
     {
-        // add getter method here for fetching data from other classes such as:
-        //1. starting point... 
-        //2. obstacle_course...
-        var startingPoint = Obstacle.spawn;
-        var obstacle_course = Obstacle.course;
+        WebClient webClient = new WebClient();
 
         var gameData = getPositionData();
         string toJson = Newtonsoft.Json.JsonConvert.SerializeObject(gameData);
         string server_url = "http://130.240.202.127/server_repo/gameSqlHandler.php";
-        WebClient webClient = new WebClient();
 
-        webClient.Headers[HttpRequestHeader.ContentType] = "application/json";
-        _ = webClient.UploadString(server_url, "POST", toJson);
+        WWWForm form = new WWWForm();
+        form.AddField("data", toJson);
+
+        using (UnityWebRequest www = UnityWebRequest.Post(server_url, form))
+        {
+            yield return www.SendWebRequest();
+
+            if (www.result == UnityWebRequest.Result.Success)
+            {
+                Debug.Log("Data sent successfully");
+            }
+            else
+            {
+                Debug.LogError("Error sending data: " + www.error);
+            }
+        }
+
+
+        //webClient.Headers[HttpRequestHeader.ContentType] = "application/json";
+        //_ = webClient.UploadString(server_url, "POST", toJson);
     }
 
 }
