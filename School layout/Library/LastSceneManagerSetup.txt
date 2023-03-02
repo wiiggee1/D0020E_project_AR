@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/YouDied.unity
+=======
+- path: Assets/Scenes/Viktor_test.unity
+>>>>>>> Eddie
   isLoaded: 1
   isActive: 1
   isSubScene: 0

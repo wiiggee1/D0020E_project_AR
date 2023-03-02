@@ -6,8 +6,13 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
+<<<<<<< HEAD
       ticks: 638121505918456869
     m_Hash: 1068063783
+=======
+      ticks: 638133852653820030
+    m_Hash: 3288505479
+>>>>>>> Eddie
   m_LockFileStatus:
     m_FilePath: C:/Users/vikto/Desktop/D0020E_project_AR/D0020E_project_AR/School
       layout/Packages/packages-lock.json
@@ -15,8 +20,13 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
+<<<<<<< HEAD
       ticks: 638121505918501356
     m_Hash: 1566602990
+=======
+      ticks: 638133852653830030
+    m_Hash: 1268052754
+>>>>>>> Eddie
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -600,7 +610,11 @@ m_ResolvedPackages:
   version: 2.0.17
   source: 1
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
+<<<<<<< HEAD
     layout\Library\PackageCache\com.unity.ide.visualstudio@2.0.17
+=======
+    layout\Library\PackageCache\com.unity.ide.visualstudio@2.0.16
+>>>>>>> Eddie
   assetPath: Packages/com.unity.ide.visualstudio
   name: com.unity.ide.visualstudio
   displayName: Visual Studio Editor
@@ -859,7 +873,11 @@ m_ResolvedPackages:
   version: 1.1.33
   source: 1
   resolvedPath: C:\Users\vikto\Desktop\D0020E_project_AR\D0020E_project_AR\School
+<<<<<<< HEAD
     layout\Library\PackageCache\com.unity.test-framework@1.1.33
+=======
+    layout\Library\PackageCache\com.unity.test-framework@1.1.31
+>>>>>>> Eddie
   assetPath: Packages/com.unity.test-framework
   name: com.unity.test-framework
   displayName: Test Framework
