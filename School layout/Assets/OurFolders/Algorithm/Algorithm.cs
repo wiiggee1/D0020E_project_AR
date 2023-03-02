@@ -10,24 +10,27 @@ using System.Net;
 public class Algorithm : MonoBehaviour
 {
     private ARCameraManager arCameraObject; //ARCore device gameobject
-    private ARPointCloud _pointCloud; // The AR Foundation PointCloud script
-    private ARSessionOrigin _arSessionOrigin;
-    private ARSession _arSession;
+    public ARPointCloud _pointCloud; // The AR Foundation PointCloud script
+    public ARSessionOrigin _arSessionOrigin;
+    public ARSession _arSession;
     private ARPoseDriver _arPoseDriver;
 
-    //public event Action<ARCameraFrameEventArgs> frameReceived;
-    private bool trackingflag = false;
+    //Reference to scripts and gameobjects
+    public GameObject timerObject;
+    private Timer _timer;
+    public GameObject safeZoneReachedObject;
+    private WinLose _winLose;
+    private float timeCycle = 0f; 
+
+
     public Text positionTextNew;
-    public InputField passwordInput;
-    private Vector2 deviceLocation;
     private float device_lat; //device geodata
     private float device_long; //device geodata
-    public Vector3 previousArCameraPosition;
+    public Vector2 deviceLocation;
     public Vector3 arCameraPosition;
     public Quaternion arCameraRotation;
     private float arHorizontal;
     private float arVertical;
-    public WinLose winLose;
 
     float[] xPos = new float[] { };
     float[] yPos = new float[] { };
@@ -39,21 +42,50 @@ public class Algorithm : MonoBehaviour
     Dictionary<string, float[]> positionData = new Dictionary<string, float[]>();
 
 
+    public void invokeGameObjectReferences()
+    {
+        ARSessionOrigin[] sessionOrigins = FindObjectsOfType<ARSessionOrigin>();
+
+        foreach (ARSessionOrigin sessionOrigin in sessionOrigins)
+        {
+            if (sessionOrigin.isActiveAndEnabled)
+            {
+                // Do something with this AR session origin
+                _arSessionOrigin = sessionOrigin.GetComponent<ARSessionOrigin>();
+                _arSessionOrigin.camera.transform.position = sessionOrigin.transform.position;
+
+            }
+        }
+
+        ARSession[] sessionAr = FindObjectsOfType<ARSession>();
+
+        foreach (ARSession session in sessionAr)
+        {
+            if (session.isActiveAndEnabled)
+            {
+                // Do something with this AR session origin
+                _arSession = session.GetComponent<ARSession>();
+            }
+        }
+
+        _timer = timerObject.GetComponent<Timer>();
+        _winLose = safeZoneReachedObject.GetComponent<WinLose>();
+
+        // set inital starting data
+        var start_x = _arSessionOrigin.camera.transform.position.x;
+        var start_y = _arSessionOrigin.camera.transform.position.y;
+        var start_z = _arSessionOrigin.camera.transform.position.z;
+        Vector3 arRotation = _arSessionOrigin.camera.transform.eulerAngles;
+        var start_horizontal = arRotation.y;
+        var start_vertical = arRotation.x;
+        var start_time = _timer.getTimer();
+
+        setPosPersAndTime(start_x, start_y, start_z, start_vertical, start_horizontal, start_time);
+    }
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
-
-        if (ARSession.state == ARSessionState.Unsupported)
-        {
-            _arSession.enabled = false;
-        }
-        else
-        {
-            // Start the AR session
-            _arSession.enabled = true;
-        }
-
 
         // Request permission to access the device's location (ANDROID)
         if (!Permission.HasUserAuthorizedPermission(Permission.FineLocation))
@@ -64,10 +96,9 @@ public class Algorithm : MonoBehaviour
         {
             Input.location.Start(); //get's the android device current location.
         }
+        invokeGameObjectReferences();
 
-        // initialize the AR Session Origin component as reference during awake state of application. 
-        _arSessionOrigin = GetComponent<ARSessionOrigin>();
-        _arSession = GetComponent<ARSession>();
+        // initialize the AR component of application. 
         _pointCloud = GetComponent<ARPointCloud>();
         _arPoseDriver = GetComponent<ARPoseDriver>();
         arCameraObject = GetComponent<ARCameraManager>();
@@ -90,9 +121,9 @@ public class Algorithm : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        mapCameraLocationData();
+        fetchLocationTimeData();
 
         var positionOutput = "Position data: x: " + arCameraPosition.x + ", y: "
             + arCameraPosition.y + ", z: " + arCameraPosition.z;
@@ -102,38 +133,31 @@ public class Algorithm : MonoBehaviour
         ifSafeZoneReachedSqlAction();
     }
 
-    private void mapCameraLocationData()
+    private void fetchLocationTimeData()
     {
-        // The transform object is attached to the gameobject 
+        timeCycle += _timer.getTimer();
 
-        //Vector3 camPositionCloud = _pointCloud.transform.position;
-        arCameraPosition = _arSessionOrigin.camera.transform.position;
-
-        //UnityEngine.Quaternion catRotation = _pointCloud.transform.rotation;
-        arCameraRotation = _arSessionOrigin.camera.transform.rotation;
-
-        // gets the euler angle for the horizontal and vertical movment in float
-        Vector3 arEulerAngles = arCameraRotation.eulerAngles;
-        arHorizontal = arEulerAngles.y;
-        arVertical = arEulerAngles.x;
-
-        if (!trackingflag)
+        if (timeCycle >= 1f)
         {
-            trackingflag = true;
-            previousArCameraPosition = _arSessionOrigin.camera.transform.position;
+            var currentTime = _timer.getTimer();
+
+            //Vector3 camPositionCloud = _pointCloud.transform.position;
+            arCameraPosition = _arSessionOrigin.camera.transform.position;
+
+            //UnityEngine.Quaternion catRotation = _pointCloud.transform.rotation;
+            arCameraRotation = _arSessionOrigin.camera.transform.rotation;
+
+            // gets the euler angle for the horizontal and vertical movment in float
+            Vector3 arEulerAngles = arCameraRotation.eulerAngles;
+            arHorizontal = arEulerAngles.y;
+            arVertical = arEulerAngles.x;
+
+            // Call the setCurrentPosPers method...
+            setPosPersAndTime(arCameraPosition.x, arCameraPosition.y, arCameraPosition.z, arVertical, arHorizontal, currentTime);
+
+            timeCycle = 0f;
         }
-
-        // delta position (position difference)
-        Vector3 deltaArPosition = arCameraPosition - previousArCameraPosition;
-        previousArCameraPosition = arCameraPosition;
-
-        //This will set the AR session space to world space in unity
-        //Vector3 deviceToWorldLocation = _arSessionOrigin.camera.transform.localToWorldMatrix.GetPosition();
-
-        // Call the setCurrentPosPers method...
-        setCurrentPosPers(arCameraPosition.x, arCameraPosition.y, arCameraPosition.z, arVertical, arHorizontal);
     }
-
 
     private void ARSessionStateChanged(ARSessionStateChangedEventArgs args)
     {
@@ -141,7 +165,7 @@ public class Algorithm : MonoBehaviour
         {
             // Wait until AR is fully initialized
             ARSession.stateChanged -= ARSessionStateChanged;
-
+ 
             // Using the android device's current geolocation
             device_lat = Input.location.lastData.latitude;
             device_long = Input.location.lastData.longitude;
@@ -149,15 +173,11 @@ public class Algorithm : MonoBehaviour
 
             Input.location.Stop(); // stops the location service updates only need reference point
 
-            // Set the ARPoseDriver's target transform to the ARReferencePoint
-            var map_long_lat = UnityEngine.Quaternion.AngleAxis(device_long, -Vector3.up) * UnityEngine.Quaternion.AngleAxis(device_lat, -Vector3.right) * new Vector3(0, 0, 1);
-            _arPoseDriver.transform.TransformPoint(map_long_lat);
-            _arPoseDriver.enabled = true;
         }
     }
-
+   
     // Should be of type PosPers instead of double! 
-    public void setCurrentPosPers(float x, float y, float z, float vertical, float horizontal)
+    public void setPosPersAndTime(float x, float y, float z, float vertical, float horizontal, float time)
     {
         xPos = xPos.Append(x).ToArray();
         yPos = yPos.Append(y).ToArray();
@@ -166,7 +186,7 @@ public class Algorithm : MonoBehaviour
         verticalPos = verticalPos.Append(vertical).ToArray();
         horizontalPos = horizontalPos.Append(horizontal).ToArray();
 
-        timeStampData = timeStampData.Append((float)timeStampOutput).ToArray();
+        timeStampData = timeStampData.Append(time).ToArray();
     }
 
     // Should be of type PosPers instead of double!
@@ -196,7 +216,7 @@ public class Algorithm : MonoBehaviour
     public void ifSafeZoneReachedSqlAction()
     {
         // if the query was successfully executed reset/restore positionData dictionary!
-        if (winLose.safeZoneReached == true)
+        if (_winLose.safeZoneReached == true)
         {
             webclientSqlHandler();
             resetPositionDataState();
