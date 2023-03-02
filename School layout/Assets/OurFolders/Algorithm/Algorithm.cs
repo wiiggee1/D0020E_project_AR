@@ -9,6 +9,7 @@ using System.Net;
 using System.Collections;
 using UnityEngine.Networking;
 using System;
+using UnityEngine.SceneManagement;
 
 public class Algorithm : MonoBehaviour
 {
@@ -207,6 +208,7 @@ public class Algorithm : MonoBehaviour
 
     public void resetPositionDataState()
     {
+
         positionData = positionData = new Dictionary<string, float[]>();
         xPos = new float[] { };
         yPos = new float[] { };
@@ -223,6 +225,12 @@ public class Algorithm : MonoBehaviour
         {
             webclientSqlHandler();
             resetPositionDataState();
+        }
+        if (SceneManager.GetSceneByName("YouDied").isLoaded)
+        {
+            webclientSqlHandler();
+            resetPositionDataState();
+
         }
     }
 
