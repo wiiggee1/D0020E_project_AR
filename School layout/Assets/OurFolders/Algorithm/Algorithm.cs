@@ -221,7 +221,7 @@ public class Algorithm : MonoBehaviour
     public void ifSafeZoneReachedSqlAction()
     {
         // if the query was successfully executed reset/restore positionData dictionary!
-        if (_winLose.safeZoneReached == true)
+        if (_winLose.endGame == true)
         {
             webclientSqlHandler();
             resetPositionDataState();
