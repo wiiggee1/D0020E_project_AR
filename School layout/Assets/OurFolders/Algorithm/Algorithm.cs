@@ -196,12 +196,12 @@ public class Algorithm : MonoBehaviour
     // Should be of type PosPers instead of double!
     public Dictionary<string, float[]> getPositionData()
     {
-        positionData.Add("x_position", xPos);
-        positionData.Add("y_position", yPos);
-        positionData.Add("z_position", zPos);
+        positionData.Add("position_x", xPos);
+        positionData.Add("position_y", yPos);
+        positionData.Add("position_z", zPos);
         positionData.Add("vertical_position", verticalPos);
         positionData.Add("horizontal_position", horizontalPos);
-        positionData.Add("timestamp", timeStampData);
+        positionData.Add("timestamp_frame", timeStampData);
 
         return positionData;
     }
@@ -223,7 +223,7 @@ public class Algorithm : MonoBehaviour
         // if the query was successfully executed reset/restore positionData dictionary!
         if (_winLose.endGame == true)
         {
-            webclientSqlHandler();
+            StartCoroutine(webclientSqlHandler());
             resetPositionDataState();
         }
         if (SceneManager.GetSceneByName("YouDied").isLoaded)
