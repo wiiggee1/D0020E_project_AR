@@ -5,18 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class WinLose : MonoBehaviour
 {
-    public bool safeZoneReached = false;
+    public bool endGame = false;
 
     public void winLevel() {
-        if (!safeZoneReached){
-            safeZoneReached = true;
+        if (!endGame){
+            endGame = true;
+            Timer.gameEnded = true;
             SceneManager.LoadScene("Victory");
         }
     }
 
     public void loseLevel() {
-        if (!safeZoneReached){
-            safeZoneReached = true;
+        if (!endGame){
+            endGame = true;
             SceneManager.LoadScene("YouDied");
         }
     }
