@@ -7,6 +7,7 @@ public class Obstacle : MonoBehaviour
 {
     public static int spawn;
     public static int course;
+
     public int courseID;
 
     [SerializeField] GameObject spawnPoint1;
@@ -76,7 +77,6 @@ public class Obstacle : MonoBehaviour
         fireAndSmoke13AlarmAndTimer();
         if (spawn == 1){
             spawnPoint1.SetActive(true);
-            //algorithm._arSessionOrigin.camera.transform.localPosition = spawnPoint1.transform.localPosition;
             if (course == 1){
                 courseID = 1;
                 safeZone1.SetActive(true);
