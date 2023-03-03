@@ -2,6 +2,7 @@ extends header.pug
 block linkJs
     link(rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="")
     script(src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin="")
+    script(src="/js/timer.js")
 block content
     div#midbox
         div#infobox 
@@ -25,7 +26,7 @@ block content
         button#startbtn START
     div#bottombox
         div#timer
-            p Time passed 00:00
+            p 03:00:00
         div#maps
             div.mapcontainer
                 div.maptext
