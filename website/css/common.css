@@ -46,13 +46,13 @@ div#bottombox {
 }
 
 .mapcontainer {
-	height: 600px;
+	height: 700px;
 	text-align: center;
 }
 
 .maptext {
 	max-height: 50px;
-	max-width: 500px;
+	max-width: 700px;
 	display: block;
 	text-align: center;
 	margin-left: auto;
@@ -61,17 +61,15 @@ div#bottombox {
 }
 
 #map2d {
-	width: 500px;
-	height: 500px;
+	width: 600px;
+	height: 600px;
 	display: block;
 	justify-content: center;
 }
 
 #map3d {
-	max-width: 500px;
-	max-height: 500px;
-	min-width: 500px;
-	min-height: 500px;
+	width: 600px;
+	height: 600px;
 	display: block;
 	justify-content: center;
 }
