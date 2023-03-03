@@ -22,6 +22,20 @@ app.get('/db', (req, res) => {
                 console.log(error);
                 return;
             }
+
+            res.send(results);
+        });
+    })
+})
+
+app.get('/db/example', (req, res) => {
+    database.SSHConnection().then(function(connection){
+        connection.query('select * from game_data_mockup', function(error, results, fields){
+            if (error)
+            {
+                console.log(error);
+                return;
+            }
             
             const {angle_up, coord_x} = results[0];
             const test = {

@@ -18,7 +18,6 @@ body {
 .all {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 }
 
 .all div {
@@ -62,10 +61,8 @@ div#bottombox {
 }
 
 #map2d {
-	max-width: 500px;
-	max-height: 500px;
-	min-width: 500px;
-	min-height: 500px;
+	width: 500px;
+	height: 500px;
 	display: block;
 	justify-content: center;
 }

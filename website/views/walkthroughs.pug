@@ -1,4 +1,7 @@
 extends header.pug
+block linkJs
+    link(rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="")
+    script(src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin="")
 block content
     div#midbox
         div#infobox 
@@ -28,7 +31,21 @@ block content
                 div.maptext
                     p 2D map
                 div#map2d
-                    p Here will be a 2D map
+                script.
+                    var map2d = L.map('map2d').setView([65.58438073922254, 22.159403177945457], 11);
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        minZoom: 5,
+                        maxZoom: 20,
+                        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                    }).addTo(map2d);
+
+                    var ltuLogo = L.icon({
+                        iconUrl: '/img/LTU_L_sve_bla.png',
+                        iconSize: [50, 50]
+                    });
+
+                    var ltu = L.marker([65.61818932415491, 22.140257153674423], {icon: ltuLogo}).addTo(map2d);
+
             div.mapcontainer
                 div.maptext
                     p 3D map
