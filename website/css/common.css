@@ -20,7 +20,7 @@ body {
 	flex-direction: column;
 }
 
-.all div {
+.midbox > * {
 	margin: 10px 10px;
 }
 

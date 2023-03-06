@@ -1,69 +1,70 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const startBtn = document.getElementById('startbtn');
-    const ltuMarker = document.querySelector('img[alt="Marker"]')
     
+    // Used coordinates
+    const luleCoords = [65.58438073922254, 22.159403177945457];
+    const ltuCoords = [65.61818932415491, 22.140257153674423];
+    const model1Coords = [65.61884604121137, 22.142276537103953];
+
+    // Models and other external layers    
+    const model1 = ["https://mapwarper.net/maps/tile/70518/{z}/{x}/{y}.png", "Game model 1"];
+    const fHouse = ["https://mapwarper.net/maps/tile/70595/{z}/{x}/{y}.png", "F house"];
+
+    // Rendering map and different background layers
+    var map2d = L.map('map2d').setView(luleCoords, 12);
+    var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map2d);
+
+    var bike = L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
+        attribution: '<a href="https://github.com/cyclosm/cyclosm-cartocss-style/releases" title="CyclOSM - Open Bicycle render">CyclOSM</a> | Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    });
+
+    var esri = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+    });
+    var darkMode = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+    });
+
+    var backgrounds = {
+        "Normal": osm,
+        "Dark mode": darkMode,
+        "Bike": bike,
+        "Satelite": esri
+    };
+
+    // LTU logo
+    var ltuLogo = L.icon({ iconUrl: '/img/LTU_L_sve_bla.png', iconSize: [50, 50] });
+    var ltu = L.marker(ltuCoords, {icon: ltuLogo}).addTo(map2d);
+
+    // Layers to be turned on/off
+    var checkboxes = { "LTU": ltu };
+    var layerControl = L.control.layers(backgrounds, checkboxes).addTo(map2d);
+
+    // Constants from other files
+    const startBtn = document.getElementById('startbtn');
+    const ltuMarker = document.querySelector('img[alt="Marker"]');
+    
+    // TODO
+    function renderOnMap(object){
+        var obj = L.tileLayer(object[0], {}).addTo(map2d);         
+        layerControl.addOverlay(obj, object[1]);
+    }
+
+    // Upon pressing start
     if (startBtn) {
         startBtn.addEventListener('click', () => {
-            map2d.setView(fCoords, 17);
+            map2d.setView(model1Coords, 20);
+            renderOnMap(model1);
         });
     }
 
+    // Upon clicking LTU's logo
     if (ltuMarker) {
-
-        var fLogo = L.icon({
-            iconUrl: '/img/F-Letter-PNG.png',
-            iconSize: [100, 100],
-            iconAnchor: [50, 50]
-        });
-
         ltuMarker.addEventListener('click', () => {
             map2d.setView(ltuCoords, 16);
-            var fHouse = L.marker(fCoords, {icon: fLogo}).addTo(map2d);
-            
-            layerControl.addOverlay(fHouse, "F house");
-            
-            /*var fPolygon = L.polygon([
-                [[65.61859390755713, 22.14185649309682], // around
-                [65.61906115848446, 22.14480692289698],
-                [65.61933952776864, 22.144553224057905],
-                [65.61932856696777, 22.144465980084924],
-                [65.6193771076222, 22.144416668274108],
-                [65.61937084431706, 22.144374942895723],
-                [65.61940842412527, 22.14433701073356],
-                [65.6193771076222, 22.144143556706513],
-                [65.61939902917834, 22.144117004192996],
-                [65.61938963422797, 22.144056312733536],
-                [65.61943504312323, 22.143976655192986],
-                [65.61938806840257, 22.143684577544313],
-                [65.6198092720292, 22.143293876274008],
-                [65.61993296993765, 22.14405251951732],
-                [65.62013182483388, 22.143866651922703],
-                [65.61965582317197, 22.140866217895415],
-                [65.61944600387915, 22.14105587870624],
-                [65.61956187444449, 22.14179555586847],
-                [65.61901696512209, 22.142303846841486],
-                [65.61889952627037, 22.141567962895476],
-                [65.61858948514991, 22.141856247327933]
-                ],
-                [[65.6189778188972, 22.14272868705774],// hole 1
-                [65.6191453643255, 22.143768028301075],
-                [65.61927689455851, 22.143646645382148],
-                [65.61908116480316, 22.142421436544204],
-                [65.61905141375117, 22.142447989057715],
-                [65.61907803311509, 22.142633856652328]],
-                [[65.61937241014347, 22.143563194625383], // hole 2
-                [65.61947105701817, 22.14346836421997],
-                [65.61927376289404, 22.14223556894959],
-                [65.61917511526985, 22.142330399355004]],
-                [[65.61968557353148, 22.143263530544278], // hole 3
-                [65.6197826534149, 22.143172493355078],
-                [65.61968557353148, 22.142561785544213],
-                [65.61958849328514, 22.142649029517194]],
-                [[65.61956657188895, 22.14250868051718], // hole 4
-                [65.61966365221727, 22.142421436544204],
-                [65.61958536165822, 22.1419396980847],
-                [65.61948984685658, 22.14203073527389]],
-            ], {color: 'red'}).addTo(map2d);*/
+            renderOnMap(fHouse);
+
         });        
     }
 });
