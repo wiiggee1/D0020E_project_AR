@@ -9,10 +9,10 @@ using UnityEngine.UI;
 
 public class DataPopupCanvas : MonoBehaviour
 {
-    static public Canvas dataPopupCanvas;
+    public Canvas dataPopupCanvas;
     public Button buttonDisplay;
-    static public Text popupDisplayText;
-    static public string jsonDataToSend;
+    public Text popupDisplayText;
+    public string jsonDataToSend;
 
     // Start is called before the first frame update
     void Start()
@@ -23,12 +23,12 @@ public class DataPopupCanvas : MonoBehaviour
         //buttonDisplay.onClick.AddListener(OnButtonClickDisplayData);
     }
 
-    public static void SetPopupText(string popupText)
+    public void SetPopupText(string popupText)
     {
         popupDisplayText.text = popupText;
     }
 
-    public static void SetDataToSend(string dataToSend)
+    public void SetDataToSend(string dataToSend)
     {
         jsonDataToSend = dataToSend;
     }
@@ -44,7 +44,7 @@ public class DataPopupCanvas : MonoBehaviour
             popupDisplayText.text = jsonDataToSend;     
         }
 
-        //dataPopupCanvas.gameObject.SetActive(value: true);
+        dataPopupCanvas.gameObject.SetActive(value: true);
         popupDisplayText.gameObject.SetActive(!popupDisplayText.gameObject.activeSelf);
     }
 
@@ -66,7 +66,14 @@ public class DataPopupCanvas : MonoBehaviour
 
         if (www.result == UnityWebRequest.Result.Success)
         {
-            SetPopupText("Data sent successfully!");
+            if (jsonDataToSend == "")
+            {
+                SetPopupText("Trying to send empty data string!");
+            }
+            else
+            {
+                SetPopupText("Data sent successfully!");
+            }
         }
         else
         {

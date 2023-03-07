@@ -211,11 +211,11 @@ public class Algorithm : MonoBehaviour
     {
         if (_winLose.endGame == true | SceneManager.GetSceneByName("YouDied").isLoaded | SceneManager.GetSceneByName("Victory").isLoaded)
         {
-            DataPopupCanvas.SetPopupText(MapDataToJsonString());
-            //_popupCanvas.SetPopupText(MapDataToJsonString());
-            DataPopupCanvas.SetDataToSend(MapDataToJsonString());
+            //DataPopupCanvas.SetPopupText(MapDataToJsonString());
+            _popupCanvas.SetPopupText(MapDataToJsonString());
+            //DataPopupCanvas.SetDataToSend(MapDataToJsonString());
 
-            //_popupCanvas.SetDataToSend(MapDataToJsonString());
+            _popupCanvas.SetDataToSend(MapDataToJsonString());
             //ResetPositionDataState();
             CancelInvoke(nameof(FetchLocationTimeData));
         }
