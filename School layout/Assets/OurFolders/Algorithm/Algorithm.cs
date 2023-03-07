@@ -5,28 +5,25 @@ using UnityEngine.XR.ARFoundation;
 using UnityEngine.Android;
 using Vector3 = UnityEngine.Vector3;
 using UnityEngine.UI;
-using System.Net;
-using System.Collections;
-using UnityEngine.Networking;
-using System;
 using UnityEngine.SceneManagement;
 
 public class Algorithm : MonoBehaviour
 {
-    private ARCameraManager arCameraObject; //ARCore device gameobject
+    public ARCameraManager arCameraObject; //ARCore device gameobject
     public ARPointCloud _pointCloud; // The AR Foundation PointCloud script
     public ARSessionOrigin _arSessionOrigin;
     public ARSession _arSession;
-    private ARPoseDriver _arPoseDriver;
+    public ARPoseDriver _arPoseDriver;
 
     //Reference to scripts and gameobjects
     public GameObject timerObject;
-    private Timer _timer;
+    private static Timer _timer;
     public GameObject safeZoneReachedObject;
-    private WinLose _winLose;
+    private static WinLose _winLose;
     private float timeCycle = 0f; 
+    private static DataPopupCanvas _popupCanvas;
 
-
+    // STATE VARIABLES DURING GAMEPLAY
     public Text positionTextNew;
     private float device_lat; //device geodata
     private float device_long; //device geodata
@@ -36,14 +33,15 @@ public class Algorithm : MonoBehaviour
     private float arHorizontal;
     private float arVertical;
 
-    float[] xPos = new float[] { };
-    float[] yPos = new float[] { };
-    float[] zPos = new float[] { };
-    float[] verticalPos = new float[] { };
-    float[] horizontalPos = new float[] { };
+    // DATASTRUCTURE FOR SAVING GAMEDATA
+    float[] xPos;
+    float[] yPos;
+    float[] zPos;
+    float[] verticalPos;
+    float[] horizontalPos;
     public long? timeStampOutput;
-    float[] timeStampData = new float[] { };
-    Dictionary<string, float[]> positionData = new Dictionary<string, float[]>();
+    float[] timeStampData;
+    Dictionary<string, float[]> positionData;
 
 
     public void invokeGameObjectReferences()
@@ -57,6 +55,7 @@ public class Algorithm : MonoBehaviour
                 // Do something with this AR session origin
                 _arSessionOrigin = sessionOrigin.GetComponent<ARSessionOrigin>();
                 _arSessionOrigin.camera.transform.position = sessionOrigin.transform.position;
+                sessionOrigin.gameObject.SetActive(false); // deactivates the old session origin 
 
             }
         }
@@ -69,8 +68,11 @@ public class Algorithm : MonoBehaviour
             {
                 // Do something with this AR session origin
                 _arSession = session.GetComponent<ARSession>();
+
             }
         }
+
+        _arSessionOrigin.gameObject.SetActive(true); // activates new main AR session origin
 
         _timer = timerObject.GetComponent<Timer>();
         _winLose = safeZoneReachedObject.GetComponent<WinLose>();
@@ -84,7 +86,7 @@ public class Algorithm : MonoBehaviour
         var start_vertical = arRotation.x;
         var start_time = _timer.getTimer();
 
-        setPosPersAndTime(start_x, start_y, start_z, start_vertical, start_horizontal, start_time);
+        SetPosPersAndTime(start_x, start_y, start_z, start_vertical, start_horizontal, start_time);
     }
 
     // Start is called before the first frame update
@@ -107,11 +109,20 @@ public class Algorithm : MonoBehaviour
         _arPoseDriver = GetComponent<ARPoseDriver>();
         arCameraObject = GetComponent<ARCameraManager>();
 
-        arCameraObject.frameReceived += OnFrameReceived;
+        //arCameraObject.frameReceived += OnFrameReceived;
         ARSession.stateChanged += ARSessionStateChanged;
 
+        // INITIALIZE DATASTRUCTURE FOR SAVING
+        positionData = new Dictionary<string, float[]>();
+        timeStampData = new float[] { };
+        xPos = new float[] { };
+        yPos = new float[] { };
+        zPos = new float[] { };
+        verticalPos = new float[] { };
+        horizontalPos = new float[] { };
     }
 
+    /*
     void OnFrameReceived(ARCameraFrameEventArgs eventArgs)
     {
         var timeStampOutputFrame = eventArgs.timestampNs;
@@ -122,22 +133,22 @@ public class Algorithm : MonoBehaviour
 
         positionTextNew.text = positionOutput + ", timestamp: " + timeStampOutputFrame.ToString();
 
-    }
+    }*/
 
     // Update is called once per frame
     public void Update()
     {
-        fetchLocationTimeData();
+        FetchLocationTimeData();
 
         var positionOutput = "Position data: x: " + arCameraPosition.x + ", y: "
             + arCameraPosition.y + ", z: " + arCameraPosition.z;
 
         positionTextNew.text = positionOutput;
 
-        ifSafeZoneReachedSqlAction();
+        IfSafeZoneReachedSqlAction();
     }
 
-    private void fetchLocationTimeData()
+    private void FetchLocationTimeData()
     {
         timeCycle += _timer.getTimer();
 
@@ -157,7 +168,7 @@ public class Algorithm : MonoBehaviour
             arVertical = arEulerAngles.x;
 
             // Call the setCurrentPosPers method...
-            setPosPersAndTime(arCameraPosition.x, arCameraPosition.y, arCameraPosition.z, arVertical, arHorizontal, currentTime);
+            SetPosPersAndTime(arCameraPosition.x, arCameraPosition.y, arCameraPosition.z, arVertical, arHorizontal, currentTime);
 
             timeCycle = 0f;
         }
@@ -181,7 +192,7 @@ public class Algorithm : MonoBehaviour
     }
    
     // Should be of type PosPers instead of double! 
-    public void setPosPersAndTime(float x, float y, float z, float vertical, float horizontal, float time)
+    public void SetPosPersAndTime(float x, float y, float z, float vertical, float horizontal, float time)
     {
         xPos = xPos.Append(x).ToArray();
         yPos = yPos.Append(y).ToArray();
@@ -194,7 +205,7 @@ public class Algorithm : MonoBehaviour
     }
 
     // Should be of type PosPers instead of double!
-    public Dictionary<string, float[]> getPositionData()
+    public Dictionary<string, float[]> GetPositionData()
     {
         positionData.Add("position_x", xPos);
         positionData.Add("position_y", yPos);
@@ -208,7 +219,6 @@ public class Algorithm : MonoBehaviour
 
     public void resetPositionDataState()
     {
-
         positionData = positionData = new Dictionary<string, float[]>();
         xPos = new float[] { };
         yPos = new float[] { };
@@ -218,50 +228,21 @@ public class Algorithm : MonoBehaviour
         timeStampData = new float[] { };
     }
 
-    public void ifSafeZoneReachedSqlAction()
+    public void IfSafeZoneReachedSqlAction()
     {
-        // if the query was successfully executed reset/restore positionData dictionary!
-        if (_winLose.endGame == true)
+        if (_winLose.endGame == true | SceneManager.GetSceneByName("YouDied").isLoaded | SceneManager.GetSceneByName("Victory").isLoaded)
         {
-            StartCoroutine(webclientSqlHandler());
-            resetPositionDataState();
+            _popupCanvas.DisplayPositionDataInCanvas(GetPositionData());
+            _popupCanvas.setDataToSend(MapDataToJsonString());
+            //StartCoroutine(webclientSqlHandler(getPositionData()));
+            //resetPositionDataState();
         }
-        if (SceneManager.GetSceneByName("YouDied").isLoaded)
-        {
-            webclientSqlHandler();
-            resetPositionDataState();
 
-        }
     }
 
-    public IEnumerator webclientSqlHandler()
+    public string MapDataToJsonString()
     {
-        WebClient webClient = new WebClient();
-
-        var gameData = getPositionData();
-        string toJson = Newtonsoft.Json.JsonConvert.SerializeObject(gameData);
-        string server_url = "http://130.240.202.127/server_repo/gameSqlHandler.php";
-
-        WWWForm form = new WWWForm();
-        form.AddField("data", toJson);
-
-        using (UnityWebRequest www = UnityWebRequest.Post(server_url, form))
-        {
-            yield return www.SendWebRequest();
-
-            if (www.result == UnityWebRequest.Result.Success)
-            {
-                Debug.Log("Data sent successfully");
-            }
-            else
-            {
-                Debug.LogError("Error sending data: " + www.error);
-            }
-        }
-
-
-        //webClient.Headers[HttpRequestHeader.ContentType] = "application/json";
-        //_ = webClient.UploadString(server_url, "POST", toJson);
+        string jsonStringData = JsonUtility.ToJson(GetPositionData());
+        return jsonStringData;
     }
-
 }

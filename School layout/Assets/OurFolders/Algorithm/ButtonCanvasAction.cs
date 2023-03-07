@@ -13,7 +13,7 @@ public class ButtonCanvasAction : MonoBehaviour
 
     public void OnItemSelect()
     {
-        var position_data = algorithm.getPositionData();
+        var position_data = algorithm.GetPositionData();
         positionTextFull.text = "Position data: " + position_data["x_position"].ToString()+", "+ position_data["y_position"].ToString() + ", "+ position_data["z_position"].ToString();
         Debug.Log(positionTextFull.text);
     }  
