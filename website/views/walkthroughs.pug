@@ -4,17 +4,34 @@ block linkJs
     script(src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin="")
     script(src="/js/map.js")
 block content
+    
+    script.
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var spc = document.getElementById("startingpoint");
+            spc.addEventListener("change", (e) => {
+                const startingPointValue = e.target.value;
+                const courses = !{JSON.stringify(courses)};
+                const select = document.getElementById("obstaclecourse");
+                select.innerHTML = "";
+                for (let i = 0; i < courses[startingPointValue].length; i++)
+                {
+                    const option = document.getElementById("obstaclecourse").appendChild(document.createElement('option'));
+                    
+                    option.value = courses[startingPointValue][i];
+                    option.text = "Course " + courses[startingPointValue][i];
+                }
+            });
+        });    
+
     div#midbox
         div#infobox 
             div#selects
                 select#startingpoint
-                    option(value='0', selected=true) --Choose starting point--
-                    option(value='1') Room 1
-                    option(value='2') Room 2
+                    option(value="", disabled, selected) --Select starting point--
+                    each obstacleCourses, startPosition in courses
+                        option(value=startPosition) #{startPosition}
                 select#obstaclecourse
-                    option(value='0', selected=true) --Choose obstacle course--
-                    option(value='1') Course 1
-                    option(value='2') Course 2
+                    option(value='0', disabled, selected) --Choose obstacle course--
                 select#walkthrough
                     option(value='0', selected=true) --Choose walkthrough--
                     option(value='1') Walkthrough 1

@@ -27,7 +27,7 @@ app.get('/db', (req, res) => {
         });
     })
 })
-
+/*
 app.get('/db/example', (req, res) => {
     database.SSHConnection().then(function(connection){
         connection.query('select * from game_data_mockup', function(error, results, fields){
@@ -46,10 +46,31 @@ app.get('/db/example', (req, res) => {
             res.render('dbtest', { test });
         });
     })
-})
+})*/
 
-app.get('/walkthroughs', (req,res) => {
-    res.render("walkthroughs")
+app.get('/walkthroughs', (req, res) => {
+	database.SSHConnection().then(function (connection) {
+		connection.query(
+			'select distinct(obstacle_course) obstacle_course, start_position from course_data_mockup order by start_position',
+			function (error, results, fields) {
+				if (error) {
+					console.log(error);
+					return;
+				}
+				let courses = {};
+				for (let i = 0; i < results.length; i++) {
+					const { start_position, obstacle_course } = results[i];
+					console.log(results[i]);
+					if (typeof courses[start_position] === 'undefined') {
+						courses[start_position] = [];
+					}
+					courses[start_position].push(obstacle_course);
+				}
+				console.log(courses);
+				res.render('walkthroughs', { courses });
+			}
+		);
+	});
 });
 
 app.get('/courses', (req,res) => {
