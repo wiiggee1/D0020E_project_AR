@@ -1751,7 +1751,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 339487395}
-  - component: {fileID: 339487396}
   - component: {fileID: 339487393}
   m_Layer: 0
   m_Name: ARAlgorithmObject
@@ -1772,14 +1771,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faadf60223216ad459be9460558b2091, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arCameraObject: {fileID: 1899929248}
-  _pointCloud: {fileID: 483802261}
-  _arSessionOrigin: {fileID: 711051771}
-  _arSession: {fileID: 1341810744}
-  _arPoseDriver: {fileID: 0}
   timerObject: {fileID: 118912075}
   safeZoneReachedObject: {fileID: 1271239812}
-  positionTextNew: {fileID: 0}
+  mainAR: {fileID: 339487392}
   deviceLocation: {x: 0, y: 0}
   arCameraPosition: {x: 0, y: 0, z: 0}
   arCameraRotation: {x: 0, y: 0, z: 0, w: 0}
@@ -1801,19 +1795,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &339487396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 339487392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa46a89c3e3c6c947afdb55212d24f99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  algorithm: {fileID: 339487393}
 --- !u!1 &345515354
 GameObject:
   m_ObjectHideFlags: 0
@@ -2126,7 +2107,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &483802261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8077,7 +8058,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &711051771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8119,14 +8100,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faadf60223216ad459be9460558b2091, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arCameraObject: {fileID: 1899929248}
-  _pointCloud: {fileID: 483802261}
-  _arSessionOrigin: {fileID: 711051771}
-  _arSession: {fileID: 1341810744}
-  _arPoseDriver: {fileID: 0}
   timerObject: {fileID: 118912075}
   safeZoneReachedObject: {fileID: 1271239812}
-  positionTextNew: {fileID: 0}
+  mainAR: {fileID: 0}
   deviceLocation: {x: 0, y: 0}
   arCameraPosition: {x: 0, y: 0, z: 0}
   arCameraRotation: {x: 0, y: 0, z: 0, w: 0}
@@ -12725,7 +12701,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1341810744
 MonoBehaviour:
   m_ObjectHideFlags: 0

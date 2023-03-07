@@ -18,8 +18,8 @@ public class DataPopupCanvas : MonoBehaviour
     void Start()
     {
         //dataPopupCanvas.gameObject.SetActive(false);
-        buttonDisplay = dataPopupCanvas.GetComponentInChildren<Button>();
-        popupDisplayText = dataPopupCanvas.GetComponentInChildren<Text>();
+        //buttonDisplay = dataPopupCanvas.GetComponentInChildren<Button>();
+        //popupDisplayText = dataPopupCanvas.GetComponentInChildren<Text>();
         //buttonDisplay.onClick.AddListener(OnButtonClickDisplayData);
     }
 
@@ -35,13 +35,13 @@ public class DataPopupCanvas : MonoBehaviour
 
     public void OnButtonClickDisplayData()
     {
-        if (jsonDataToSend == "")
+        if (Algorithm.requestData == "")
         {
             popupDisplayText.text = "No data received or stored!";
         }
         else
         { 
-            popupDisplayText.text = jsonDataToSend;     
+            popupDisplayText.text = Algorithm.requestData;     
         }
 
         dataPopupCanvas.gameObject.SetActive(value: true);
@@ -66,7 +66,7 @@ public class DataPopupCanvas : MonoBehaviour
 
         if (www.result == UnityWebRequest.Result.Success)
         {
-            if (jsonDataToSend == "")
+            if (Algorithm.requestData == "")
             {
                 SetPopupText("Trying to send empty data string!");
             }

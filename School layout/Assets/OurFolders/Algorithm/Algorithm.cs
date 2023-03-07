@@ -6,14 +6,16 @@ using UnityEngine.Android;
 using Vector3 = UnityEngine.Vector3;
 using UnityEngine.SceneManagement;
 using Newtonsoft.Json;
+using UnityEngine.XR.ARCore;
 
 public class Algorithm : MonoBehaviour
 {
-    public ARCameraManager arCameraObject; //ARCore device gameobject
-    public ARPointCloud _pointCloud; // The AR Foundation PointCloud script
-    public ARSessionOrigin _arSessionOrigin;
-    public ARSession _arSession;
-    public ARPoseDriver _arPoseDriver;
+    public static Algorithm algo_instance;
+    private ARCameraManager arCameraObject; //ARCore device gameobject
+    private ARPointCloud _pointCloud; // The AR Foundation PointCloud script
+    private ARSessionOrigin _arSessionOrigin;
+    private ARSession _arSession;
+    private ARPoseDriver _arPoseDriver;
 
     //Reference to scripts and gameobjects
     [SerializeField] GameObject timerObject;
@@ -21,14 +23,18 @@ public class Algorithm : MonoBehaviour
     [SerializeField] GameObject safeZoneReachedObject;
     WinLose _winLose;
     DataPopupCanvas _popupCanvas;
+    [SerializeField] GameObject mainAR;
+    static public string requestData;
+
 
     // STATE VARIABLES DURING GAMEPLAY
     private float timeCycle;
     private float device_lat; //device geodata
     private float device_long; //device geodata
-    public Vector2 deviceLocation;
-    public Vector3 arCameraPosition;
-    public Quaternion arCameraRotation;
+    public Vector2 deviceLocation = new Vector2();
+    public Vector3 arCameraPosition = new Vector3();
+    public Vector3 arEulerAngles= new Vector3();
+    public Quaternion arCameraRotation = new Quaternion();
     private float arHorizontal;
     private float arVertical;
 
@@ -42,55 +48,17 @@ public class Algorithm : MonoBehaviour
     Dictionary<string, float[]> positionData = new Dictionary<string, float[]>();
 
 
-    public void InvokeGameObjectReferences()
+    public void Awake()
     {
-        ARSessionOrigin[] sessionOrigins = FindObjectsOfType<ARSessionOrigin>();
-        ARSession[] sessionAr = FindObjectsOfType<ARSession>();
-
-        foreach (ARSessionOrigin activeSessionOrigin in sessionOrigins)
+        if (algo_instance == null)
         {
-            if (activeSessionOrigin.isActiveAndEnabled)
-            {
-                // Do something with this AR session origin
-                _arSessionOrigin = activeSessionOrigin.GetComponent<ARSessionOrigin>();
-                _arSessionOrigin.camera = activeSessionOrigin.camera;
-                _arSessionOrigin.camera.transform.position = activeSessionOrigin.transform.position;
-                activeSessionOrigin.gameObject.SetActive(false);
-            }
+            algo_instance = this;
         }
-
-        foreach (ARSession activeSession in sessionAr)
+        else
         {
-            if (activeSession.isActiveAndEnabled)
-            {
-                // Do something with this AR session origin
-                _arSession = activeSession.GetComponent<ARSession>();
-                activeSession.gameObject.SetActive(true);
-
-                //session.enabled = false;
-
-            }
+            Destroy(this.gameObject);
         }
-        
-        // REFRESH ACTIVE STATE OF GAME OBJECT 
-        _arSession.gameObject.SetActive(true);
-        _arSessionOrigin.gameObject.SetActive(true); // activates new main AR session origin
-
-        _timer = timerObject.GetComponent<Timer>();
-        _winLose = safeZoneReachedObject.GetComponent<WinLose>();
-
-        // set inital starting data
-        var start_x = _arSessionOrigin.camera.transform.position.x;
-        var start_y = _arSessionOrigin.camera.transform.position.y;
-        var start_z = _arSessionOrigin.camera.transform.position.z;
-        Vector3 arRotation = _arSessionOrigin.camera.transform.eulerAngles;
-        var start_horizontal = arRotation.y;
-        var start_vertical = arRotation.x;
-        var start_time = _timer.getTimer();
-
-        SetPosPersAndTime(start_x, start_y, start_z, start_vertical, start_horizontal, start_time);
     }
-
 
     // Start is called before the first frame update
     public void Start()
@@ -107,33 +75,61 @@ public class Algorithm : MonoBehaviour
         }
 
         // initialize the AR component of application. 
-        //_arSessionOrigin = GetComponent<ARSessionOrigin>();
         _pointCloud = GetComponent<ARPointCloud>();
         _arPoseDriver = GetComponent<ARPoseDriver>();
+        _arSession = GetComponent<ARSession>();
+        _arSessionOrigin = GetComponent<ARSessionOrigin>();
         //arCameraObject = GetComponent<ARCameraManager>();
 
-        //arCameraObject.frameReceived += OnFrameReceived;
-        ARSession.stateChanged += ARSessionStateChanged;        
+        //ARSession.stateChanged += ARSessionStateChanged;
 
-        InvokeGameObjectReferences();
+        // SET INITIAL POSITION to 0
+        SetPosPersAndTime(0, 0, 0, 0, 0, 0);
+
+        // INITIALIZE OTHER GAMEOBJECTS
+        _timer = timerObject.GetComponent<Timer>();
+        _winLose = safeZoneReachedObject.GetComponent<WinLose>();
     }
 
         
     // Update is called once per frame
     public void Update()
+    {  
+        Invoke(nameof(FetchLocationTimeData),1f);      
+        IfSafeZoneReachedSqlAction();       
+    }
+
+    public void InvokeGameObjectReferences()
     {
-        if (!Timer.gameEnded)
+        ARSessionOrigin activeSessionOrigin = FindObjectOfType<ARSessionOrigin>();
+        ARSession activeSession = FindObjectOfType<ARSession>();
+
+        if (activeSession.isActiveAndEnabled | activeSessionOrigin.isActiveAndEnabled)
         {
-            Invoke(nameof(FetchLocationTimeData),1f);
+            // Do something with this AR session origin
+            _arSession = activeSession.GetComponent<ARSession>();
+            _arSessionOrigin = activeSession.GetComponent<ARSessionOrigin>();
+
+            _arSessionOrigin = activeSessionOrigin.GetComponent<ARSessionOrigin>();
+            _arSessionOrigin.camera = activeSessionOrigin.camera;
+            //_arSessionOrigin.camera.transform.position = activeSessionOrigin.transform.position;
         }
- 
-        IfSafeZoneReachedSqlAction();
+
+        //SWITCH OBJECT STATES
+        /*
+        _arSessionOrigin.MakeContentAppearAt(activeSessionOrigin.transform, Vector3.zero);
+        mainAR.SetActive(true);
+        activeSession.gameObject.SetActive(false);
+        
+        _arSession.enabled = true;
+        */
+
     }
 
     public void FetchLocationTimeData()
     {
-        //timeCycle += _timer.getTimer();
-           
+        InvokeGameObjectReferences(); // get the current state from the active gameobjects
+
         //yield return new WaitForSeconds(1.0f);
 
         timeCycle = Timer.currentTime;
@@ -145,13 +141,13 @@ public class Algorithm : MonoBehaviour
         arCameraRotation = _arSessionOrigin.camera.transform.rotation;
 
         // gets the euler angle for the horizontal and vertical movment in float
-        Vector3 arEulerAngles = arCameraRotation.eulerAngles;
-        arHorizontal = arEulerAngles.y;
-        arVertical = arEulerAngles.x;
+        arEulerAngles = arCameraRotation.eulerAngles;
+       
+        var arHorizontal = arEulerAngles.y;
+        var arVertical = arEulerAngles.x;
 
         // Call the setCurrentPosPers method...
         SetPosPersAndTime(arCameraPosition.x, arCameraPosition.y, arCameraPosition.z, arVertical, arHorizontal, timeCycle);
-             
     }
 
     private void ARSessionStateChanged(ARSessionStateChangedEventArgs args)
@@ -212,14 +208,20 @@ public class Algorithm : MonoBehaviour
         if (_winLose.endGame == true | SceneManager.GetSceneByName("YouDied").isLoaded | SceneManager.GetSceneByName("Victory").isLoaded)
         {
             //DataPopupCanvas.SetPopupText(MapDataToJsonString());
-            _popupCanvas.SetPopupText(MapDataToJsonString());
+            //_popupCanvas.SetPopupText(MapDataToJsonString());
+            requestData = MapDataToJsonString();
             //DataPopupCanvas.SetDataToSend(MapDataToJsonString());
 
-            _popupCanvas.SetDataToSend(MapDataToJsonString());
+            //_popupCanvas.SetDataToSend(MapDataToJsonString());
             //ResetPositionDataState();
-            CancelInvoke(nameof(FetchLocationTimeData));
+            //CancelInvoke(nameof(FetchLocationTimeData));
         }
 
+    } 
+
+    public string getRequestStringData()
+    {
+        return requestData;
     }
 
     public string MapDataToJsonString()
