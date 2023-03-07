@@ -19,3 +19,4 @@ MonoBehaviour:
     m_Enabled: 0
     m_MaxBlobSizeInBytes: 0
     m_MaxFileSizeInBytes: 0
+  m_EnableGestures: 0

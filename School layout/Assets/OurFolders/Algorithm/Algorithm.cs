@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -89,9 +90,18 @@ public class Algorithm : MonoBehaviour
         SetPosPersAndTime(start_x, start_y, start_z, start_vertical, start_horizontal, start_time);
     }
 
+=======
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Algorithm : MonoBehaviour
+{
+>>>>>>> 86df386b5967b3f8bb264b37ae56f8ee4737711e
     // Start is called before the first frame update
-    public void Start()
+    void Start()
     {
+<<<<<<< HEAD
 
         // Request permission to access the device's location (ANDROID)
         if (!Permission.HasUserAuthorizedPermission(Permission.FineLocation))
@@ -134,10 +144,15 @@ public class Algorithm : MonoBehaviour
         positionTextNew.text = positionOutput + ", timestamp: " + timeStampOutputFrame.ToString();
 
     }*/
+=======
+        
+    }
+>>>>>>> 86df386b5967b3f8bb264b37ae56f8ee4737711e
 
     // Update is called once per frame
-    public void Update()
+    void Update()
     {
+<<<<<<< HEAD
         FetchLocationTimeData();
 
         var positionOutput = "Position data: x: " + arCameraPosition.x + ", y: "
@@ -245,4 +260,8 @@ public class Algorithm : MonoBehaviour
         string jsonStringData = JsonUtility.ToJson(GetPositionData());
         return jsonStringData;
     }
+=======
+        
+    }
+>>>>>>> 86df386b5967b3f8bb264b37ae56f8ee4737711e
 }
