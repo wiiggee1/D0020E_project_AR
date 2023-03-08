@@ -6,6 +6,8 @@ using System.Xml;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using static UnityEngine.EventSystems.EventTrigger;
+using static UnityEngine.XR.ARSubsystems.XRCpuImage;
 
 public class DataPopupCanvas : MonoBehaviour
 {
@@ -50,16 +52,27 @@ public class DataPopupCanvas : MonoBehaviour
 
     public void OnUploadButton()
     {
-        StartCoroutine(SqlWebrequest());
+        StartCoroutine(SqlWebrequest(Algorithm.requestData));
         dataPopupCanvas.gameObject.SetActive(value: true);
 
     }
-    public IEnumerator SqlWebrequest()
+    public IEnumerator SqlWebrequest(string inputDataToSend)
     {
-        string jsonStringData = JsonUtility.ToJson(jsonDataToSend);
+        string jsonStringData = inputDataToSend;
+        var dataDict = Algorithm.requestDataDictionary;
+
         string server_url = "http://130.240.202.127/server_repo/gameSqlHandler.php";
         WWWForm form = new WWWForm();
-        form.AddField("data", jsonStringData);
+        foreach (KeyValuePair<string, float[]> posData in dataDict)
+        {
+            string key = posData.Key;
+            float[] values = posData.Value;
+            for (int i = 0; i < values.Length; i++)
+            {
+                form.AddField(key + "[]", values[i].ToString());
+            }
+        }
+        //form.AddField("data", jsonStringData);
         UnityWebRequest www = UnityWebRequest.Post(server_url, form);
 
         yield return www.SendWebRequest();
@@ -73,6 +86,7 @@ public class DataPopupCanvas : MonoBehaviour
             else
             {
                 SetPopupText("Data sent successfully!");
+                StopAllCoroutines();
             }
         }
         else

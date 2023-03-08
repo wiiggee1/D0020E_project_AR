@@ -25,7 +25,7 @@ public class Algorithm : MonoBehaviour
     DataPopupCanvas _popupCanvas;
     [SerializeField] GameObject mainAR;
     static public string requestData;
-
+    static public Dictionary<string, float[]> requestDataDictionary = new Dictionary<string, float[]>();
 
     // STATE VARIABLES DURING GAMEPLAY
     private float timeCycle;
@@ -94,8 +94,10 @@ public class Algorithm : MonoBehaviour
         
     // Update is called once per frame
     public void Update()
-    {  
-        Invoke(nameof(FetchLocationTimeData),1f);      
+    {
+        InvokeGameObjectReferences(); // get the current state from the active gameobjects
+        Invoke(nameof(FetchLocationTimeData),2.0f);
+        //FetchLocationTimeData();
         IfSafeZoneReachedSqlAction();       
     }
 
@@ -128,8 +130,6 @@ public class Algorithm : MonoBehaviour
 
     public void FetchLocationTimeData()
     {
-        InvokeGameObjectReferences(); // get the current state from the active gameobjects
-
         //yield return new WaitForSeconds(1.0f);
 
         timeCycle = Timer.currentTime;
@@ -210,6 +210,7 @@ public class Algorithm : MonoBehaviour
             //DataPopupCanvas.SetPopupText(MapDataToJsonString());
             //_popupCanvas.SetPopupText(MapDataToJsonString());
             requestData = MapDataToJsonString();
+            requestDataDictionary = GetPositionData();
             //DataPopupCanvas.SetDataToSend(MapDataToJsonString());
 
             //_popupCanvas.SetDataToSend(MapDataToJsonString());
