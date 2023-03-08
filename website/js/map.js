@@ -64,7 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
         ltuMarker.addEventListener('click', () => {
             map2d.setView(ltuCoords, 16);
             renderOnMap(fHouse);
-
         });        
     }
 });
