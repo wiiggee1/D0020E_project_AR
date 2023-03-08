@@ -28,15 +28,13 @@ block content
         div#infobox 
             div#selects
                 select#startingpoint
-                    option(value="", disabled, selected) --Select starting point--
+                    option(value="", disabled, selected) --Starting point--
                     each obstacleCourses, startPosition in courses
-                        option(value=startPosition) #{startPosition}
+                        option(value=startPosition) Start position #{startPosition}
                 select#obstaclecourse
-                    option(value='0', disabled, selected) --Choose obstacle course--
+                    option(value='0', disabled, selected) --Obstacle course--
                 select#walkthrough
-                    option(value='0', selected=true) --Choose walkthrough--
-                    option(value='1') Walkthrough 1
-                    option(value='2') Walkthrough 2
+                    option(value='0', selected=true) --Walkthrough--
             p(style='white-space:pre;')
                 | Default infobox for now
                 | Another line in default infobox
