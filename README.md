@@ -35,3 +35,13 @@ Note that in order to make the website display any data stored in the database y
 * NodeJS
 * PugJS
 * Leaflet
+* MapWarper
+
+### Features:
+* Displaying all obstacle courses, chosen by selecting a value of the starting point from dropdown
+* Upon clicking LTU's logo:
+ * Displaying a map of Luleå with zoom in to campus
+ * Highlighting F house by rendering a new polygon
+* Upon clicking the start button:
+ * Timer starts counting down
+ * The georeferenced game model is rendered
