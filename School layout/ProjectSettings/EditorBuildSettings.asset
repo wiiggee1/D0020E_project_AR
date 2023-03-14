@@ -4,21 +4,32 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 89ccbdc9033c82a20818378ee4c41bda
+  - enabled: 1
+    path: Assets/Scenes/GameScene.unity
+    guid: d121a2f714e0f3246906ea46fc9fe67e
+  - enabled: 1
+    path: Assets/Scenes/YouDied.unity
+    guid: a78df2e5453db4b42b75bfbc33f4f14f
+  - enabled: 1
+    path: Assets/Scenes/Victory.unity
+    guid: 5b83c36cedd983a4983cdd2b2469f82e
+  - enabled: 1
+    path: Assets/Scenes/ShowDataMenu.unity
+    guid: e417392883f66934a891c2ee52469526
   m_configObjects:
-    Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 744b813df90924c169af73489b8325de,
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 23b3a275f841053d5a44fec13852cdbd,
       type: 2}
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 89a6d18d3df8d3e4fa917b0f9a963bc0,
       type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: de8a8e4f987434338a4b1062feb8d069,
       type: 2}
-    com.unity.xr.arcore.PlayerSettings: {fileID: 11400000, guid: c2f7b8d7c0bff4d10874cbcf3f24af78,
-      type: 2}
-    com.unity.xr.arkit.PlayerSettings: {fileID: 11400000, guid: b27ec7d82a91a48e69fd689ad6808e5e,
-      type: 2}
     com.unity.xr.magicleap.magic_leap_settings: {fileID: 11400000, guid: 1eb95d77acb39444e8cf44313496a874,
       type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 58f40b12bbc864f3c96c6505a9a1e1e3,
       type: 2}
-    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 6bb381a8ba31f114d9724357633b4625,
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 3702de4c941c7f645b757bdf430c898e,
       type: 2}
