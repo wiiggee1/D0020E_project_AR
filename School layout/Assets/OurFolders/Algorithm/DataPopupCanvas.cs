@@ -1,4 +1,4 @@
-using MySql.Data.MySqlClient;
+//using MySql.Data.MySqlClient;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -19,9 +19,9 @@ public class DataPopupCanvas : MonoBehaviour
     public Text popupDisplayText;
     public string jsonDataToSend;
 
-    private MySqlConnection connection;
-    private string connectionString = "server=130.240.202.127;user=root;database=d0020e;port=3306;password=456;";
-
+    //
+    //private MySqlConnection connection;
+ 
     // Start is called before the first frame update
     void Start()
     {
@@ -58,8 +58,8 @@ public class DataPopupCanvas : MonoBehaviour
 
     public void OnUploadButton()
     {
-        InsertPositionData(Algorithm.requestDataDictionary);
-        //StartCoroutine(SqlWebrequest(Algorithm.requestData));
+        //InsertPositionData(Algorithm.requestDataDictionary);
+        StartCoroutine(SqlWebrequest(Algorithm.requestData));
         dataPopupCanvas.gameObject.SetActive(value: true);
 
     }
@@ -69,15 +69,16 @@ public class DataPopupCanvas : MonoBehaviour
         var dataDict = Algorithm.requestDataDictionary;
 
         string server_url = "http://130.240.202.127/server_repo/gameSqlHandler.php";
-
+        /*
         var request = new UnityWebRequest(server_url, "POST");
         byte[] bodyRaw = Encoding.UTF8.GetBytes(jsonStringData);
         request.uploadHandler = new UploadHandlerRaw(bodyRaw);
         request.downloadHandler = new DownloadHandlerBuffer();
         request.SetRequestHeader("Content-Type", "application/json");
         yield return request.SendWebRequest();
+        */
 
-        /*
+        
         WWWForm form = new WWWForm();
 
         form.AddField("data", jsonStringData);
@@ -92,11 +93,11 @@ public class DataPopupCanvas : MonoBehaviour
             }
         }
 
-        UnityWebRequest www = UnityWebRequest.Put(server_url, form);
+        UnityWebRequest www = UnityWebRequest.Post(server_url, form);
 
-        yield return www.SendWebRequest(); */
+        yield return www.SendWebRequest(); 
 
-        if (request.result == UnityWebRequest.Result.Success)
+        if (www.result == UnityWebRequest.Result.Success)
         {
             if (Algorithm.requestData == "")
             {
@@ -110,10 +111,11 @@ public class DataPopupCanvas : MonoBehaviour
         }
         else
         {
-            SetPopupText("Error sending data: " + request.error);
+            SetPopupText("Error sending data: " + www.error);
         }
     }
 
+    /*
     private void InsertPositionData(Dictionary<string, float[]> positionData)
     {
         try
@@ -152,7 +154,7 @@ public class DataPopupCanvas : MonoBehaviour
             SetPopupText("Error sending data: " + ex.Message);
         }
            
-    }
+    }*/
 
 }
 
