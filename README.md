@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+"# D0020E_project_AR" 
+"abc"
+=======
 # Gamification of evacuation drills
 This project is made during the third-year project course for computer engineering students at Luleå University of Technology. The course aims to develop students within software development and prepare for practices within the industry.
 
@@ -23,3 +27,4 @@ Platforms used to develop the game: **(Add more)**
 * AR Foundation
 
 ## Screenshots: 
+>>>>>>> Eddie
