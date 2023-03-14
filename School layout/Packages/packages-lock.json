@@ -77,7 +77,11 @@
     },
     "com.unity.inputsystem": {
       "version": "1.4.4",
+<<<<<<< HEAD
       "depth": 1,
+=======
+      "depth": 2,
+>>>>>>> origin/Viktor
       "source": "registry",
       "dependencies": {
         "com.unity.modules.uielements": "1.0.0"
