@@ -1,0 +1,55 @@
+extends header.pug
+block linkJs
+    link(rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="")
+    script(src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin="")
+    script(type="module" src="/js/map.js")
+    script(type="module" src="/js/timer.js")
+block content
+    
+    script.
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var spc = document.getElementById("startingpoint");
+            spc.addEventListener("change", (e) => {
+                const startingPointValue = e.target.value;
+                const courses = !{JSON.stringify(courses)};
+                const select = document.getElementById("obstaclecourse");
+                select.innerHTML = "";
+                for (let i = 0; i < courses[startingPointValue].length; i++)
+                {
+                    const option = document.getElementById("obstaclecourse").appendChild(document.createElement('option'));
+                    
+                    option.value = courses[startingPointValue][i];
+                    option.text = "Course " + courses[startingPointValue][i];
+                }
+            });
+        });    
+
+    div#midbox
+        div#infobox 
+            div#selects
+                select#startingpoint
+                    option(value="", disabled, selected) --Starting point--
+                    each obstacleCourses, startPosition in courses
+                        option(value=startPosition) Start position #{startPosition}
+                select#obstaclecourse
+                    option(value='0', disabled, selected) --Obstacle course--
+                select#walkthrough
+                    option(value='0', selected=true) --Walkthrough--
+            p(style='white-space:pre;')
+                | Default infobox for now
+                | Another line in default infobox
+                | And one more
+        button#startbtn START
+    div#bottombox
+        div#timer
+            p 03:00:00
+        div#maps
+            div.mapcontainer
+                div.maptext
+                    p 2D map
+                div#map2d
+            div.mapcontainer
+                div.maptext
+                    p 3D map
+                div#map3d
+                    p Here will be a 3D map

@@ -1,0 +1,7 @@
+.all {
+    display: grid;
+}
+
+#title {
+    align-self: center;
+}

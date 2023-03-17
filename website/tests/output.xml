@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.0 on win32)" generated="20230224 09:07:13.987" rpa="false" schemaversion="3">
+<suite id="s1" name="Connect" source="C:\Users\kruci\Desktop\unity\D0020E_project_AR\website\tests\connect.robot">
+<test id="s1-t1" name="Initialize Connection" line="9">
+<kw name="Set Log Level" library="BuiltIn" type="SETUP">
+<arg>TRACE</arg>
+<doc>Sets the log threshold to the specified level and returns the old level.</doc>
+<msg timestamp="20230224 09:07:14.886" level="INFO">Log level changed from INFO to TRACE.</msg>
+<msg timestamp="20230224 09:07:14.886" level="TRACE">Return: 'INFO'</msg>
+<status status="PASS" starttime="20230224 09:07:14.885" endtime="20230224 09:07:14.886"/>
+</kw>
+<kw name="Connect to VM" library="vm">
+<msg timestamp="20230224 09:07:14.887" level="TRACE">Arguments: [  ]</msg>
+<kw name="Set Log Level" library="BuiltIn">
+<arg>NONE</arg>
+<doc>Sets the log threshold to the specified level and returns the old level.</doc>
+<msg timestamp="20230224 09:07:14.887" level="TRACE">Arguments: [ 'NONE' ]</msg>
+<status status="PASS" starttime="20230224 09:07:14.887" endtime="20230224 09:07:14.888"/>
+</kw>
+<kw name="Get Value From User" library="Dialogs">
+<var>${SSHPassword}</var>
+<arg>SSH password:</arg>
+<arg>hidden=yes</arg>
+<doc>Pauses execution and asks user to input a value.</doc>
+<status status="PASS" starttime="20230224 09:07:14.888" endtime="20230224 09:07:21.584"/>
+</kw>
+<kw name="Open Connection" library="SSHLibrary">
+<arg>${SSHHost}</arg>
+<doc>Opens a new SSH connection to the given ``host`` and ``port``.</doc>
+<status status="PASS" starttime="20230224 09:07:21.585" endtime="20230224 09:07:21.586"/>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<arg>${SSHUser}</arg>
+<arg>${SSHPassword}</arg>
+<doc>Logs into the SSH server with the given ``username`` and ``password``.</doc>
+<status status="PASS" starttime="20230224 09:07:21.587" endtime="20230224 09:07:24.246"/>
+</kw>
+<kw name="Set Log Level" library="BuiltIn">
+<arg>TRACE</arg>
+<doc>Sets the log threshold to the specified level and returns the old level.</doc>
+<msg timestamp="20230224 09:07:24.247" level="INFO">Log level changed from NONE to TRACE.</msg>
+<msg timestamp="20230224 09:07:24.247" level="TRACE">Return: 'NONE'</msg>
+<status status="PASS" starttime="20230224 09:07:24.246" endtime="20230224 09:07:24.247"/>
+</kw>
+<kw name="Create Local Ssh Tunnel" library="SSHLibrary">
+<arg>${localPort}</arg>
+<arg>${DBHost}</arg>
+<arg>${remotePort}</arg>
+<doc>The keyword uses the existing connection to set up local port forwarding
+(the openssh -L option) from a local port through a tunneled
+connection to a destination reachable from the SSH server machine.</doc>
+<msg timestamp="20230224 09:07:24.248" level="TRACE">Arguments: [ '33306' | '127.0.0.1' | 3306 ]</msg>
+<msg timestamp="20230224 09:07:24.249" level="INFO">Now forwarding port 33306 to 127.0.0.1:3306 ...</msg>
+<msg timestamp="20230224 09:07:24.249" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20230224 09:07:24.247" endtime="20230224 09:07:24.249"/>
+</kw>
+<msg timestamp="20230224 09:07:24.250" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20230224 09:07:14.887" endtime="20230224 09:07:24.250"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>\n\nConnection to VM established!</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230224 09:07:24.252" level="TRACE">Arguments: [ '\n\nConnection to VM established!' | console=True ]</msg>
+<msg timestamp="20230224 09:07:24.252" level="INFO">
+
+Connection to VM established!</msg>
+<msg timestamp="20230224 09:07:24.252" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20230224 09:07:24.251" endtime="20230224 09:07:24.253"/>
+</kw>
+<kw name="Connect to DB" library="db">
+<msg timestamp="20230224 09:07:24.254" level="TRACE">Arguments: [  ]</msg>
+<kw name="Set Log Level" library="BuiltIn">
+<arg>NONE</arg>
+<doc>Sets the log threshold to the specified level and returns the old level.</doc>
+<msg timestamp="20230224 09:07:24.254" level="TRACE">Arguments: [ 'NONE' ]</msg>
+<status status="PASS" starttime="20230224 09:07:24.254" endtime="20230224 09:07:24.255"/>
+</kw>
+<kw name="Get Value From User" library="Dialogs">
+<var>${DBPassword}</var>
+<arg>SSH password:</arg>
+<arg>hidden=yes</arg>
+<doc>Pauses execution and asks user to input a value.</doc>
+<status status="PASS" starttime="20230224 09:07:24.255" endtime="20230224 09:07:28.854"/>
+</kw>
+<kw name="Connect To Database" library="DatabaseLibrary">
+<arg>pymysql</arg>
+<arg>${DBName}</arg>
+<arg>${DBUser}</arg>
+<arg>${DBPassword}</arg>
+<arg>${DBHost}</arg>
+<arg>${DBPort}</arg>
+<doc>Loads the DB API 2.0 module given `dbapiModuleName` then uses it to
+connect to the database using `dbName`, `dbUsername`, and `dbPassword`.</doc>
+<status status="PASS" starttime="20230224 09:07:28.854" endtime="20230224 09:07:28.964"/>
+</kw>
+<kw name="Set Log Level" library="BuiltIn">
+<arg>TRACE</arg>
+<doc>Sets the log threshold to the specified level and returns the old level.</doc>
+<msg timestamp="20230224 09:07:28.964" level="INFO">Log level changed from NONE to TRACE.</msg>
+<msg timestamp="20230224 09:07:28.965" level="TRACE">Return: 'NONE'</msg>
+<status status="PASS" starttime="20230224 09:07:28.964" endtime="20230224 09:07:28.965"/>
+</kw>
+<kw name="Table Must Exist" library="DatabaseLibrary">
+<arg>${coords}</arg>
+<doc>Check if the table given exists in the database. Set optional input `sansTran` to True to run command without an
+explicit transaction commit or rollback.</doc>
+<msg timestamp="20230224 09:07:28.965" level="TRACE">Arguments: [ 'position_data' ]</msg>
+<msg timestamp="20230224 09:07:28.965" level="INFO">Executing : Table Must Exist  |  position_data </msg>
+<msg timestamp="20230224 09:07:28.965" level="INFO">Executing : Row Count  |  SELECT * FROM information_schema.tables WHERE table_name='position_data' </msg>
+<msg timestamp="20230224 09:07:29.010" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20230224 09:07:28.965" endtime="20230224 09:07:29.010"/>
+</kw>
+<msg timestamp="20230224 09:07:29.011" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20230224 09:07:24.253" endtime="20230224 09:07:29.011"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>\nConnection to DB established!</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230224 09:07:29.012" level="TRACE">Arguments: [ '\nConnection to DB established!' | console=True ]</msg>
+<msg timestamp="20230224 09:07:29.012" level="INFO">
+Connection to DB established!</msg>
+<msg timestamp="20230224 09:07:29.012" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20230224 09:07:29.012" endtime="20230224 09:07:29.013"/>
+</kw>
+<tag>Connection</tag>
+<status status="PASS" starttime="20230224 09:07:14.884" endtime="20230224 09:07:29.013"/>
+</test>
+<test id="s1-t2" name="Disconnect" line="16">
+<kw name="Set Log Level" library="BuiltIn" type="SETUP">
+<arg>TRACE</arg>
+<doc>Sets the log threshold to the specified level and returns the old level.</doc>
+<msg timestamp="20230224 09:07:29.015" level="TRACE">Arguments: [ 'TRACE' ]</msg>
+<msg timestamp="20230224 09:07:29.015" level="INFO">Log level changed from TRACE to TRACE.</msg>
+<msg timestamp="20230224 09:07:29.015" level="TRACE">Return: 'TRACE'</msg>
+<status status="PASS" starttime="20230224 09:07:29.015" endtime="20230224 09:07:29.015"/>
+</kw>
+<kw name="Disconnect from VM" library="vm">
+<msg timestamp="20230224 09:07:29.016" level="TRACE">Arguments: [  ]</msg>
+<kw name="Close All Connections" library="SSHLibrary">
+<doc>Closes all open connections.</doc>
+<msg timestamp="20230224 09:07:29.017" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20230224 09:07:29.414" level="DEBUG">[chan 0] EOF sent (0)</msg>
+<msg timestamp="20230224 09:07:29.415" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20230224 09:07:29.017" endtime="20230224 09:07:29.415"/>
+</kw>
+<msg timestamp="20230224 09:07:29.416" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20230224 09:07:29.016" endtime="20230224 09:07:29.416"/>
+</kw>
+<tag>Admin</tag>
+<tag>Connection</tag>
+<tag>Procedures</tag>
+<tag>Tables</tag>
+<tag>UpdateDB</tag>
+<status status="PASS" starttime="20230224 09:07:29.014" endtime="20230224 09:07:29.417"/>
+</test>
+<doc>Connecting to the DB</doc>
+<status status="PASS" starttime="20230224 09:07:13.991" endtime="20230224 09:07:29.420"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Admin</stat>
+<stat pass="2" fail="0" skip="0">Connection</stat>
+<stat pass="1" fail="0" skip="0">Procedures</stat>
+<stat pass="1" fail="0" skip="0">Tables</stat>
+<stat pass="1" fail="0" skip="0">UpdateDB</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Connect">Connect</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css?family=Shantell+Sans');
+html {
+	background: radial-gradient(
+		circle,
+		rgba(255, 235, 205, 1) 0%,
+		rgba(211, 210, 250, 1) 100%
+	);
+
+    min-height: 100vh;
+    display:flex;
+    justify-content: center;
+}
+
+body {
+    display: flex;
+}
+
+.all {
+	display: flex;
+	flex-direction: column;
+}
+
+.midbox > * {
+	margin: 10px 10px;
+}
+
+div#title {
+	max-height: 150px;
+	min-height: 150px;
+	top: 0px;
+	color: navy;
+	font-family: Shantell Sans;
+	font-style: oblique;
+	font-stretch: ultra-expanded;
+	font-size: 26px;
+	text-align: center;
+}
+
+div#bottombox {
+	height: 70%;
+	bottom: 0px;
+
+	display: flex !important;
+	flex-direction: column;
+	align-items: center;
+}
+
+.mapcontainer {
+	height: 700px;
+	text-align: center;
+}
+
+.maptext {
+	max-height: 50px;
+	max-width: 700px;
+	display: block;
+	text-align: center;
+	margin-left: auto;
+	color: navy;
+	font-family: Shantell Sans;
+}
+
+#map2d {
+	width: 600px;
+	height: 600px;
+	display: block;
+	justify-content: center;
+}
+
+#map3d {
+	width: 600px;
+	height: 600px;
+	display: block;
+	justify-content: center;
+}
+
+#midbox {
+	justify-content: center;
+	text-align: center;
+}
+
+#startbtn {
+	background-color: blanchedalmond;
+	padding: 10px 10px;
+	font-family: Shantell Sans;
+	font-weight: bold;
+	border: solid 3px #12024b;
+}
+
+#startbtn:hover {
+	box-shadow: 0 10px 10px 0 #12024b, 0 10px 30px 0 #12024b;
+}
+
+#timer {
+	justify-content: center;
+	text-align: center;
+}
+
+.red {
+	background-color: blanchedalmond;
+	padding: 10px 10px;
+	margin-left: 50px;
+	margin-right: 50px;
+	font-family: Shantell Sans;
+	font-weight: bold;
+	border: dashed 3px #12024b;
+}
+
+.red:hover {
+	box-shadow: 0 10px 10px 0 #12024b, 0 10px 30px 0 #12024b;
+}
+
+#evacuate {
+	width: 500px;
+	max-width: 100%;
+}
+
+#indexA {
+	text-decoration: none;
+}
+
+#indexA:hover {
+	text-shadow: 4px 4px 4px #12024b;
+}
+
+#indexA:active {
+	color: green;
+}
+
+#image {
+	max-width: 100%;
+	padding-top: 120px;
+}
+
+@media (orientation: landscape) {
+	.mapcontainer {
+		display: inline-block !important;
+	}
+
+	#maps {
+		display: flex !important;
+		flex-direction: row;
+		align-items: center;
+	}
+}
+
+@media (orientation: portrait) {
+	.mapcontainer {
+		display: block !important;
+	}
+
+	#maps {
+		display: flex !important;
+		flex-direction: column;
+		align-items: center;
+	}
+}
