@@ -10,7 +10,7 @@ A website was created to visualize the data collected. See section [Website](#we
 The game is playable on Android as for now. To install the game follow these steps in Unity:
 	File -> Build settings… -> Make sure that Android is selected in the Platform window -> Press Build and download the APK file to an android device -> Install the app from the devices file manager.
 
-**INFOGA BILD**
+![Capture1](https://user-images.githubusercontent.com/22946017/225952504-fb35d1a9-7ab4-47c5-b72b-55caa2635670.PNG)
 
 ## Usage: 
 To play the game properly, the player needs to know where the spawns are placed and go to the location the player chooses. The image below shows where those locations are as well as which direction the camera needs to be pointed for the obstacles to be in the correct locations.
