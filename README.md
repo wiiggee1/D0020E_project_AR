@@ -27,11 +27,13 @@ When the game begins, players are presented with various obstacles such as chair
 * End screen
 
 ## Technologies: 
-Platforms used to develop the game: **(Add more)**
+Platforms used to develop the game:
 
 * Unity
 * AR Core
 * AR Foundation
+* Blender
+* Polycam
 
 ## Screenshots: 
 
