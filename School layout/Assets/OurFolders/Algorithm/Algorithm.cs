@@ -98,7 +98,7 @@ public class Algorithm : MonoBehaviour
     public void Update()
     {
         InvokeGameObjectReferences(); // get the current state from the active gameobjects
-        Invoke(nameof(FetchLocationTimeData),2.0f);
+        Invoke(nameof(FetchLocationTimeData),1.0f);
         //FetchLocationTimeData();
         IfSafeZoneReachedSqlAction();       
     }
