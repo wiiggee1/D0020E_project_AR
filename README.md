@@ -6,14 +6,25 @@ For our project an augmented reality (AR) game was created with the aim to gener
 
 A website was created to visualize the data collected. See section [Website](#website)
 
-## Installation: 
-The game is playable on Android as for now. To install the game….. **Add detailed instructions on how to install the game**
+## Game installation: 
+The game is playable on Android as for now. To install the game follow these steps in Unity:
+	File -> Build settings… -> Make sure that Android is selected in the Platform window -> Press Build and download the APK file to an android device -> Install the app from the devices file manager.
 
 ## Usage: 
-Instructions on how to use the game, including any special features or controls.
+To play the game properly, the player needs to know where the spawns are placed and go to the location the player chooses. The image below shows where those locations are as well as which direction the camera needs to be pointed for the obstacles to be in the correct locations.
+
+INFOGA BILD
+
+When the game begins, players are presented with various obstacles such as chairs, tables and fire. The timer starts counting down, and is visible to the player at all times. The timer changes color from green to yellow to red as time runs out, indicating the urgency to find the safe zone. The objective of the game is to reach the safe zone before the time runs out. If a player crosses an AR obstacle, they will receive a notification in the game to avoid them.
 
 ## Features:
-A list of features of the game, including any unique or innovative aspects.
+
+* Main menu
+* AR gameplay
+* Timer
+* Obstacles such as fire and chairs
+* Safe zones
+* End screen
 
 ## Technologies: 
 Platforms used to develop the game: **(Add more)**
